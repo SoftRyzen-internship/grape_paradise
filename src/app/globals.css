@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	body {
+		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;
+	}
+
+	.section {
+		@apply mx-auto bg-cover bg-center bg-no-repeat py-[30px] md:py-[40px] lg:py-[80px];
+	}
+
+	.title {
+		@apply font-tenor text-h2 uppercase md:text-h2_tab lg:text-h2_desk;
+	}
+
+	.subtitle {
+		@apply font-tenor text-h3 lg:text-h3_desk;
+	}
+
+	.transition {
+		@apply transition-all duration-300 ease-in-out;
+	}
+}
