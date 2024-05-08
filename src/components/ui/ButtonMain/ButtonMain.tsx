@@ -10,7 +10,7 @@ const ButtonMain = ({ to, children }: ButtonMainProps) => {
 			smooth={true}
 			duration={500}
 			offset={40}
-			classNames=''
+			className='rounded-60px flex items-center justify-center border border-transparent px-7 py-5 font-tenor text-btn font-normal uppercase text-green'
 		>
 			{children}
 		</Link>
