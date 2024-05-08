@@ -1,8 +1,10 @@
+'use client';
+
 import React from 'react';
 import { Link } from 'react-scroll';
 import { ButtonMainProps } from './ButtonMain.types';
 
-const ButtonMain = ({ to, children }: ButtonMainProps) => {
+export const ButtonMain = ({ to, children }: ButtonMainProps) => {
 	return (
 		<Link
 			to={to}
@@ -10,11 +12,11 @@ const ButtonMain = ({ to, children }: ButtonMainProps) => {
 			smooth={true}
 			duration={500}
 			offset={40}
-			className='rounded-60px flex items-center justify-center border border-transparent px-7 py-5 font-tenor text-btn font-normal uppercase text-green'
+			className='flex h-[59px] items-center justify-center rounded-60px border border-transparent bg-white px-7 py-5 font-tenor text-btn font-normal uppercase text-green hover:bg-green hover:text-white
+			md:h-[63px] md:border-green md:bg-transparent 
+			lg:text-btn_desk'
 		>
 			{children}
 		</Link>
 	);
 };
-
-export default ButtonMain;
