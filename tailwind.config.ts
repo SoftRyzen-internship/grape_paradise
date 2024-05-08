@@ -21,6 +21,7 @@ const config: Config = {
 			bodyDark: '#4D4843',
 			green: '#4D6116',
 			darkGreen: '#405012',
+			green50: 'rgba(77, 97, 22, 0.5)',
 			logo: '#675F28',
 			red: '#F60000',
 		},

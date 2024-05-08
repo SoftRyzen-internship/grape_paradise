@@ -3,8 +3,9 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { ButtonMainProps } from './ButtonMain.types';
+import clsx from 'clsx';
 
-export const ButtonMain = ({ to, children }: ButtonMainProps) => {
+export const ButtonMain = ({ to, chapter, children }: ButtonMainProps) => {
 	return (
 		<Link
 			to={to}
@@ -12,9 +13,21 @@ export const ButtonMain = ({ to, children }: ButtonMainProps) => {
 			smooth={true}
 			duration={500}
 			offset={40}
-			className='flex h-[59px] items-center justify-center rounded-60px border border-transparent bg-white px-7 py-5 font-tenor text-btn font-normal uppercase text-green hover:bg-green hover:text-white
-			md:border-green md:bg-transparent
-			lg:h-[63px] lg:text-btn_desk'
+			className={clsx(
+				'flex  cursor-pointer items-center justify-center  rounded-60px font-tenor text-btn font-normal uppercase text-green hover:bg-green hover:text-white focus:bg-green focus:text-white md:border-green md:bg-transparent',
+				{
+					'h-[43px] w-[218px] border lg:border-white50 lg:text-white lg:hover:bg-white lg:hover:text-green lg:focus:bg-white lg:focus:text-green':
+						chapter === 'header',
+				},
+				{
+					'md:border-green50 h-[59px] bg-white md:w-[238px] md:border lg:h-[63px] lg:w-[284px] lg:text-btn_desk':
+						chapter === 'about',
+				},
+				{
+					'md:border-green50 h-[59px] bg-white md:w-[157px] md:border lg:h-[63px] lg:w-[182px] lg:text-btn_desk':
+						chapter === 'card',
+				},
+			)}
 		>
 			{children}
 		</Link>
