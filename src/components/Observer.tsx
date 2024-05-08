@@ -1,7 +1,7 @@
 import React from 'react';
 import { buttonsData, sectionsData } from '@/data';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
-import { ButtonForm } from './ui/ButtonForm/ButtonForm';
+import { ButtonLess } from './ui/ButtonForm/ButtonLess';
 
 export const Observer: React.FC = () => {
 	return (
@@ -9,7 +9,9 @@ export const Observer: React.FC = () => {
 			<ButtonMain chapter='about' to={sectionsData.contacts}>
 				{buttonsData.callButton}
 			</ButtonMain>
-			<ButtonForm>{buttonsData.sendButton}</ButtonForm>
+			<ButtonLess type='submit' purpose='form'>
+				{buttonsData.sendButton}
+			</ButtonLess>
 		</>
 	);
 };
