@@ -1,0 +1,22 @@
+[
+  { 
+    "id": "01",
+    "to": "about", 
+    "children": "Про нас" 
+  },
+  { 
+    "id": "02",
+    "to": "services", 
+    "children": "Послуги" 
+  },
+  { 
+    "id": "03",
+    "to": "goods", 
+    "children": "Товари" 
+  },
+  { 
+    "id": "04",
+    "to": "contacts", 
+    "children": "Контакти" 
+  }
+]
