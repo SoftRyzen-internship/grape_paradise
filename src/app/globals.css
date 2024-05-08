@@ -4,7 +4,7 @@
 
 @layer utilities {
 	body {
-		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;
+		@apply bg-bg1 font-geologica text-normal text-bodyDark lg:text-normal_desk font-extralight;
 	}
 
 	.section {
@@ -12,7 +12,7 @@
 	}
 
 	.title {
-		@apply font-tenor text-h2 uppercase md:text-h2_tab lg:text-h2_desk;
+		@apply font-tenor text-h2 md:text-h2_tab lg:text-h2_desk uppercase;
 	}
 
 	.subtitle {

@@ -6,7 +6,7 @@ export interface AdvantagesProps {}
 
 export const Advantages: React.FC<AdvantagesProps> = () => {
 	return (
-		<section>
+		<section className='section bg-red'>
 			<AdvantagesCard />
 		</section>
 	);
