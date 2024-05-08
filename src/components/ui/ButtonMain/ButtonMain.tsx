@@ -13,8 +13,8 @@ export const ButtonMain = ({ to, children }: ButtonMainProps) => {
 			duration={500}
 			offset={40}
 			className='flex h-[59px] items-center justify-center rounded-60px border border-transparent bg-white px-7 py-5 font-tenor text-btn font-normal uppercase text-green hover:bg-green hover:text-white
-			md:h-[63px] md:border-green md:bg-transparent 
-			lg:text-btn_desk'
+			md:border-green md:bg-transparent
+			lg:h-[63px] lg:text-btn_desk'
 		>
 			{children}
 		</Link>

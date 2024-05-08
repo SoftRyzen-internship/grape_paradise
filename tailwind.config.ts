@@ -20,6 +20,7 @@ const config: Config = {
 			black: '#343434',
 			bodyDark: '#4D4843',
 			green: '#4D6116',
+			darkGreen: '#405012',
 			logo: '#675F28',
 			red: '#F60000',
 		},
