@@ -1,3 +1,5 @@
-export const Observer = () => {
-	return <div></div>;
+import React from 'react';
+
+export const Observer: React.FC = () => {
+	return <></>;
 };
