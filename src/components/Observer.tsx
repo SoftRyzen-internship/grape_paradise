@@ -1,3 +1,9 @@
+import { Advantages } from '@/sections/Advantages';
+
 export const Observer = () => {
-	return <div></div>;
+	return (
+		<div>
+			<Advantages />
+		</div>
+	);
 };
