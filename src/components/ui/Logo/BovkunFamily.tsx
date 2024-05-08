@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { LogoComponentProps } from './Logo.types'
+import { LogoComponentProps } from './Logo.typesgit '
 
 export const BovkunFamily: React.FC<LogoComponentProps> = ({
   isActive,
