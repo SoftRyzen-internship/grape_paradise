@@ -1,4 +1,4 @@
-export interface ButtonLessProps {
+export interface IButtonLessProps {
 	type: 'button' | 'submit';
 	purpose: 'form' | 'slider' | 'video';
 	disabled?: boolean;

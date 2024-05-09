@@ -1,11 +1,13 @@
 'use client';
 
 import React from 'react';
+
 import clsx from 'clsx';
 import { Link } from 'react-scroll';
-import { ButtonMainProps } from './ButtonMain.types';
 
-export const ButtonMain = ({ to, chapter, children }: ButtonMainProps) => {
+import { IButtonMainProps } from './ButtonMain.types';
+
+export const ButtonMain = ({ to, chapter, children }: IButtonMainProps) => {
 	return (
 		<Link
 			to={to}
