@@ -1,6 +1,5 @@
-'use client';
-
 import clsx from 'clsx';
+
 import { ILogoComponentProps } from './Logo.types';
 
 export const LogoSvg: React.FC<ILogoComponentProps> = ({
@@ -37,7 +36,7 @@ export const LogoSvg: React.FC<ILogoComponentProps> = ({
 	return (
 		<>
 			<svg
-				className={`${textColor}  ${sizeFull}`}
+				className={`transition ${textColor}  ${sizeFull}`}
 				viewBox='0 0 190 48'
 				fill={fill}
 				xmlns='http://www.w3.org/2000/svg'
