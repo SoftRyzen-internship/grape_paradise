@@ -43,7 +43,7 @@ export const Observer: React.FC = () => {
 				</ButtonLess>
 			</div>
 			<ButtonLess type='button' purpose='video'>
-				{<Play className='h-[26.4px] w-[26.4px] lg:h-[64px] lg:w-[64px]' />}
+				{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 			</ButtonLess>
 		</div>
 	);
