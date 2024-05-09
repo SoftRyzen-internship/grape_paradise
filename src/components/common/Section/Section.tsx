@@ -1,9 +1,13 @@
 import React from 'react';
 
-export const Section = ({ children }: { children: React.ReactNode }) => {
+import clsx from 'clsx';
+
+import { ISectionProps } from './Section.types';
+
+export const Section = ({ id, styles, children }: ISectionProps) => {
 	return (
-		<section className=''>
-			<div className=''>{children}</div>
+		<section id={id} className={clsx('w-full', styles)}>
+			<div className='container outline outline-darkGreen'>{children}</div>
 		</section>
 	);
 };
