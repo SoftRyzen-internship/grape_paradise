@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { buttonsData } from '@/data';
+// import { buttonsData } from '@/data';
 
-import { Logo } from './ui/Logo';
-import { NavMenu } from './ui/NavMenu';
-import { ButtonMain } from './ui/ButtonMain/ButtonMain';
-import { ButtonLess } from './ui/ButtonLess/ButtonLess';
+// import { Logo } from './ui/Logo';
+// import { NavMenu } from './ui/NavMenu';
+// import { ButtonMain } from './ui/ButtonMain/ButtonMain';
+// import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 import { BurgerMenu } from "./ui/BurgerMenu";
 
 
-import Arrow from '../../public/icons/arrow.svg'; //не задаються розміри іконки
-import Play from '../../public/icons/play.svg'; //не задаються розміри іконки
+// import Arrow from '../../public/icons/arrow.svg'; //не задаються розміри іконки
+// import Play from '../../public/icons/play.svg'; //не задаються розміри іконки
 
 export const Observer: React.FC = () => {
 	return (
 		<div>
-			<Logo />
+			{/* <Logo />
 			<Logo theme='green' size='big' />
 			<NavMenu />
 			<ButtonMain chapter='header' to='контакти'>
@@ -46,7 +46,7 @@ export const Observer: React.FC = () => {
 				{
 					<Play className='h-[20.62px] w-[17.88px] fill-white lg:h-[37.33px] lg:w-[29.33px]' />
 				}
-			</ButtonLess>
+			</ButtonLess> */}
 			<BurgerMenu/>
 		</div>
 	);
