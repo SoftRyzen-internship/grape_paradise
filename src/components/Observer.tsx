@@ -21,14 +21,14 @@ export const Observer: React.FC = () => {
 				{buttonsData.sendButton}
 			</ButtonLess>
 			<div className='flex gap-2'>
-				<ButtonLess type='button' purpose='slider'>
+				<ButtonLess type='button' purpose='slider' disabled={true}>
 					{
-						<Arrow className=' h-6 w-6 rotate-180 fill-green stroke-green group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white' />
+						<Arrow className=' group-disabled:fill-green30 group-disabled:stroke-green30 h-6 w-6 rotate-180 fill-green stroke-green group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white' />
 					}
 				</ButtonLess>
-				<ButtonLess type='button' purpose='slider'>
+				<ButtonLess type='button' purpose='slider' disabled={false}>
 					{
-						<Arrow className=' h-6 w-6 fill-green stroke-green group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white' />
+						<Arrow className=' group-disabled:fill-green30 group-disabled:stroke-green30 h-6 w-6 fill-green stroke-green group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white' />
 					}
 				</ButtonLess>
 			</div>
