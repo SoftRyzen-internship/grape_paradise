@@ -1,12 +1,15 @@
-import { Logo } from './ui/Logo';
-import { NavMenu } from './ui/NavMenu';
+// import { Logo } from './ui/Logo';
+// import { NavMenu } from './ui/NavMenu';
+
+import { BurgerMenu } from "./ui/BurgerMenu";
 
 export const Observer = () => {
 	return (
 		<div>
-			<Logo />
+			{/* <Logo />
 			<Logo theme='green' size='big' />
-			<NavMenu />
+			<NavMenu /> */}
+			<BurgerMenu/>
 		</div>
 	);
 };
