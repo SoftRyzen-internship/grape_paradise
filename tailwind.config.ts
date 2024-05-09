@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-	content: [
-		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+	content: [		
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+        './src/sections/**/*.{js,ts,jsx,tsx,mdx}',    
 	],
 	theme: {
 		colors: {
@@ -21,6 +21,7 @@ const config: Config = {
 			bodyDark: '#4D4843',
 			green: '#4D6116',
 			logo: '#675F28',
+			logo60: 'rgba(103, 95, 40, 0.6)',
 			red: '#F60000',
 		},
 		screens: {

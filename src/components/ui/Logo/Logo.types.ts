@@ -1,10 +1,13 @@
 type Theme = 'white' | 'green';
+type Size = 'small' | 'big';
 
-export type LogoProps = {
+export interface ILogoProps {
   theme?: Theme;
+  size?: Size;
 };
 
-export type LogoComponentProps = {
+export interface ILogoComponentProps {
     isActive: boolean;
     theme?: Theme;
+    size?: Size;
   };

@@ -3,8 +3,8 @@ import { Logo } from './ui/Logo';
 export const Observer = () => {
 	return (
 		<div>
-			<Logo theme='white' />
-			<Logo theme='green' />
+			<Logo />
+			<Logo theme='green' size='big' />
 		</div>
 	);
 };
