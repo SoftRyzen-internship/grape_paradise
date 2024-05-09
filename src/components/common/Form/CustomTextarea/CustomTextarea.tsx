@@ -1,6 +1,5 @@
 import { forwardRef, useId } from 'react';
 import clsx from 'clsx';
-
 import { ICustomTextareaProps } from './CustomTextarea.types';
 
 export const CustomTextarea = forwardRef<
@@ -26,7 +25,7 @@ export const CustomTextarea = forwardRef<
 				{...rest}
 				ref={ref}
 				id={id}
-				className='font-semilight h-full resize-none border-b border-stroke bg-transparent py-[10px] caret-logo transition placeholder:text-grey placeholder:transition hover:border-logo focus:border-logo focus:outline-0 focus:placeholder:opacity-0 lg:py-4'
+				className='h-full resize-none border-b border-stroke bg-transparent py-[10px] font-semilight caret-logo transition placeholder:text-grey placeholder:transition hover:border-logo focus:border-logo focus:outline-0 focus:placeholder:opacity-0 lg:py-4'
 			/>
 		</div>
 	);
