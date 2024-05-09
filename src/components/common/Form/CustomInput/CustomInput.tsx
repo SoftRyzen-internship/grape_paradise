@@ -11,7 +11,7 @@ export const CustomInput = forwardRef<HTMLInputElement, ICustomInputProps>(
 		const id = useId();
 
 		return (
-			<div className={clsx('relative', className)}>
+			<div className={clsx('relative flex flex-col', className)}>
 				{label ? <label htmlFor={id}>{label}</label> : null}
 				<input {...rest} ref={ref} id={id} />
 				{errorMessage ? (
