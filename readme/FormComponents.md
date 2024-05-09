@@ -44,4 +44,9 @@ The application example - `<CustomCheckbox />`
 ####
 
 - Any other attributes that are characteristic of the textarea (placeholder, type, etc)
+
+#### The remark
+
+To apply with React-Hook-Form using the library's component - `<Controller />`
+
 <hr>

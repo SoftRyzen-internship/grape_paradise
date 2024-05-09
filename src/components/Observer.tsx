@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Logo } from '@/components/ui/Logo';
 import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
-import { CustomCheckbox } from './common/Form/CustomCheckbox';
+import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
 
 import { buttonsData } from '@/data';
 
@@ -21,7 +21,6 @@ export const Observer: React.FC = () => {
 		<div className='container py-5'>
 			<Logo />
 			<Logo theme='green' size='big' />
-
 			<NavMenu />
 
 			<ButtonMain chapter='header' to='контакти'>
