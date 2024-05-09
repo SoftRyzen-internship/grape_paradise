@@ -1,8 +1,13 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
+import { Logo } from '@/components/ui/Logo';
+import { CustomInput } from '@/components/common/Form/CustomInput';
+import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
+import { CustomCheckbox } from './common/Form/CustomCheckbox';
 
 import { buttonsData } from '@/data';
 
-import { Logo } from './ui/Logo';
 import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
@@ -11,8 +16,9 @@ import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
 
 export const Observer: React.FC = () => {
+	const [checkbox, setCheckbox] = useState(false);
 	return (
-		<div>
+		<div className='container py-5'>
 			<Logo />
 			<Logo theme='green' size='big' />
 
@@ -45,6 +51,19 @@ export const Observer: React.FC = () => {
 			<ButtonLess type='button' purpose='video'>
 				{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 			</ButtonLess>
+
+			<CustomInput label='Ваше ім’я' placeholder='Тетяна' />
+			<CustomInput label='Ваш Номер телефону' placeholder='+3800967777323' />
+			<CustomTextarea
+				label='Ваш Коментар'
+				placeholder='Напишіть щось'
+				className='h-36'
+			/>
+			<CustomCheckbox
+				checked={checkbox}
+				handleChange={setCheckbox}
+				definition='Даю згоду на обробку персональних даних'
+			/>
 		</div>
 	);
 };
