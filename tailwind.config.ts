@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-	content: [		
+	content: [
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/sections/**/*.{js,ts,jsx,tsx,mdx}',    
+		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/sections/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
 		colors: {
@@ -41,11 +41,11 @@ const config: Config = {
 				md: '34px',
 				xl: '32px',
 			},
-    },
-    fontFamily: {
-				tenor: ['var(--font-tenor)'],
-				geologica: ['var(--font-geologica)'],
-			},
+		},
+		fontFamily: {
+			tenor: ['var(--font-tenor)'],
+			geologica: ['var(--font-geologica)'],
+		},
 		extend: {
 			fontSize: {
 				// Н0 Використовується для рухомого рядка
@@ -69,10 +69,10 @@ const config: Config = {
 				normal_desk: ['18px', '1.5'],
 				large: ['18px', '1.3'],
 				large_desk: ['26px', '1.3'],
-      },
-      backdropBlur: {
-        '25': '12.5px',
-      },
+			},
+			backdropBlur: {
+				'25': '12.5px',
+			},
 		},
 	},
 	plugins: [],
