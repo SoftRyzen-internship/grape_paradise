@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-	content: [		
+	content: [
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/sections/**/*.{js,ts,jsx,tsx,mdx}',    
+		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/sections/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
 		colors: {
@@ -14,12 +14,17 @@ const config: Config = {
 			bg2: '#FBF3EB',
 			white: '#FFFFFF',
 			white50: 'rgba(255, 255, 255, 0.5)',
+			white40: 'rgba(255, 255, 255, 0.4)',
+			white20: 'rgba(255, 255, 255, 0.2)',
 			accent: '#9F8C79',
 			stroke: '#C2B2A2',
 			grey: '#A7A7A7',
 			black: '#343434',
 			bodyDark: '#4D4843',
 			green: '#4D6116',
+			darkGreen: '#405012',
+			green50: 'rgba(77, 97, 22, 0.5)',
+			green30: 'rgba(77, 97, 22, 0.3)',
 			logo: '#675F28',
 			logo60: 'rgba(103, 95, 40, 0.6)',
 			red: '#F60000',
@@ -41,11 +46,11 @@ const config: Config = {
 				md: '34px',
 				xl: '32px',
 			},
-    },
-    fontFamily: {
-				tenor: ['var(--font-tenor)'],
-				geologica: ['var(--font-geologica)'],
-			},
+		},
+		fontFamily: {
+			tenor: ['var(--font-tenor)'],
+			geologica: ['var(--font-geologica)'],
+		},
 		extend: {
 			fontSize: {
 				// Н0 Використовується для рухомого рядка
@@ -73,9 +78,13 @@ const config: Config = {
 			fontWeight: {
 				semilight: '250',
 			},
-      backdropBlur: {
-        '25': '12.5px',
-      },
+			backdropBlur: {
+				'25': '12.5px',
+				'70': '70px',
+			},
+			borderRadius: {
+				'60px': '60px',
+			},
 		},
 	},
 	plugins: [],
