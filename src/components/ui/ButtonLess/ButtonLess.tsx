@@ -17,7 +17,7 @@ export const ButtonLess = ({
 			type={type}
 			disabled={disabled}
 			className={clsx(
-				'disabled:border-green30 disabled:hover:bg-transparent disabled:focus:bg-transparent',
+				'transition disabled:border-green30 disabled:hover:bg-transparent disabled:focus:bg-transparent',
 				{
 					'lg lg:w-[279px]lg:text-btn_desk flex h-[59px] w-full cursor-pointer items-center justify-center rounded-60px bg-green px-7 py-5 font-tenor text-btn font-normal uppercase text-white hover:bg-darkGreen focus:bg-darkGreen md:w-[234px] lg:h-[63px]':
 						purpose === 'form',
