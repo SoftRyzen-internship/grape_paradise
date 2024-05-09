@@ -3,6 +3,7 @@ import React from 'react';
 import { buttonsData } from '@/data';
 
 import { Logo } from './ui/Logo';
+import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 
@@ -11,9 +12,11 @@ import Play from '../../public/icons/play.svg'; //не задаються роз
 
 export const Observer: React.FC = () => {
 	return (
-		<>
+		<div>
 			<Logo />
 			<Logo theme='green' size='big' />
+
+			<NavMenu />
 
 			<ButtonMain chapter='header' to='контакти'>
 				{buttonsData.callButton}
@@ -44,6 +47,6 @@ export const Observer: React.FC = () => {
 					<Play className='h-[20.62px] w-[17.88px] fill-white lg:h-[37.33px] lg:w-[29.33px]' />
 				}
 			</ButtonLess>
-		</>
+		</div>
 	);
 };

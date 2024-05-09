@@ -1,10 +1,10 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-	content: [		
+	content: [
 		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-        './src/sections/**/*.{js,ts,jsx,tsx,mdx}',    
+		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./src/sections/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
 		colors: {
@@ -74,6 +74,9 @@ const config: Config = {
 				normal_desk: ['18px', '1.5'],
 				large: ['18px', '1.3'],
 				large_desk: ['26px', '1.3'],
+			},
+			fontWeight: {
+				semilight: '250',
 			},
 			backdropBlur: {
 				'25': '12.5px',
