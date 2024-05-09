@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import { Link } from 'react-scroll';
 import { ButtonMainProps } from './ButtonMain.types';
-import clsx from 'clsx';
 
 export const ButtonMain = ({ to, chapter, children }: ButtonMainProps) => {
 	return (
@@ -20,11 +20,11 @@ export const ButtonMain = ({ to, chapter, children }: ButtonMainProps) => {
 						chapter === 'header',
 				},
 				{
-					'md:border-green50 h-[59px] bg-white md:w-[238px] md:border lg:h-[63px] lg:w-[284px] lg:text-btn_desk':
+					'h-[59px] bg-white md:w-[238px] md:border md:border-green50 lg:h-[63px] lg:w-[284px] lg:text-btn_desk':
 						chapter === 'about',
 				},
 				{
-					'md:border-green50 h-[59px] bg-white md:w-[157px] md:border lg:h-[63px] lg:w-[182px] lg:text-btn_desk':
+					'h-[59px] bg-white md:w-[157px] md:border md:border-green50 lg:h-[63px] lg:w-[182px] lg:text-btn_desk':
 						chapter === 'card',
 				},
 			)}

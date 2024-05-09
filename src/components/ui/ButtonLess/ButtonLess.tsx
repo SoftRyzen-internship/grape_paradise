@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ButtonLessProps } from './ButtonLess.types';
 import clsx from 'clsx';
+import { ButtonLessProps } from './ButtonLess.types';
 
 export const ButtonLess = ({
 	type,
@@ -21,7 +21,7 @@ export const ButtonLess = ({
 						purpose === 'form',
 					' group flex h-12 w-12 items-center justify-center rounded-full border border-green hover:bg-green hover:fill-white lg:h-[72px] lg:w-[72px]':
 						purpose === 'slider',
-					'bg-white20 backdrop-blur-70 flex h-[88px] w-[88px] items-center justify-center rounded-full hover:bg-black lg:h-36 lg:w-36':
+					'flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white20 backdrop-blur-70 hover:bg-black lg:h-36 lg:w-36':
 						purpose === 'video',
 				},
 			)}
