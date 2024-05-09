@@ -1,29 +1,29 @@
-.advantage-icon1::before, 
-.advantage-icon2::before, 
-.advantage-icon3::before, 
-.advantage-icon4::before {
+.plant::before, 
+.bag::before, 
+.watering_can::before, 
+.truck::before {
     content: '';
 	height: 82px;
 	display: inline-block;
 	background-size: cover;
 }
 
-.advantage-icon1::before {
+.plant::before {
 	width: 64px;
 	background-image: url(../../../../public/icons/plant.svg);
 }
 
-.advantage-icon2::before {
+.bag::before {
 	width: 67px;
 	background-image: url(../../../../public/icons/bag.svg);
 }
 
-.advantage-icon3::before {
+.watering_can::before {
 	width: 88px;
 	background-image: url(../../../../public/icons/watering-can.svg);
 }
 
-.advantage-icon4::before {
+.truck::before {
 	width: 128px;
 	background-image: url(../../../../public/icons/truck.svg);
 }

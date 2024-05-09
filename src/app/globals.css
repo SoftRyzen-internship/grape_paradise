@@ -23,3 +23,5 @@
 		@apply transition-all duration-300 ease-in-out;
 	}
 }
+
+/* @import url('../components/common/AdvantagesCard/AdvantagesCard.module.css'); */
