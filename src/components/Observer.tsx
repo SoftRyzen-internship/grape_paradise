@@ -1,4 +1,4 @@
-import { NavMenu } from "./common/Header/NavMenu";
+import { NavMenu } from "./ui/NavMenu";
 
 export const Observer = () => {
 	return (
