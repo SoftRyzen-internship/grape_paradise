@@ -1,22 +1,22 @@
 [
   { 
     "id": "01",
-    "to": "about", 
+    "section": "about", 
     "children": "Про нас" 
   },
   { 
     "id": "02",
-    "to": "services", 
+    "section": "services", 
     "children": "Послуги" 
   },
   { 
     "id": "03",
-    "to": "goods", 
+    "section": "goods", 
     "children": "Товари" 
   },
   { 
     "id": "04",
-    "to": "contacts", 
+    "section": "contacts", 
     "children": "Контакти" 
   }
 ]

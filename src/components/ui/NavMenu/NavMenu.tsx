@@ -1,30 +1,31 @@
 'use client';
 
+import { FC } from 'react';
 import { Link } from 'react-scroll';
 
-import { headerData } from '@/data';
+import { navMenuData } from '@/data';
 
 import { INavMenuProps } from './INavMenuProps.types';
 
-import s from './NavMenu.module.css';
+import styles from './NavMenu.module.css';
 
-export const NavMenu = ({ onClick }: INavMenuProps) => {
+export const NavMenu: FC<INavMenuProps> = ({ onClick }) => {
 	return (
 		<nav>
 			<ul className='flex flex-col items-center gap-6 lg:flex-row'>
-				{headerData.map(({ id, to, children }) => (
+				{navMenuData.map(({ id, section, children }) => (
 					<li
 						key={id}
-						className='lg:font-semilight font-tenor text-h3 text-green lg:font-geologica lg:text-normal lg:text-white'
+						className='font-tenor text-h3 text-green lg:font-geologica lg:text-normal lg:font-semilight lg:text-white'
 					>
 						<Link
-							to={to}
+							to={section}
 							smooth={true}
 							duration={500}
 							onClick={onClick}
 							href='#'
 							ignoreCancelEvents={true}
-							className={`relative px-0.5 pb-0.5 transition focus:outline-1 focus:outline-current ${s.active}`}
+							className={`relative px-0.5 pb-0.5 transition focus:outline-1 focus:outline-current ${styles.active}`}
 						>
 							{children}
 						</Link>
@@ -34,4 +35,3 @@ export const NavMenu = ({ onClick }: INavMenuProps) => {
 		</nav>
 	);
 };
-
