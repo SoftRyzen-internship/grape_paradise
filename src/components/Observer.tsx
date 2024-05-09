@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Logo } from '@/components/ui/Logo';
 import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
@@ -11,8 +13,10 @@ import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 
 import Arrow from '../../public/icons/arrow.svg'; //не задаються розміри іконки
 import Play from '../../public/icons/play.svg'; //не задаються розміри іконки
+import { CustomCheckbox } from './common/Form/CustomCheckbox';
 
 export const Observer: React.FC = () => {
+	const [checkbox, setCheckbox] = useState(false);
 	return (
 		<div className='container py-5'>
 			<Logo />
@@ -52,7 +56,16 @@ export const Observer: React.FC = () => {
 
 			<CustomInput label='Ваше ім’я' placeholder='Тетяна' />
 			<CustomInput label='Ваш Номер телефону' placeholder='+3800967777323' />
-			<CustomTextarea label='Ваш Коментар' placeholder='Напишіть щось' />
+			<CustomTextarea
+				label='Ваш Коментар'
+				placeholder='Напишіть щось'
+				className='h-36'
+			/>
+			<CustomCheckbox
+				checked={checkbox}
+				handleChange={setCheckbox}
+				definition='Даю згоду на обробку персональних даних'
+			/>
 		</div>
 	);
 };
