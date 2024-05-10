@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 import { IButtonLessProps } from './ButtonLess.types';
 
-export const ButtonLess: React.FC<IButtonLessProps> = ({
+export const ButtonLess: FC<IButtonLessProps> = ({
 	type,
 	purpose,
 	disabled,
