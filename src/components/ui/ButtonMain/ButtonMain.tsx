@@ -7,7 +7,11 @@ import { Link } from 'react-scroll';
 
 import { IButtonMainProps } from './ButtonMain.types';
 
-export const ButtonMain = ({ to, chapter, children }: IButtonMainProps) => {
+export const ButtonMain: React.FC<IButtonMainProps> = ({
+	to,
+	chapter,
+	children,
+}) => {
 	return (
 		<Link
 			to={to}

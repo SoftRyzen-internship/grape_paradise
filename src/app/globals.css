@@ -7,12 +7,12 @@
 		@apply bg-bg1 font-geologica text-normal text-bodyDark lg:text-normal_desk font-extralight;
 	}
 
-	.section {
-		@apply mx-auto bg-cover bg-center bg-no-repeat py-[30px] md:py-[40px] lg:py-[80px];
+	.main-title {
+		@apply w-full font-tenor text-h1 font-normal uppercase text-white md:w-[388px] md:text-h1_tab lg:w-[614px] lg:text-h1_desk;
 	}
 
 	.title {
-		@apply font-tenor text-h2 md:text-h2_tab lg:text-h2_desk uppercase;
+		@apply font-tenor text-h2 uppercase text-green md:text-h2_tab lg:text-h2_desk;
 	}
 
 	.subtitle {
@@ -23,5 +23,3 @@
 		@apply transition-all duration-300 ease-in-out;
 	}
 }
-
-/* @import url('../components/common/AdvantagesCard/AdvantagesCard.module.css'); */
