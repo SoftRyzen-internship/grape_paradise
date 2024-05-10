@@ -1,5 +1,5 @@
 export interface ITitleProps {
-	chapter?: 'hero' | 'contacts';
+	chapter?: 'hero' | 'chapter';
 	styles?: string;
 	children: React.ReactNode;
 }
