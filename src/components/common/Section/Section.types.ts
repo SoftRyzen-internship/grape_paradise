@@ -1,5 +1,6 @@
 export interface ISectionProps {
 	id?: string;
-	styles?: string;
+	sectionStyles?: string;
+	containerStyles?: string;
 	children: React.ReactNode;
 }

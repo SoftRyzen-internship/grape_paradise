@@ -1,4 +1,7 @@
 .advantages_bg {
+	background-size: contain;
+	background-position: center;
+	background-repeat: repeat-x;
 	background-image: image-set(
 		url(/images/advantages/advantages_bg_mob.png) 1x,
 		url(/images/advantages/advantages_bg_mob@2x.png) 2x
@@ -16,6 +19,7 @@
 
 @media screen and (min-width: 1280px) {
 	.advantages_bg {
+		background-size: cover;
 		background-image: image-set(
 			url(/images/advantages/advantages_bg_desk.png) 1x,
 			url(/images/advantages/advantages_bg_desk@2x.png) 2x
@@ -23,12 +27,18 @@
 	}
 }
 
+@media screen and (min-width: 1440px) {
+	.advantages_bg {
+		background-size: contain;
+	}
+}
+
 @media screen and (min-width: 1280px) {
 	.leaf::before {
 		content: '';
 		position: absolute;
-		top: -43px;
-		right: 392px;
+		top: -226px;
+		right: 314px;
 		width: 258px;
 		height: 220px;
 		display: inline-block;
@@ -39,8 +49,8 @@
 	.leaf::after {
 		content: '';
 		position: absolute;
-		top: 67px;
-		right: 168px;
+		top: -116px;
+		right: 90px;
 		width: 147px;
 		height: 128px;
 		display: inline-block;
@@ -51,8 +61,8 @@
 	.bottle::after {
 		content: '';
 		position: absolute;
-		bottom: -120px;
-		right: 425px;
+		bottom: -303px;
+		right: 313px;
 		width: 387px;
 		height: 275px;
 		display: inline-block;

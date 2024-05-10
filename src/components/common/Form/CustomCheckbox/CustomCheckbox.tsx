@@ -1,7 +1,9 @@
 import { ChangeEvent } from 'react';
-import clsx from 'clsx';
-import CheckIcon from '../../../../../public/icons/check.svg';
+import { clsx } from 'clsx';
+
 import { ICustomCheckboxProps } from './CustomCheckbox.types';
+
+import CheckIcon from '../../../../../public/icons/check.svg';
 
 export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 	checked,

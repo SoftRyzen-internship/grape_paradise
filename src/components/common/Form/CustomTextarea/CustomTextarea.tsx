@@ -1,5 +1,6 @@
 import { forwardRef, useId } from 'react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
+
 import { ICustomTextareaProps } from './CustomTextarea.types';
 
 export const CustomTextarea = forwardRef<

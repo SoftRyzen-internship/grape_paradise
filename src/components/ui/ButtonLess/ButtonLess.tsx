@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import { clsx } from 'clsx';
 
 import { IButtonLessProps } from './ButtonLess.types';
