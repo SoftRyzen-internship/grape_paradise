@@ -5,8 +5,8 @@ import { buttonsData, titleData } from '@/data';
 import { Section } from '@/components/common/Section/Section';
 import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
-import { ButtonMain } from './ui/ButtonMain/ButtonMain';
-import { ButtonLess } from './ui/ButtonLess/ButtonLess';
+import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
+import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/ui/SlideCardGeneration';
 import { FormBlock } from '@/components/common/Form/FormBlock';
 
