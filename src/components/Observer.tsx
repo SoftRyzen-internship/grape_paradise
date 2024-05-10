@@ -10,9 +10,12 @@ import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
 import { Logo } from '@/components/ui/Logo';
+
 import { NavMenu } from '@/components/ui/NavMenu';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+import { BurgerMenu } from '@/components/ui/BurgerMenu';
+
 
 import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
@@ -85,6 +88,7 @@ export const Observer: FC = () => {
 				/>
 			</div>
 			<Advantages />
+			<BurgerMenu />
 		</>
 	);
 };
