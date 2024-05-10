@@ -15,6 +15,8 @@ import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 import { ProdudtCard } from '@/components/ui/ProductCard.tsx/ProdactCard';
 import { ServicesCard } from '@/components/ui/ServicesCard/ServicesCard';
+import { BurgerMenu } from '@/components/ui/BurgerMenu';
+
 
 import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
@@ -90,6 +92,7 @@ export const Observer: FC = () => {
 			    <ProdudtCard index={0} />
 			</div>
 			<Advantages />
+			<BurgerMenu />
 		</>
 	);
 };
