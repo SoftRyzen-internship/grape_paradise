@@ -76,7 +76,7 @@ const config: Config = {
 				large_desk: ['26px', '1.3'],
 			},
 			fontWeight: {
-				semilight: '250',
+				// semilight: '250',
 			},
 			backdropBlur: {
 				'12.5': '12.5px',
