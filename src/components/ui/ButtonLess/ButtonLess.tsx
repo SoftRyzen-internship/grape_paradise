@@ -6,12 +6,12 @@ import clsx from 'clsx';
 
 import { IButtonLessProps } from './ButtonLess.types';
 
-export const ButtonLess = ({
+export const ButtonLess: React.FC<IButtonLessProps> = ({
 	type,
 	purpose,
 	disabled,
 	children,
-}: IButtonLessProps) => {
+}) => {
 	return (
 		<button
 			type={type}

@@ -21,7 +21,7 @@ export const Observer: React.FC = () => {
 	const [checkbox, setCheckbox] = useState(false);
 	return (
 		<div>
-			<Section styles='outline outline-red pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
+			<Section styles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
 				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>
 					{titleData.advantages}
