@@ -7,7 +7,6 @@ export interface ILogoProps {
 };
 
 export interface ILogoComponentProps {
-    isActive: boolean;
     theme?: Theme;
     size?: Size;
   };

@@ -6,20 +6,26 @@ import { ILogoComponentProps } from './Logo.types';
 export const LogoSvg: FC<ILogoComponentProps> = ({
 	theme = 'white',
 	size = 'small',
-	isActive,
 }) => {
+
 	const fill = clsx({
-		white: theme === 'white' && !isActive,
-		'rgba(242, 232, 222, 1)': theme === 'white' && isActive,
-		'rgba(103, 95, 40, 1)': theme !== 'white' && !isActive,
-		'rgba(77, 72, 67, 1)': theme !== 'white' && isActive,
+		'fill-white': theme === 'white',
+		'fill-logo60': theme !== 'white',
+	});
+
+	const hoverFocusFill = clsx({
+		'hover:fill-bg1': theme === 'white',
+		'hover:fill-bodyDark': theme !== 'white',
 	});
 
 	const textColor = clsx({
-		'text-white': theme === 'white' && !isActive,
-		'text-bg1': theme === 'white' && isActive,
-		'text-logo60': theme !== 'white' && !isActive,
-		'text-bodyDark': theme !== 'white' && isActive,
+		'text-white': theme === 'white',
+		'text-logo60': theme !== 'white',
+	});
+
+	const hoverFocusTextColor = clsx({
+		'hover:text-bg1': theme === 'white',
+		'hover:text-bodyDark': theme !== 'white',
 	});
 
 	const sizeFull = clsx({
@@ -37,7 +43,7 @@ export const LogoSvg: FC<ILogoComponentProps> = ({
 	return (
 		<>
 			<svg
-				className={`transition ${textColor}  ${sizeFull}`}
+				className={`transition ${textColor} ${fill} ${sizeFull} ${hoverFocusFill} ${hoverFocusTextColor}`}
 				viewBox='0 0 190 48'
 				fill={fill}
 				xmlns='http://www.w3.org/2000/svg'
