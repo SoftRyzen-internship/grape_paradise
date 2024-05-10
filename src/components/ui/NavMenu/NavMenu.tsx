@@ -25,7 +25,7 @@ export const NavMenu: FC<INavMenuProps> = ({ onClick }) => {
 							onClick={onClick}
 							href='#'
 							ignoreCancelEvents={true}
-							className={`relative px-0.5 pb-0.5 transition focus:outline-1 focus:outline-current ${styles.active}`}
+							className={`relative px-0.5 pb-0.5 focus:outline-1 focus:outline-current ${styles.active}`}
 						>
 							{children}
 						</Link>
