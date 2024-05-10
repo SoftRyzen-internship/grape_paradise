@@ -5,10 +5,8 @@ import { buttonsData, titleData } from '@/data';
 import { Section } from '@/components/common/Section/Section';
 import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
-import { NavMenu } from '@/components/ui/NavMenu';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
-import { BurgerMenu } from '@/components/ui/BurgerMenu';
 import { FormBlock } from '@/components/common/Form/FormBlock';
 
 import Arrow from '@/../public/icons/arrow.svg';
@@ -38,7 +36,6 @@ export const Observer: FC = () => {
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
 				<Logo theme='green' size='big' />
-				<NavMenu />
 
 				<ButtonMain chapter='header' to='контакти'>
 					{buttonsData.callButton}
@@ -66,7 +63,7 @@ export const Observer: FC = () => {
 
 				<FormBlock />
 			</div>
-			<BurgerMenu />
+
 		</>
 	);
 };

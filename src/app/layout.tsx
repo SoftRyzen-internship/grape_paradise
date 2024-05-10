@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { Tenor_Sans, Geologica } from 'next/font/google';
 
 import { metaData } from '@/data';
+import { Header } from '@/sections/Header';
 
 export const metadata: Metadata = {
 	title: metaData.title,
@@ -13,16 +14,17 @@ export const metadata: Metadata = {
 };
 
 const tenor = Tenor_Sans({
-	subsets: ['latin'],
+	subsets: ['cyrillic', 'latin'],
 	display: 'swap',
 	variable: '--font-tenor',
 	weight: '400',
 });
 
 const geologica = Geologica({
-	subsets: ['latin'],
+	subsets: ['cyrillic', 'latin'],
 	display: 'swap',
 	variable: '--font-geologica',
+	weight: ['200', '400'],
 });
 
 export default function RootLayout({
@@ -32,7 +34,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='uk' className={`${tenor.variable} ${geologica.variable}`}>
-			<body>{children}</body>
+			<body>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }
