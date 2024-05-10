@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 10; 
     top: 0; 
-    left: 0; 
+    left: -5px;  
   }
 
   @media (min-width: 768px) {
@@ -19,11 +19,19 @@
     position: absolute; 
     z-index: 10; 
     top: 0; 
-    right: 0; 
+    right: -5px; 
   }
   
   @media (min-width: 768px) {
     .containerImg::after {
         content: url('/icons/card-services-frame-right-md.svg'); 
     }
+  }
+
+  .containerImg img {
+    transition: transform 0.3s ease;
+  }
+  
+  .containerImg:hover img {
+    transform: scale(1.1); 
   }

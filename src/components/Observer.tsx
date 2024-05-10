@@ -12,8 +12,8 @@ import { buttonsData } from '@/data';
 import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
-import { ProdudtCard } from './ui/ProductCard.tsx/ProdactCard';
-import { ServicesCard } from './ui/ServicesCard/ServicesCard';
+import { ProdudtCard } from '@/components/ui/ProductCard.tsx/ProdactCard';
+import { ServicesCard } from '@/components/ui/ServicesCard/ServicesCard';
 
 import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
