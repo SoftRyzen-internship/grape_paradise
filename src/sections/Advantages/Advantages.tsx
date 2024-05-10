@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { Section } from '@/components/common/Section/Section';
+import { Title } from '@/components/common/Title/Title';
 import { AdvantagesCard } from '@/components/common/AdvantagesCard';
 
 import { advantagesData } from '@/data';
@@ -7,15 +9,16 @@ import { advantagesData } from '@/data';
 import s from './Advantages.module.css';
 
 export const Advantages: FC = () => (
-	<section
-		className={`relative bg-contain bg-center bg-repeat-x py-[60px] md:py-20 lg:bg-cover lg:py-[183px] xl:bg-contain ${s.advantages_bg} ${s.leaf}`}
+	<Section
+		sectionStyles={`relative py-[60px] md:py-20 lg:py-[183px] ${s.advantages_bg}`}
+		containerStyles={`relative ${s.leaf}`}
 	>
-		<div className={`container ${s.bottle}`}>
-			<h2 className='title mb-6 text-green md:mb-10 lg:mb-16'>
-				{advantagesData.title.first}
-				<span className='block'>{advantagesData.title.second}</span>
-			</h2>
+		<div className={`relative ${s.bottle}`}>
+			<Title styles='mb-6 w-[255px] md:w-[350px] md:mb-10 lg:w-[590px] lg:mb-16'>
+				{advantagesData.title}
+			</Title>
+
 			<AdvantagesCard />
 		</div>
-	</section>
+	</Section>
 );

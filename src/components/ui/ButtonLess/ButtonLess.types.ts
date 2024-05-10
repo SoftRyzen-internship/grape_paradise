@@ -3,4 +3,5 @@ export interface IButtonLessProps {
 	purpose: 'form' | 'slider' | 'video';
 	disabled?: boolean;
 	children?: React.ReactNode;
+	styles?: string;
 }

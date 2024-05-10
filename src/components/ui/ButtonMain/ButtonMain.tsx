@@ -1,7 +1,6 @@
 'use client';
 
 import { FC } from 'react';
-
 import { clsx } from 'clsx';
 import { Button } from 'react-scroll';
 
