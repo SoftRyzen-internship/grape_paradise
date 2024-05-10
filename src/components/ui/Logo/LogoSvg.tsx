@@ -1,46 +1,54 @@
+import { FC } from 'react';
 import { clsx } from 'clsx';
 
 import { ILogoComponentProps } from './Logo.types';
 
-export const LogoSvg: React.FC<ILogoComponentProps> = ({
-	theme = 'white',
-	size = 'small',
-	isActive,
+export const LogoSvg: FC<ILogoComponentProps> = ({
+    theme = 'white',
+    size = 'small',
 }) => {
-	const fill = clsx({
-		white: theme === 'white' && !isActive,
-		'rgba(242, 232, 222, 1)': theme === 'white' && isActive,
-		'rgba(103, 95, 40, 1)': theme !== 'white' && !isActive,
-		'rgba(77, 72, 67, 1)': theme !== 'white' && isActive,
-	});
 
-	const textColor = clsx({
-		'text-white': theme === 'white' && !isActive,
-		'text-bg1': theme === 'white' && isActive,
-		'text-logo60': theme !== 'white' && !isActive,
-		'text-bodyDark': theme !== 'white' && isActive,
-	});
+    const fill = clsx({
+        'fill-white': theme === 'white',
+        'fill-logo60': theme !== 'white',
+    });
 
-	const sizeFull = clsx({
-		'h-[48px] w-[190px]': true,
-		'lg:h-[56px] lg:w-[222px]': size === 'small',
-		'lg:h-[70px] lg:w-[277px]': size === 'big',
-	});
+    const hoverFocusFill = clsx({
+        'hover:fill-bg1': theme === 'white',
+        'hover:fill-bodyDark': theme !== 'white',
+    });
 
-	const sizeUpperPart = clsx({
-		'h-[27px] w-[184px]': true,
-		'lg:h-[32px] lg:w-[213px]': size === 'small',
-		'lg:h-[39px] lg:w-[267px]': size === 'big',
-	});
+    const textColor = clsx({
+        'text-white': theme === 'white',
+        'text-logo60': theme !== 'white',
+    });
 
-	return (
-		<>
-			<svg
-				className={`transition ${textColor}  ${sizeFull}`}
-				viewBox='0 0 190 48'
-				fill={fill}
-				xmlns='http://www.w3.org/2000/svg'
-			>
+    const hoverFocusTextColor = clsx({
+        'hover:text-bg1': theme === 'white',
+        'hover:text-bodyDark': theme !== 'white',
+    });
+
+    const sizeFull = clsx({
+        'h-[48px] w-[190px]': true,
+        'lg:h-[56px] lg:w-[222px]': size === 'small',
+        'lg:h-[70px] lg:w-[277px]': size === 'big',
+    });
+
+    const sizeUpperPart = clsx({
+        'h-[27px] w-[184px]': true,
+        'lg:h-[32px] lg:w-[213px]': size === 'small',
+        'lg:h-[39px] lg:w-[267px]': size === 'big',
+    });
+
+    return (
+        <>
+            <svg
+                className={`transition ${textColor} ${fill} ${sizeFull} ${hoverFocusFill} ${hoverFocusTextColor}`}
+                viewBox='0 0 190 48'
+                fill={fill}
+                xmlns='http://www.w3.org/2000/svg'
+            >
+
 				<mask
 					id='path-1-outside-1_163_50459'
 					maskUnits='userSpaceOnUse'
