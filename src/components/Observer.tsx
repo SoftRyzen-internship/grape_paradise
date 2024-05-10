@@ -21,18 +21,9 @@ export const Observer: FC = () => {
 				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>
 					{titleData.advantages}
 				</Title>
-				<Title chapter='contacts' styles='text-green'>
+				<Title chapter='chapter' styles='text-green'>
 					{titleData.contacts}
 				</Title>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
-					reprehenderit praesentium dicta vero nostrum magni exercitationem
-					molestiae doloribus assumenda molestias libero reiciendis a, aliquam
-					nisi. Doloribus nesciunt quasi blanditiis. Aspernatur. Lorem ipsum
-					dolor sit amet consectetur adipisicing elit. Eius ipsum fugit fugiat
-					voluptatum iusto delectus in eos inventore quis, labore quam, dolores
-					dolorem porro veritatis maiores deserunt repellendus possimus eaque?
-				</p>
 			</Section>
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
