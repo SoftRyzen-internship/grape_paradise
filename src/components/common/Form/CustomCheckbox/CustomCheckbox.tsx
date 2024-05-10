@@ -3,23 +3,26 @@ import { clsx } from 'clsx';
 
 import { ICustomCheckboxProps } from './CustomCheckbox.types';
 
-import CheckIcon from '../../../../../public/icons/check.svg';
+import CheckIcon from '@/../public/icons/check.svg';
 
 export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 	checked,
 	handleChange,
 	errorMessage,
 	definition,
+	className,
 	...rest
 }) => {
-	const onBooleanChange = (e: ChangeEvent<HTMLInputElement>) => {
+	const onBooleanChange = (e: ChangeEvent<HTMLInputElement>) =>
 		handleChange(e.target.checked);
-	};
 
 	return (
 		<label
 			htmlFor='checkbox'
-			className='inline-flex cursor-pointer items-center gap-3'
+			className={clsx(
+				'inline-flex cursor-pointer items-center gap-3',
+				className,
+			)}
 		>
 			<input
 				{...rest}
@@ -37,7 +40,7 @@ export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 			>
 				<CheckIcon className='transition' />
 			</div>
-			<span className='text-xs/normal font-semilight text-black80 md:text-small lg:text-normal'>
+			<span className='text-xs/normal font-extralight text-black80 md:text-small lg:text-normal'>
 				{definition}
 			</span>
 		</label>

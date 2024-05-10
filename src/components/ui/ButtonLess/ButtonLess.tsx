@@ -8,6 +8,7 @@ export const ButtonLess: FC<IButtonLessProps> = ({
 	purpose,
 	disabled,
 	children,
+	styles,
 }) => {
 	return (
 		<button
@@ -23,6 +24,7 @@ export const ButtonLess: FC<IButtonLessProps> = ({
 					'flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white20 backdrop-blur-70 hover:bg-white40 focus:bg-white40 lg:h-36 lg:w-36':
 						purpose === 'video',
 				},
+				styles,
 			)}
 		>
 			{children}
