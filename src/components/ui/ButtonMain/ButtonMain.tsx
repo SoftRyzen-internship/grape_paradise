@@ -1,19 +1,14 @@
 'use client';
 
-import React from 'react';
-
-import clsx from 'clsx';
-import { Link } from 'react-scroll';
+import { FC } from 'react';
+import { clsx } from 'clsx';
+import { Button } from 'react-scroll';
 
 import { IButtonMainProps } from './ButtonMain.types';
 
-export const ButtonMain: React.FC<IButtonMainProps> = ({
-	to,
-	chapter,
-	children,
-}) => {
+export const ButtonMain: FC<IButtonMainProps> = ({ to, chapter, children }) => {
 	return (
-		<Link
+		<Button
 			to={to}
 			spy={true}
 			smooth={true}
@@ -36,6 +31,6 @@ export const ButtonMain: React.FC<IButtonMainProps> = ({
 			)}
 		>
 			{children}
-		</Link>
+		</Button>
 	);
 };

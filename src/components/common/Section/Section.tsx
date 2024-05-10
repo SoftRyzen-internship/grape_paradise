@@ -1,13 +1,18 @@
-import React from 'react';
+import { FC } from 'react';
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 import { ISectionProps } from './Section.types';
 
-export const Section: React.FC<ISectionProps> = ({ id, styles, children }) => {
+export const Section: FC<ISectionProps> = ({
+	id,
+	sectionStyles,
+	containerStyles,
+	children,
+}) => {
 	return (
-		<section id={id} className={clsx('w-full', styles)}>
-			<div className='container'>{children}</div>
+		<section id={id} className={clsx('w-full', sectionStyles)}>
+			<div className={clsx('container', containerStyles)}>{children}</div>
 		</section>
 	);
 };

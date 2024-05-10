@@ -1,7 +1,9 @@
 import { forwardRef, useId } from 'react';
 import { clsx } from 'clsx';
-import ErrorIcon from '@/../public/icons/error.svg';
+
 import { ICustomInputProps } from './CustomInput.types';
+
+import ErrorIcon from '@/../public/icons/error.svg';
 
 export const CustomInput = forwardRef<HTMLInputElement, ICustomInputProps>(
 	({ label, errorMessage, className, ...rest }, ref) => {

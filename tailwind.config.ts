@@ -34,7 +34,6 @@ const config: Config = {
 			sm: '480px',
 			md: '768px',
 			lg: '1280px',
-			xl: '1440px',
 		},
 		maxWidth: {
 			mob: '480px',
@@ -78,10 +77,11 @@ const config: Config = {
 				large_desk: ['26px', '1.3'],
 			},
 			fontWeight: {
-				semilight: '250',
+				// semilight: '250',
 			},
 			backdropBlur: {
-				'25': '12.5px',
+				'12.5': '12.5px',
+				'25': '25px',
 				'70': '70px',
 			},
 			borderRadius: {

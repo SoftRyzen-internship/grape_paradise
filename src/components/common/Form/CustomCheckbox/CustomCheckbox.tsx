@@ -1,9 +1,11 @@
-import { ChangeEvent, FC } from 'react';
+import { ChangeEvent } from 'react';
 import { clsx } from 'clsx';
-import CheckIcon from '@/../public/icons/check.svg';
+
 import { ICustomCheckboxProps } from './CustomCheckbox.types';
 
-export const CustomCheckbox: FC<ICustomCheckboxProps> = ({
+import CheckIcon from '@/../public/icons/check.svg';
+
+export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 	checked,
 	handleChange,
 	errorMessage,

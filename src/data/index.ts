@@ -6,3 +6,5 @@ export { default as buttonsData } from './buttonsData.json';
 export { default as advantagesData } from './advantagesData.json';
 
 export { default as titleData } from './titleData.json';
+
+export { default as burgerMenuData } from './burgerMenuData.json';

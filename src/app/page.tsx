@@ -1,3 +1,4 @@
+import { Advantages } from '@/sections/Advantages';
 import { Observer } from '@/components/Observer';
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
 		<>
 			{/* <Header/> */}
 			<main>
+				<Advantages />
 				<Observer />
 			</main>
 			{/* <Footer/> */}
