@@ -7,12 +7,12 @@
 		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;
 	}
 
-	.section {
-		@apply mx-auto bg-cover bg-center bg-no-repeat py-[30px] md:py-[40px] lg:py-[80px];
+	.main-title {
+		@apply w-full font-tenor text-h1 font-normal uppercase text-white md:w-[388px] md:text-h1_tab lg:w-[614px] lg:text-h1_desk;
 	}
 
 	.title {
-		@apply font-tenor text-h2 uppercase md:text-h2_tab lg:text-h2_desk;
+		@apply font-tenor text-h2 uppercase text-green md:text-h2_tab lg:text-h2_desk;
 	}
 
 	.subtitle {
