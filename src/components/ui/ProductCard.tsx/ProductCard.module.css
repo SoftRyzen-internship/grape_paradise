@@ -1,0 +1,29 @@
+.containerImg::before {   
+    content: url('/icons/card-services-frame-left-sm.svg'); 
+    display: block; 
+    position: absolute;
+    z-index: 10; 
+    top: 0; 
+    left: 0; 
+  }
+
+  @media (min-width: 768px) {
+    .containerImg::before {
+        content: url('/icons/card-services-frame-left-md.svg'); 
+    }
+  }
+
+  .containerImg::after {   
+    content: url('/icons/card-services-frame-right-sm.svg'); 
+    display: block; 
+    position: absolute; 
+    z-index: 10; 
+    top: 0; 
+    right: 0; 
+  }
+  
+  @media (min-width: 768px) {
+    .containerImg::after {
+        content: url('/icons/card-services-frame-right-md.svg'); 
+    }
+  }

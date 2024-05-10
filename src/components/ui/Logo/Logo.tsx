@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import Link from 'next/link';
 
 import { ILogoProps } from './Logo.types';
 import { LogoSvg } from './LogoSvg';
 
-export const Logo: React.FC<ILogoProps> = ({
+export const Logo: FC<ILogoProps> = ({
 	theme = 'white',
 	size = 'small',
 }) => {
