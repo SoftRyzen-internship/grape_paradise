@@ -8,6 +8,7 @@ export const CustomCheckbox: FC<ICustomCheckboxProps> = ({
 	handleChange,
 	errorMessage,
 	definition,
+	className,
 	...rest
 }) => {
 	const onBooleanChange = (e: ChangeEvent<HTMLInputElement>) =>
@@ -16,7 +17,10 @@ export const CustomCheckbox: FC<ICustomCheckboxProps> = ({
 	return (
 		<label
 			htmlFor='checkbox'
-			className='inline-flex cursor-pointer items-center gap-3'
+			className={clsx(
+				'inline-flex cursor-pointer items-center gap-3',
+				className,
+			)}
 		>
 			<input
 				{...rest}

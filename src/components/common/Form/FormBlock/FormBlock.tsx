@@ -27,7 +27,10 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className={clsx('', className)}>
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className={clsx('outline outline-red', className)}
+		>
 			<CustomInput
 				label='Ваше ім’я'
 				placeholder='Тетяна'
@@ -40,12 +43,14 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 				placeholder='+380967777323'
 				{...register('phone')}
 				errorMessage={errors.phone?.message}
+				className='mt-11 lg:mt-[60px]'
 			/>
 
 			<CustomTextarea
 				label='Ваш Коментар'
 				placeholder='Напишіть щось'
 				{...register('message')}
+				className='mt-11 h-[149px] lg:mt-[60px]'
 			/>
 
 			<Controller
@@ -57,11 +62,12 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 						handleChange={field.onChange}
 						errorMessage={errors.approval?.message}
 						definition='Даю згоду на обробку персональних даних'
+						className='mt-[52px] lg:mt-[60px]'
 					/>
 				)}
 			/>
 
-			<ButtonLess type='submit' purpose='form'>
+			<ButtonLess type='submit' purpose='form' styles='mt-8 lg:mt-10'>
 				Надіслати заявку
 			</ButtonLess>
 		</form>
