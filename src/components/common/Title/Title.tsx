@@ -1,10 +1,10 @@
-import React from 'react';
+import { FC } from 'react';
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 import { ITitleProps } from './Title.types';
 
-export const Title: React.FC<ITitleProps> = ({ chapter, styles, children }) => {
+export const Title: FC<ITitleProps> = ({ chapter, styles, children }) => {
 	return (
 		<>
 			{chapter === 'hero' ? (
