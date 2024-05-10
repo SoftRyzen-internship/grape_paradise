@@ -1,11 +1,16 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 import { buttonsData, titleData } from '@/data';
 
-import { Logo } from './ui/Logo';
-import { NavMenu } from './ui/NavMenu';
 import { Section } from './common/Section/Section';
 import { Title } from './common/Title/Title';
+import { CustomInput } from '@/components/common/Form/CustomInput';
+import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
+import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
+import { Logo } from '@/components/ui/Logo';
+import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 
@@ -13,6 +18,7 @@ import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
 
 export const Observer: React.FC = () => {
+	const [checkbox, setCheckbox] = useState(false);
 	return (
 		<div>
 			<Section styles='outline outline-red pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
@@ -36,7 +42,6 @@ export const Observer: React.FC = () => {
 
 			<Logo />
 			<Logo theme='green' size='big' />
-
 			<NavMenu />
 
 			<ButtonMain chapter='header' to='контакти'>
@@ -66,6 +71,19 @@ export const Observer: React.FC = () => {
 			<ButtonLess type='button' purpose='video'>
 				{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 			</ButtonLess>
+
+			<CustomInput label='Ваше ім’я' placeholder='Тетяна' />
+			<CustomInput label='Ваш Номер телефону' placeholder='+3800967777323' />
+			<CustomTextarea
+				label='Ваш Коментар'
+				placeholder='Напишіть щось'
+				className='h-36'
+			/>
+			<CustomCheckbox
+				checked={checkbox}
+				handleChange={setCheckbox}
+				definition='Даю згоду на обробку персональних даних'
+			/>
 		</div>
 	);
 };
