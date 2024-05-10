@@ -1,29 +1,30 @@
 'use client';
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
-import { buttonsData, titleData } from '@/data';
+// import { buttonsData, titleData } from '@/data';
 
-import { Section } from './common/Section/Section';
-import { Title } from './common/Title/Title';
-import { CustomInput } from '@/components/common/Form/CustomInput';
-import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
-import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
-import { Logo } from '@/components/ui/Logo';
-import { NavMenu } from './ui/NavMenu';
-import { ButtonMain } from './ui/ButtonMain/ButtonMain';
-import { ButtonLess } from './ui/ButtonLess/ButtonLess';
+// import { Section } from './common/Section/Section';
+// import { Title } from './common/Title/Title';
+// import { CustomInput } from '@/components/common/Form/CustomInput';
+// import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
+// import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
+// import { Logo } from '@/components/ui/Logo';
+// import { NavMenu } from './ui/NavMenu';
+// import { ButtonMain } from './ui/ButtonMain/ButtonMain';
+// import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 
-import Arrow from '../../public/icons/arrow.svg';
-import Play from '../../public/icons/play.svg';
+// import Arrow from '../../public/icons/arrow.svg';
+// import Play from '../../public/icons/play.svg';
 
-import { Advantages } from '@/sections/Advantages';
+// import { Advantages } from '@/sections/Advantages';
+import { Header } from '../sections/Header';
 
 export const Observer: React.FC = () => {
-	const [checkbox, setCheckbox] = useState(false);
+	// const [checkbox, setCheckbox] = useState(false);
 	return (
 		<>
-			<Section styles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
+			{/* <Section styles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
 				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>
 					{titleData.advantages}
@@ -87,7 +88,8 @@ export const Observer: React.FC = () => {
 					definition='Даю згоду на обробку персональних даних'
 				/>
 			</div>
-			<Advantages />
+			<Advantages /> */}
+			<Header />
 		</>
 	);
 };

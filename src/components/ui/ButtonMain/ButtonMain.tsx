@@ -11,6 +11,7 @@ export const ButtonMain: React.FC<IButtonMainProps> = ({
 	to,
 	chapter,
 	children,
+	className,
 }) => {
 	return (
 		<Link
@@ -33,6 +34,7 @@ export const ButtonMain: React.FC<IButtonMainProps> = ({
 					'h-[59px] bg-white md:w-[157px] md:border md:border-green50 lg:h-[63px] lg:w-[182px] lg:text-btn_desk':
 						chapter === 'card',
 				},
+				className,
 			)}
 		>
 			{children}

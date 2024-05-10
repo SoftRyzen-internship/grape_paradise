@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer base {
 	body {
-		@apply bg-bg1 font-geologica text-normal text-bodyDark lg:text-normal_desk font-extralight;
+		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;
 	}
+}
 
+@layer utilities {
 	.main-title {
 		@apply w-full font-tenor text-h1 font-normal uppercase text-white md:w-[388px] md:text-h1_tab lg:w-[614px] lg:text-h1_desk;
 	}

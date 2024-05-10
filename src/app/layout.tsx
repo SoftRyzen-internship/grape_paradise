@@ -13,16 +13,17 @@ export const metadata: Metadata = {
 };
 
 const tenor = Tenor_Sans({
-	subsets: ['latin'],
+	subsets: ['cyrillic', 'latin'],
 	display: 'swap',
 	variable: '--font-tenor',
 	weight: '400',
 });
 
 const geologica = Geologica({
-	subsets: ['latin'],
+	subsets: ['cyrillic', 'latin'],
 	display: 'swap',
 	variable: '--font-geologica',
+	weight: ['200', '400'],
 });
 
 export default function RootLayout({
