@@ -1,12 +1,13 @@
 'use client';
 
 
-import React, { useState } from 'react';
+
+import { FC, useState } from 'react';
 
 import { buttonsData, titleData } from '@/data';
 
-import { Section } from './common/Section/Section';
-import { Title } from './common/Title/Title';
+import { Section } from '@/components/common/Section/Section';
+import { Title } from '@/components/common/Title/Title';
 import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
@@ -16,14 +17,17 @@ import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 import { ProdudtCard } from '@/components/ui/ProductCard.tsx/ProdactCard';
 import { ServicesCard } from '@/components/ui/ServicesCard/ServicesCard';
+import { BurgerMenu } from '@/components/ui/BurgerMenu';
+
 
 import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
 
 import { Advantages } from '@/sections/Advantages';
 
-export const Observer: React.FC = () => {
+export const Observer: FC = () => {
 	const [checkbox, setCheckbox] = useState(false);
+
 	return (
 		<>
 			<Section styles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
@@ -64,14 +68,10 @@ export const Observer: React.FC = () => {
 				</ButtonLess>
 				<div className='flex gap-2'>
 					<ButtonLess type='button' purpose='slider' disabled={true}>
-						{
-							<Arrow className='h-6 w-6 rotate-180 fill-green stroke-green group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white group-disabled:fill-green30 group-disabled:stroke-green30' />
-						}
+						{<Arrow className='arrow-icon rotate-180' />}
 					</ButtonLess>
 					<ButtonLess type='button' purpose='slider' disabled={false}>
-						{
-							<Arrow className='h-6 w-6 fill-green stroke-green group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white group-disabled:fill-green30 group-disabled:stroke-green30' />
-						}
+						{<Arrow className='arrow-icon' />}
 					</ButtonLess>
 				</div>
 				<ButtonLess type='button' purpose='video'>
@@ -94,6 +94,7 @@ export const Observer: React.FC = () => {
 			    <ProdudtCard index={0} />
 			</div>
 			<Advantages />
+			<BurgerMenu />
 		</>
 	);
 };
