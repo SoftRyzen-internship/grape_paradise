@@ -39,7 +39,6 @@ export const Observer: FC = () => {
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
 				<Logo theme='green' size='big' />
-				<NavMenu />
 
 				<ButtonMain chapter='header' to='контакти'>
 					{buttonsData.callButton}
@@ -72,7 +71,7 @@ export const Observer: FC = () => {
 				<FormBlock />
 
 			</div>
-			<BurgerMenu />
+
 		</>
 	);
 };
