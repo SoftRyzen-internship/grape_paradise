@@ -10,7 +10,7 @@ export const AdvantagesCard: React.FC = () => {
 			{advantagesData.advantages.map(({ id, description }) => (
 				<li
 					key={id}
-					className={`${s[id]} flex flex-col items-center gap-4 md:w-[151px] lg:w-[280px] lg:gap-8`}
+					className={`${s[id]} flex flex-col items-center gap-4 md:w-[151px] md:gap-6 lg:w-[280px]`}
 				>
 					<p className='px-4 text-center md:p-0 md:text-small lg:px-[25px] lg:text-normal_desk'>
 						{description}
