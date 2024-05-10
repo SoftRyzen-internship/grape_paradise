@@ -8,7 +8,7 @@ import s from './Advantages.module.css';
 
 export const Advantages: FC = () => (
 	<section
-		className={`relative bg-contain bg-center bg-repeat-x py-[60px] md:py-20 lg:py-[183px] ${s.advantages_bg} ${s.leaf}`}
+		className={`relative bg-contain bg-center bg-repeat-x py-[60px] md:py-20 lg:bg-cover lg:py-[183px] xl:bg-contain ${s.advantages_bg} ${s.leaf}`}
 	>
 		<div className={`container ${s.bottle}`}>
 			<h2 className='title mb-6 text-green md:mb-10 lg:mb-16'>
