@@ -1,14 +1,9 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 
 import { buttonsData, titleData } from '@/data';
 
 import { Section } from './common/Section/Section';
 import { Title } from './common/Title/Title';
-import { CustomInput } from '@/components/common/Form/CustomInput';
-import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
-import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
 import { Logo } from '@/components/ui/Logo';
 import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
@@ -18,9 +13,9 @@ import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
 
 import { Advantages } from '@/sections/Advantages';
+import { FormBlock } from '@/components/common/Form/FormBlock';
 
 export const Observer: React.FC = () => {
-	const [checkbox, setCheckbox] = useState(false);
 	return (
 		<>
 			<Section styles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
@@ -74,18 +69,7 @@ export const Observer: React.FC = () => {
 					{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 				</ButtonLess>
 
-				<CustomInput label='Ваше ім’я' placeholder='Тетяна' />
-				<CustomInput label='Ваш Номер телефону' placeholder='+3800967777323' />
-				<CustomTextarea
-					label='Ваш Коментар'
-					placeholder='Напишіть щось'
-					className='h-36'
-				/>
-				<CustomCheckbox
-					checked={checkbox}
-					handleChange={setCheckbox}
-					definition='Даю згоду на обробку персональних даних'
-				/>
+				<FormBlock />
 			</div>
 			<Advantages />
 		</>

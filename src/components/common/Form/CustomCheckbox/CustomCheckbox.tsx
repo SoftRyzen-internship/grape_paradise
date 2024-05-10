@@ -1,18 +1,17 @@
-import { ChangeEvent } from 'react';
-import clsx from 'clsx';
-import CheckIcon from '../../../../../public/icons/check.svg';
+import { ChangeEvent, FC } from 'react';
+import { clsx } from 'clsx';
+import CheckIcon from '@/../public/icons/check.svg';
 import { ICustomCheckboxProps } from './CustomCheckbox.types';
 
-export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
+export const CustomCheckbox: FC<ICustomCheckboxProps> = ({
 	checked,
 	handleChange,
 	errorMessage,
 	definition,
 	...rest
 }) => {
-	const onBooleanChange = (e: ChangeEvent<HTMLInputElement>) => {
+	const onBooleanChange = (e: ChangeEvent<HTMLInputElement>) =>
 		handleChange(e.target.checked);
-	};
 
 	return (
 		<label
@@ -35,7 +34,7 @@ export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 			>
 				<CheckIcon className='transition' />
 			</div>
-			<span className='text-xs/normal font-semilight text-black80 md:text-small lg:text-normal'>
+			<span className='text-xs/normal font-extralight text-black80 md:text-small lg:text-normal'>
 				{definition}
 			</span>
 		</label>
