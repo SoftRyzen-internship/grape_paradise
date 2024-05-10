@@ -5,11 +5,9 @@ import { buttonsData, titleData } from '@/data';
 import { Section } from '@/components/common/Section/Section';
 import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
-import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/ui/SlideCardGeneration';
-import { BurgerMenu } from '@/components/ui/BurgerMenu';
 import { FormBlock } from '@/components/common/Form/FormBlock';
 
 import Arrow from '@/../public/icons/arrow.svg';
