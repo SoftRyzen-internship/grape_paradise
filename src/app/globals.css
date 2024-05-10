@@ -4,7 +4,7 @@
 
 @layer utilities {
 	body {
-		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;
+		@apply bg-bg1 font-geologica text-normal text-bodyDark lg:text-normal_desk font-extralight;
 	}
 
 	.main-title {
