@@ -1,6 +1,6 @@
 'use client';
 
-import React, { FC, useState } from 'react';
+import { FC, useState } from 'react';
 
 import { buttonsData, titleData } from '@/data';
 
@@ -10,17 +10,13 @@ import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
 import { Logo } from '@/components/ui/Logo';
-
 import { NavMenu } from '@/components/ui/NavMenu';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { BurgerMenu } from '@/components/ui/BurgerMenu';
 
-
 import Arrow from '../../public/icons/arrow.svg';
 import Play from '../../public/icons/play.svg';
-
-import { Advantages } from '@/sections/Advantages';
 
 export const Observer: FC = () => {
 	const [checkbox, setCheckbox] = useState(false);
@@ -45,7 +41,7 @@ export const Observer: FC = () => {
 					dolorem porro veritatis maiores deserunt repellendus possimus eaque?
 				</p>
 			</Section>
-			<div className='container py-5'>
+			<div className='container py-5 flex flex-col gap-10'>
 				<Logo />
 				<Logo theme='green' size='big' />
 				<NavMenu />
@@ -87,7 +83,6 @@ export const Observer: FC = () => {
 					definition='Даю згоду на обробку персональних даних'
 				/>
 			</div>
-			<Advantages />
 			<BurgerMenu />
 		</>
 	);

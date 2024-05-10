@@ -12,8 +12,7 @@ export const Logo: React.FC<ILogoProps> = ({
 }) => {
 	const [isActive, setIsActive] = useState(false);
 
-	const active =
-		'cursor-pointer';
+	const active = 'cursor-pointer';
 
 	return (
 		<>

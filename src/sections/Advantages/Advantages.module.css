@@ -1,7 +1,7 @@
 .advantages_bg {
 	background-size: contain;
-    background-position: center;
-    background-repeat: repeat-x;
+	background-position: center;
+	background-repeat: repeat-x;
 	background-image: image-set(
 		url(/images/advantages/advantages_bg_mob.png) 1x,
 		url(/images/advantages/advantages_bg_mob@2x.png) 2x
