@@ -3,4 +3,5 @@ export interface IButtonMainProps {
 	chapter: 'header' | 'about' | 'card';
 	children?: React.ReactNode;
 	className?: string;
+	onClick?: () => void;
 }

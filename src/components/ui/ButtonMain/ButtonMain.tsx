@@ -12,6 +12,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 	chapter,
 	children,
 	className,
+	onClick,
 }) => {
 	return (
 		<Button
@@ -20,6 +21,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 			smooth={true}
 			duration={500}
 			offset={40}
+			onClick={onClick}
 			className={clsx(
 				'flex  cursor-pointer items-center justify-center  rounded-60px font-tenor text-btn font-normal uppercase text-green transition hover:bg-green hover:text-white focus:bg-green focus:text-white md:border-green md:bg-transparent',
 				{

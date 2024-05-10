@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import { Tenor_Sans, Geologica } from 'next/font/google';
 
 import { metaData } from '@/data';
+import { Header } from '@/sections/Header';
 
 export const metadata: Metadata = {
 	title: metaData.title,
@@ -33,7 +34,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='uk' className={`${tenor.variable} ${geologica.variable}`}>
-			<body>{children}</body>
+			<body>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }
