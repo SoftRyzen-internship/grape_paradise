@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import { Section } from '@/components/common/Section/Section';
-import { Title } from '@/components/common/Title/Title';
+import { Section } from '@/components/common/Section';
+import { Title } from '@/components/common/Title';
 import { AdvantagesCard } from '@/components/common/AdvantagesCard';
 
 import { advantagesData } from '@/data';
