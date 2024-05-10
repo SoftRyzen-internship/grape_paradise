@@ -24,4 +24,8 @@
 	.transition {
 		@apply transition-all duration-300 ease-in-out;
 	}
+
+	.arrow-icon {
+		@apply h-6 w-6 fill-green stroke-green transition group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white group-disabled:fill-green30 group-disabled:stroke-green30;
+	}
 }

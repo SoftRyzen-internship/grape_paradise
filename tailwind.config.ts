@@ -78,7 +78,8 @@ const config: Config = {
 				large_desk: ['26px', '1.3'],
 			},
 			backdropBlur: {
-				'25': '12.5px',
+				'12.5': '12.5px',
+				'25': '25px',
 				'70': '70px',
 			},
 			borderRadius: {
