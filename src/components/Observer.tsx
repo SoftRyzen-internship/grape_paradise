@@ -13,8 +13,7 @@ import { Logo } from '@/components/ui/Logo';
 import { NavMenu } from './ui/NavMenu';
 import { ButtonMain } from './ui/ButtonMain/ButtonMain';
 import { ButtonLess } from './ui/ButtonLess/ButtonLess';
-import { ProdudtCard } from '@/components/ui/ProductCard.tsx/ProdactCard';
-import { ServicesCard } from '@/components/ui/ServicesCard/ServicesCard';
+import { SlideCardGeneration } from '@/components/ui/SlideCardGeneration'
 import { BurgerMenu } from '@/components/ui/BurgerMenu';
 
 
@@ -88,8 +87,8 @@ export const Observer: FC = () => {
 					handleChange={setCheckbox}
 					definition='Даю згоду на обробку персональних даних'
 				/>
-				<ServicesCard index={0} />
-			    <ProdudtCard index={0} />
+				<SlideCardGeneration index={0} slide="service" />
+				<SlideCardGeneration index={0} slide="product" />
 			</div>
 			<Advantages />
 			<BurgerMenu />
