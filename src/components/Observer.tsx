@@ -7,6 +7,7 @@ import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+import { SlideCardGeneration } from '@/components/ui/SlideCardGeneration';
 import { FormBlock } from '@/components/common/Form/FormBlock';
 
 import Arrow from '@/../public/icons/arrow.svg';
@@ -39,6 +40,7 @@ export const Observer: FC = () => {
 				</ButtonMain>
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
+
 				</ButtonLess>
 				<div className='flex gap-2'>
 					<ButtonLess type='button' purpose='slider' disabled={true}>
@@ -52,7 +54,11 @@ export const Observer: FC = () => {
 					{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 				</ButtonLess>
 
+				<SlideCardGeneration index={0} slide="service" />
+				<SlideCardGeneration index={0} slide="product" />
+
 				<FormBlock />
+
 			</div>
 
 		</>
