@@ -1,0 +1,1 @@
+export { SlideCardGeneration } from './SlideCardGeneration'

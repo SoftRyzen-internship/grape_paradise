@@ -7,6 +7,7 @@ import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { FormBlock } from '@/components/common/Form/FormBlock';
 
 import Arrow from '@/../public/icons/arrow.svg';
@@ -51,6 +52,12 @@ export const Observer: FC = () => {
 				<ButtonLess type='button' purpose='video'>
 					{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 				</ButtonLess>
+
+				<div className='flex flex-col gap-4 md:flex-row'>
+					<SlideCardGeneration index={0} slide='service' />
+					<SlideCardGeneration index={1} slide='service' />
+				</div>
+				<SlideCardGeneration index={0} slide='product' />
 
 				<FormBlock />
 			</div>

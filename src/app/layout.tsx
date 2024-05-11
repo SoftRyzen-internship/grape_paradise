@@ -1,12 +1,12 @@
 import './globals.css';
 
-import React from 'react';
-
+import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Tenor_Sans, Geologica } from 'next/font/google';
 
-import { metaData } from '@/data';
 import { Header } from '@/sections/Header';
+
+import { metaData } from '@/data';
 
 export const metadata: Metadata = {
 	title: metaData.title,
@@ -30,7 +30,7 @@ const geologica = Geologica({
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode;
+	children: ReactNode;
 }>) {
 	return (
 		<html lang='uk' className={`${tenor.variable} ${geologica.variable}`}>
