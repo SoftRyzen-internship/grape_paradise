@@ -1,0 +1,24 @@
+{
+	"namedField": {
+		"name": {
+			"label": "Ваше ім’я",
+			"placeholder": "Тетяна",
+			"errorMessage": "Будь ласка, введіть коректне ім’я"
+		},
+		"phone": {
+			"label": "Ваш Номер телефону",
+			"placeholder": "+380967777323",
+			"errorMessage": "Недійсний номер телефону"
+		},
+		"textarea": {
+			"label": "Ваш Коментар",
+			"placeholder": "Напишіть щось",
+			"errorMessage": ""
+		},
+		"checkbox": {
+			"label": "Даю згоду на обробку персональних даних",
+			"errorMessage": "Обов'язково"
+		}
+	},
+	"buttonText": "Надіслати заявку"
+}
