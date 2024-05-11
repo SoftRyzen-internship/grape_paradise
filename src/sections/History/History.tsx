@@ -24,11 +24,13 @@ export const History: FC = () => (
 				sizes='(max-width: 768px) 448px, (max-width: 1280px) 300px, 567px'
 			/>
 
-			<div className='absolute -bottom-5 right-5'>
-				<ButtonLess type='button' purpose='video'>
-					{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
-				</ButtonLess>
-			</div>
+			<ButtonLess
+				type='button'
+				purpose='video'
+				styles='absolute -bottom-5 right-5'
+			>
+				{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
+			</ButtonLess>
 		</div>
 
 		<div>
@@ -40,11 +42,9 @@ export const History: FC = () => (
 
 			<p className='mb-6'>{historyData.offer}</p>
 
-			<div className='grid'>
-				<ButtonMain chapter='about' to='contacts'>
-					{historyData.button}
-				</ButtonMain>
-			</div>
+			<ButtonMain chapter='about' to='contacts'>
+				{historyData.button}
+			</ButtonMain>
 		</div>
 	</Section>
 );
