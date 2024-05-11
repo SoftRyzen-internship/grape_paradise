@@ -30,14 +30,6 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
 					>
 						<CloseIcon width={24} height={24} className='fill-green' />
 					</ButtonLess>
-					{/* <button
-						type='button'
-						onClick={onClick}
-						aria-label={headerData.ariaLabelClose}
-						className='h-12 w-12 p-3 transition hover:scale-125'
-					>
-						<CloseIcon width={24} height={24} className='fill-green' />
-					</button> */}
 				</div>
 
 				<div className='mb-[152px] mt-[96px] flex flex-col items-center gap-[73px] md:mb-[96px]'>

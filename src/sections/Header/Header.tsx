@@ -37,14 +37,6 @@ export const Header = () => {
 				>
 					<BurgerIcon width={24} height={24} />
 				</ButtonLess>
-				{/* <button
-					type='button'
-					aria-label={headerData.ariaLabelOpen}
-					className='h-12 w-12 p-3 transition hover:scale-125 lg:hidden'
-					onClick={toggleMenuOpen}
-				>
-					<BurgerIcon width={24} height={24} />
-				</button> */}
 				{isOpened && <BurgerMenu onClick={toggleMenuOpen} />}
 			</div>
 		</header>
