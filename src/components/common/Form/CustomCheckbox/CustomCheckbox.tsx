@@ -11,6 +11,7 @@ export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 	errorMessage,
 	definition,
 	className,
+
 	...rest
 }) => {
 	const onBooleanChange = (e: ChangeEvent<HTMLInputElement>) =>
@@ -34,7 +35,7 @@ export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
 			></input>
 			<div
 				className={clsx(
-					'flex h-5 w-5 shrink-0 items-center justify-center rounded border border-green text-transparent transition peer-checked:bg-green30 peer-checked:text-green lg:h-6 lg:w-6',
+					'flex h-5 w-5 shrink-0 items-center justify-center rounded border border-green text-transparent transition peer-checked:bg-green30 peer-checked:text-green peer-hover:bg-green30 peer-focus:bg-green30 lg:h-6 lg:w-6',
 					errorMessage && 'border-red',
 				)}
 			>
