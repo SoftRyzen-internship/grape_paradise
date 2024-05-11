@@ -10,7 +10,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 	to,
 	chapter,
 	children,
-	className,
+	styles,
 	onClick,
 }) => {
 	return (
@@ -35,7 +35,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 					'h-[59px] bg-white md:w-[157px] md:border md:border-green50 lg:h-[63px] lg:w-[182px] lg:text-btn_desk':
 						chapter === 'card',
 				},
-				className,
+				styles,
 			)}
 		>
 			{children}

@@ -54,7 +54,6 @@ export const Observer: FC = () => {
 
 				<FormBlock />
 			</div>
-
 		</>
 	);
 };

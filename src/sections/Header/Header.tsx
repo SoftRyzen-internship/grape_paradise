@@ -24,7 +24,7 @@ export const Header = () => {
 			<div className='container flex items-center justify-between '>
 				<Logo />
 				<NavMenu className='hidden lg:block' />
-				<ButtonMain chapter='header' to='contacts' className='hidden lg:flex'>
+				<ButtonMain chapter='header' to='contacts' styles='hidden lg:flex'>
 					{headerData.text}
 				</ButtonMain>
 				<button
@@ -40,4 +40,3 @@ export const Header = () => {
 		</header>
 	);
 };
-
