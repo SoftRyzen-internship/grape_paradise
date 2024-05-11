@@ -42,14 +42,24 @@ export const Observer: FC = () => {
 					{buttonsData.sendButton}
 				</ButtonLess>
 				<div className='flex gap-2'>
-					<ButtonLess type='button' purpose='slider' disabled={true}>
+					<ButtonLess
+						type='button'
+						aria={`Slider's button back`}
+						purpose='slider'
+						disabled={true}
+					>
 						{<Arrow className='arrow-icon rotate-180' />}
 					</ButtonLess>
-					<ButtonLess type='button' purpose='slider' disabled={false}>
+					<ButtonLess
+						type='button'
+						aria={`Slider's button front`}
+						purpose='slider'
+						disabled={false}
+					>
 						{<Arrow className='arrow-icon' />}
 					</ButtonLess>
 				</div>
-				<ButtonLess type='button' purpose='video'>
+				<ButtonLess type='button' aria='Play video button' purpose='video'>
 					{<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />}
 				</ButtonLess>
 
