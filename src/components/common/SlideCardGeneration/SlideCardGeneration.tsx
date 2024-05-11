@@ -63,7 +63,7 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 					)}
 				</div>
 				<div className='mt-6 md:mt-0 '>
-					<ButtonMain chapter='card' to='контакти' className={'w-full'}>
+					<ButtonMain chapter='card' to='контакти'>
 						{buttonsData.orderButton}
 					</ButtonMain>
 				</div>
