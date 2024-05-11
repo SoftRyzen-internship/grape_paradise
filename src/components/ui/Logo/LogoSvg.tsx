@@ -4,8 +4,8 @@ import { clsx } from 'clsx';
 import { ILogoComponentProps } from './Logo.types';
 
 export const LogoSvg: FC<ILogoComponentProps> = ({
-    theme = 'white',
-    size = 'small',
+	theme = 'white',
+	size = 'small',
 }) => {
 
     const fill = clsx({

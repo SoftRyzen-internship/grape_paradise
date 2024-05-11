@@ -1,6 +1,4 @@
 .background {
-	position: relative;
-
 	&::before {
 		content: url('../../../../public/icons/bg-small-leaf-section-4.svg');
 		width: 147px;
@@ -15,7 +13,7 @@
 		width: 199px;
 		height: 170px;
 		position: absolute;
-		bottom: -18px;
+		top: 488px;
 		right: -71px;
 	}
 
@@ -27,7 +25,7 @@
 		&::after {
 			width: 257.428px;
 			height: 220.003px;
-			bottom: 45px;
+			top: 319px;
 			right: -58.38px;
 		}
 	}

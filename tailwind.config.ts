@@ -48,11 +48,11 @@ const config: Config = {
 				xl: '32px',
 			},
 		},
-		fontFamily: {
-			tenor: ['var(--font-tenor)'],
-			geologica: ['var(--font-geologica)'],
-		},
 		extend: {
+			fontFamily: {
+				tenor: ['var(--font-tenor)'],
+				geologica: ['var(--font-geologica)'],
+			},
 			fontSize: {
 				// Н0 Використовується для рухомого рядка
 				h0: ['24px', '1.25'],
@@ -75,9 +75,6 @@ const config: Config = {
 				normal_desk: ['18px', '1.5'],
 				large: ['18px', '1.3'],
 				large_desk: ['26px', '1.3'],
-			},
-			fontWeight: {
-				// semilight: '250',
 			},
 			backdropBlur: {
 				'12.5': '12.5px',
