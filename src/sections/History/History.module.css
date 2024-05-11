@@ -1,0 +1,21 @@
+.frame::before {
+	content: url('/icons/history-frame-left.svg');
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: -5px;
+    z-index: 5;
+    height: 328px;
+    overflow: hidden;
+}
+
+.frame::after {
+	content: url('/icons/history-frame-right.svg');
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: -5px;
+    z-index: 5;
+    height: 328px;
+    overflow: hidden;
+}

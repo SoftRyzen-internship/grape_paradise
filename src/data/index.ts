@@ -10,3 +10,4 @@ export { default as advantagesData } from './advantagesData.json';
 export { default as titleData } from './titleData.json';
 
 export { default as headerData } from './headerData.json';
+export {default as historyData} from './historyData.json'
