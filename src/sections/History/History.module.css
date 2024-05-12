@@ -1,23 +1,48 @@
-.frame::before {
-	content: url('/icons/history-frame-left.svg');
+.frame::before,
+.frame::after {
 	position: absolute;
 	display: inline-block;
 	top: 0;
-	left: -1px;
 	width: 11px;
 	height: 328px;
+	transform: rotateY(180deg);
 	z-index: 5;
-	/* overflow: hidden; */
+}
+
+.frame::before {
+	content: url('/icons/history-frame.svg');
+	left: -1px;
 }
 
 .frame::after {
-	content: url('/icons/history-frame-right.svg');
-	position: absolute;
-	display: inline-block;
-	top: 0;
+	content: url('/icons/history-frame.svg');
 	right: -1px;
-	width: 11px;
-	height: 328px;
-	z-index: 5;
-	/* overflow: hidden; */
+	rotate: 180deg;
+}
+
+@media screen and (min-width: 768px) {
+	.frame::before,
+	.frame::after {
+		height: 312px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.frame::before,
+	.frame::after {
+		width: 20px;
+		height: 579px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.grape::before {
+		content: url('/icons/bg-grape-section-2.svg');
+		position: absolute;
+		display: inline-block;
+		top: -62px;
+		left: 482px;
+		width: 214px;
+		height: 235px;
+	}
 }
