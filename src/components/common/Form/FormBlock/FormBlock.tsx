@@ -1,17 +1,18 @@
 'use client';
 
 import { FC } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 
 import { formData } from '@/data';
 const { namedField, buttonText } = formData;
 
+import { formSchema } from '@/utils';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { CustomInput } from '@/components/common/Form//CustomInput';
 import { CustomTextarea } from '@/components/common/Form//CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form//CustomCheckbox';
 import { IFormBlockProps, IFormState } from './FormBlock.types';
-import { formSchema } from '@/utils/formSchema';
+import { sendMessage } from '@/actions';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	const {
@@ -25,12 +26,17 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 		shouldFocusError: false,
 	});
 
-	const onSubmit = (data: IFormState) => {
-		console.log(data);
-		alert(
-			`The next step will send \n${data.name}\n${data.phone}\n${data.message} to the telegram group and display a modal with info about the result for the user`,
-		);
-		reset();
+	const onSubmit: SubmitHandler<IFormState> = async data => {
+		try {
+			await sendMessage(data);
+			alert(
+				`The next step will send \n${data.name}\n${data.phone}\n${data.message} to the telegram group and display a modal with info about the result for the user`,
+			);
+
+			reset();
+		} catch (error) {
+			alert(error);
+		}
 	};
 
 	return (
