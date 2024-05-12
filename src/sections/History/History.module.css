@@ -3,10 +3,11 @@
 	position: absolute;
 	display: inline-block;
 	top: 0;
-	left: -5px;
-    z-index: 5;
-    height: 328px;
-    overflow: hidden;
+	left: -1px;
+	width: 11px;
+	height: 328px;
+	z-index: 5;
+	/* overflow: hidden; */
 }
 
 .frame::after {
@@ -14,8 +15,9 @@
 	position: absolute;
 	display: inline-block;
 	top: 0;
-	right: -5px;
-    z-index: 5;
-    height: 328px;
-    overflow: hidden;
+	right: -1px;
+	width: 11px;
+	height: 328px;
+	z-index: 5;
+	/* overflow: hidden; */
 }

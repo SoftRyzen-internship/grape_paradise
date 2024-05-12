@@ -1,3 +1,12 @@
+### Component - FormBlock
+
+The application example - `<FormBlock />`
+
+#### The custom props are optional
+
+- className?: string - The style can be passed to manage placing the component next to others in the section
+
+<hr>
 ### Component - CustomInput
 
 The application example - `<CustomInput />`

@@ -1,7 +1,9 @@
 export interface IButtonLessProps {
 	type: 'button' | 'submit';
-	purpose: 'form' | 'slider' | 'video';
+	purpose: 'form' | 'slider' | 'video' | 'burger';
 	disabled?: boolean;
-	children?: React.ReactNode;
+	aria?: string;
 	styles?: string;
+	children?: React.ReactNode;
+	onClick?: () => void;
 }

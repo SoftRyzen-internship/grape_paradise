@@ -10,6 +10,7 @@ import { BurgerMenu } from '@/components/ui/BurgerMenu';
 import { headerData } from '@/data';
 
 import BurgerIcon from '@/../public/icons/menu.svg';
+import { ButtonLess } from '@/components/ui/ButtonLess';
 
 export const Header = () => {
 	const [isOpened, setIsOpened] = useState(false);
@@ -24,20 +25,20 @@ export const Header = () => {
 			<div className='container flex items-center justify-between '>
 				<Logo />
 				<NavMenu className='hidden lg:block' />
-				<ButtonMain chapter='header' to='contacts' className='hidden lg:flex'>
+				<ButtonMain chapter='header' to='contacts' styles='hidden lg:flex'>
 					{headerData.text}
 				</ButtonMain>
-				<button
+				<ButtonLess
 					type='button'
-					aria-label={headerData.ariaLabelOpen}
-					className='h-12 w-12 p-3 transition hover:scale-125 lg:hidden'
+					purpose='burger'
+					aria={headerData.ariaLabelOpen}
+					styles='lg:hidden'
 					onClick={toggleMenuOpen}
 				>
 					<BurgerIcon width={24} height={24} />
-				</button>
+				</ButtonLess>
 				{isOpened && <BurgerMenu onClick={toggleMenuOpen} />}
 			</div>
 		</header>
 	);
 };
-
