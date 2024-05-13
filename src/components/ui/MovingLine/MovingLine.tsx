@@ -1,17 +1,25 @@
-import { FC, Fragment } from 'react';
+import { FC } from 'react';
 
 import Marquee from 'react-fast-marquee';
 
 import { movingLineData } from '@/data';
 
+import styles from './MovingLine.module.css';
+
 export const MovingLine: FC = () => {
 	return (
-		<Marquee>
+		<Marquee autoFill speed={50} loop={0} className='py-4 md:py-6 lg:py-8 '>
 			{movingLineData.map(({ id, text }) => (
-				<Fragment key={id}>
-					<p>{text}</p>
-					<div className='h-3 w-3 bg-accent'></div>
-				</Fragment>
+				<div
+					key={id}
+					className='mr-6 flex items-center justify-center md:mr-10'
+				>
+					<p
+						className={`mr-6 font-tenor text-h0 text-accent md:mr-10 md:text-h0_tab lg:text-h0_desk ${styles.item}`}
+					>
+						{text}
+					</p>
+				</div>
 			))}
 		</Marquee>
 	);
