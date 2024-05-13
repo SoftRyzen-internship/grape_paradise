@@ -11,6 +11,7 @@ import s from './Contacts.module.css';
 export const Contacts: FC = () => {
 	return (
 		<Section
+			id={contactsData.id}
 			sectionStyles={`relative pt-[80px] lg:pt-[130px] ${s.contacts_bg}`}
 			containerStyles='md:flex justify-between'
 		>
