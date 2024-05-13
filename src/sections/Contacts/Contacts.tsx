@@ -21,8 +21,7 @@ export const Contacts: FC = () => {
 				<address className='w-[320px] font-tenor text-large not-italic text-black lg:text-h3_desk mdOnly:w-[200px]'>
 					<p className='mb-[15px] mt-6 md:my-8'>
 						{contactsData.address1}
-						<br />
-						{contactsData.address2}
+						<span className='block'>{contactsData.address2}</span>
 					</p>
 					<a
 						href={`tel:${contactsData.phone.replace(/-/g, '').replace(/\s/g, '')}`}
