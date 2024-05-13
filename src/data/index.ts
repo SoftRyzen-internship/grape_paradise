@@ -8,3 +8,5 @@ export { default as advantagesData } from './advantagesData.json';
 export { default as titleData } from './titleData.json';
 
 export { default as burgerMenuData } from './burgerMenuData.json';
+
+export { default as logo } from './logo.json';
