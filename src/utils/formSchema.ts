@@ -1,5 +1,7 @@
 import { RegisterOptions } from 'react-hook-form';
-import { IFormState } from '@/components/common/Form/FormBlock/FormBlock.types';
+
+import { IFormState } from '@/components/common/Form/FormBlock';
+
 import { formData } from '@/data';
 const { name, phone, checkbox } = formData.namedField;
 

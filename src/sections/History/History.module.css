@@ -6,6 +6,7 @@
 	width: 11px;
 	height: 328px;
 	transform: rotateY(180deg);
+	overflow: hidden;
 	z-index: 5;
 }
 
@@ -41,7 +42,7 @@
 		position: absolute;
 		display: inline-block;
 		top: -62px;
-		left: 482px;
+		left: 480px;
 		width: 214px;
 		height: 235px;
 	}
