@@ -3,8 +3,8 @@
 	background-position: center;
 	background-repeat: repeat-x;
 	background-image: image-set(
-		url(/images/advantages/advantages_bg_mob.png) 1x,
-		url(/images/advantages/advantages_bg_mob@2x.png) 2x
+		url(/images/advantages/advantages_bg_mob.webp) 1x,
+		url(/images/advantages/advantages_bg_mob@2x.webp) 2x
 	);
 }
 
@@ -17,8 +17,8 @@
 @media screen and (min-width: 768px) {
 	.advantages_bg {
 		background-image: image-set(
-			url(/images/advantages/advantages_bg_tab.png) 1x,
-			url(/images/advantages/advantages_bg_tab@2x.png) 2x
+			url(/images/advantages/advantages_bg_tab.webp) 1x,
+			url(/images/advantages/advantages_bg_tab@2x.webp) 2x
 		);
 	}
 }
@@ -27,8 +27,8 @@
 	.advantages_bg {
 		background-size: cover;
 		background-image: image-set(
-			url(/images/advantages/advantages_bg_desk.png) 1x,
-			url(/images/advantages/advantages_bg_desk@2x.png) 2x
+			url(/images/advantages/advantages_bg_desk.webp) 1x,
+			url(/images/advantages/advantages_bg_desk@2x.webp) 2x
 		);
 	}
 }
