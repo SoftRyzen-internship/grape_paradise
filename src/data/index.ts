@@ -14,3 +14,5 @@ export { default as logo } from './logo.json';
 export { default as formData } from './formData.json';
 
 export { default as headerData } from './headerData.json';
+
+export { default as movingLineData } from './movingLineData.json';
