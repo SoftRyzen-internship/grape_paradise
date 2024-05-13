@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Title } from '../Title';
+import { Title } from '@/components/common/Title';
 import { ButtonMain } from '@/components/ui/ButtonMain';
 
 import { historyData } from '@/data';
