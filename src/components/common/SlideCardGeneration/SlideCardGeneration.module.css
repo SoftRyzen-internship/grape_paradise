@@ -1,5 +1,5 @@
 .containerImg::before {
-	content: url('/icons/card-frame-left.svg');
+	content: url('/icons/card-frame.svg');
 	display: block;
 	width: 15px;
 	height: 229px;
@@ -16,7 +16,7 @@
 }
 
 .containerImg::after {
-	content: url('/icons/card-frame-left.svg');
+	content: url('/icons/card-frame.svg');
 	transform: rotate(180deg);
 	display: block;
 	width: 15px;
