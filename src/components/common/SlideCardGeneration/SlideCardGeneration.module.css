@@ -1,6 +1,8 @@
 .containerImg::before {
-	content: url('/icons/card-services-frame-left-sm.svg');
+	content: url('/icons/card-frame-left.svg');
 	display: block;
+	width: 15px;
+	height: 229px;
 	position: absolute;
 	z-index: 10;
 	top: 0;
@@ -9,13 +11,16 @@
 
 @media (min-width: 768px) {
 	.containerImg::before {
-		content: url('/icons/card-services-frame-left-md.svg');
+		height: 274px;
 	}
 }
 
 .containerImg::after {
-	content: url('/icons/card-services-frame-right-sm.svg');
+	content: url('/icons/card-frame-left.svg');
+	transform: rotate(180deg);
 	display: block;
+	width: 15px;
+	height: 229px;
 	position: absolute;
 	z-index: 10;
 	top: 0;
@@ -23,8 +28,8 @@
 }
 
 @media (min-width: 768px) {
-	.containerImg::after {
-		content: url('/icons/card-services-frame-right-md.svg');
+	.containerImg::after {	
+		height: 274px;
 	}
 }
 
