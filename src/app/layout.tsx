@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Tenor_Sans, Geologica } from 'next/font/google';
 
-import { Header } from '@/sections/Header';
+import { Header } from '@/sections';
 
 import { metaData } from '@/data';
 

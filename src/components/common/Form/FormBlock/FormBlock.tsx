@@ -10,8 +10,10 @@ import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { CustomInput } from '@/components/common/Form//CustomInput';
 import { CustomTextarea } from '@/components/common/Form//CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form//CustomCheckbox';
+
 import { IFormBlockProps, IFormState } from './FormBlock.types';
-import { formSchema } from '@/utils/formSchema';
+
+import { formSchema } from '@/utils';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	const {
