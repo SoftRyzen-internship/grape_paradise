@@ -1,6 +1,6 @@
 import { defineConfig } from './node_modules/sanity'
 import { structureTool } from 'sanity/structure'
-import { visionTool } from '@sanity/vision'
+
 
 import { schemaTypes } from './src/sanity/schemas/index'
 import { pageStructure } from '@/sanity/pageStructure'
@@ -21,7 +21,7 @@ export default defineConfig({
   projectId: projectId,
   dataset: dataset,
 
-  plugins: [structureTool({ name: 'content', title: 'Редагування контенту', structure: pageStructure }), visionTool()],
+  plugins: [structureTool({ name: 'content', title: 'Редагування контенту', structure: pageStructure })],
 
   schema: {
     types: schemaTypes,
