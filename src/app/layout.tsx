@@ -2,9 +2,9 @@ import './globals.css';
 
 import { ReactNode } from 'react';
 import { Metadata } from 'next';
-import { Tenor_Sans, Geologica } from 'next/font/google';
+import { Tenor_Sans } from 'next/font/google';
 
-import { Header } from '@/sections/Header';
+import { Header } from '@/sections';
 
 import { metaData } from '@/data';
 
@@ -20,12 +20,6 @@ const tenor = Tenor_Sans({
 	weight: '400',
 });
 
-const geologica = Geologica({
-	subsets: ['cyrillic', 'latin'],
-	display: 'swap',
-	variable: '--font-geologica',
-	weight: ['200', '400'],
-});
 
 export default function RootLayout({
 	children,
@@ -33,7 +27,7 @@ export default function RootLayout({
 	children: ReactNode;
 }>) {
 	return (
-		<html lang='uk' className={`${tenor.variable} ${geologica.variable}`}>
+		<html lang='uk' className={`${tenor.variable}`}>
 			<body>
 				<Header />
 				{children}

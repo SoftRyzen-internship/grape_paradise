@@ -1,5 +1,7 @@
 import { RegisterOptions } from 'react-hook-form';
-import { IFormState } from '@/components/common/Form/FormBlock/FormBlock.types';
+
+import { IFormState } from '@/types';
+
 import { formData } from '@/data';
 const { name, phone, checkbox } = formData.namedField;
 
@@ -23,7 +25,15 @@ export const formSchema: Record<keyof IFormState, RegisterOptions> = {
 		required: `${phone.errorMessage}`,
 		pattern: {
 			value: /^\+380\d{9}$/,
-			message: `${phone.errorMessage}`,
+			message: `${phone.rules}`,
+		},
+		minLength: {
+			value: 13,
+			message: `${phone.minLength}`,
+		},
+		maxLength: {
+			value: 13,
+			message: `${phone.maxLength}`,
 		},
 	},
 	message: {},
