@@ -7,12 +7,13 @@ import { formData } from '@/data';
 const { namedField, buttonText } = formData;
 
 import { formSchema } from '@/utils';
+import { sendMessage } from '@/actions';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { CustomInput } from '@/components/common/Form//CustomInput';
 import { CustomTextarea } from '@/components/common/Form//CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form//CustomCheckbox';
+
 import { IFormBlockProps, IFormState } from './FormBlock.types';
-import { sendMessage } from '@/actions';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	const {
