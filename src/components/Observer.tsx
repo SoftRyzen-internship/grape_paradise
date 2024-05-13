@@ -10,6 +10,9 @@ import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { FormBlock } from '@/components/common/Form';
 
+import { serviceCardData } from '@/data';
+import { productCardData } from '@/data'; 
+
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
 
@@ -64,10 +67,10 @@ export const Observer: FC = () => {
 				</ButtonLess>
 
 				<div className='flex flex-col gap-4 md:flex-row'>
-					<SlideCardGeneration index={0} slide='service' />
-					<SlideCardGeneration index={1} slide='service' />
+					<SlideCardGeneration data={serviceCardData[1]} slide='service' />
+					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
-				<SlideCardGeneration index={0} slide='product' />
+				<SlideCardGeneration data={productCardData[1]} slide='product' />
 
 				<FormBlock />
 			</div>
