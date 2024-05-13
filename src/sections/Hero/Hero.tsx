@@ -1,11 +1,15 @@
-import { Section } from '@/components/common/Section';
-import { Title } from '@/components/common/Title';
-import { heroData } from '@/data';
+import { FC } from 'react';
 
-import s from './Hero.module.css';
 import { clsx } from 'clsx';
 
-export const Hero = () => {
+import { heroData } from '@/data';
+
+import { Section } from '@/components/common/Section';
+import { Title } from '@/components/common/Title';
+
+import s from './Hero.module.css';
+
+export const Hero: FC = () => {
 	return (
 		<Section
 			sectionStyles={clsx(
