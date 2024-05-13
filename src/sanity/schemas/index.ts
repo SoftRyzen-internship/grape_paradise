@@ -1,6 +1,6 @@
-import blockContent from './blockContent'
-import category from './category'
+import { goods } from './goods'
+import { privacyPolicy } from './privacyPolicy'
 import { review } from './review'
-import author from './author'
+import { services } from './services'
 
-export const schemaTypes = [review, author, category, blockContent]
+export const schemaTypes = [review, services, goods, privacyPolicy]

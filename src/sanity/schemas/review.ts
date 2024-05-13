@@ -10,7 +10,7 @@ export const review = defineType({
       name: "reviewText",
       type: "text",
       title: "Текст відгуку",
-      description: 'Введіть повний текст нового відгуку',
+      placeholder: 'Введіть повний текст нового відгуку',
       validation: (rule: any) =>
         rule
           .required()
@@ -21,7 +21,7 @@ export const review = defineType({
       name: "reviewAuthor",
       type: "string",
       title: "Ім'я та прізвище автора відгуку",
-      description: "Введіть ім'я та прізвище автора відгуку",
+      placeholder: "Введіть ім'я та прізвище автора відгуку",
       validation: (rule: any) =>
         rule
           .required()
