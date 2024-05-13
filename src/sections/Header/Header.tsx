@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import { Logo } from '@/components/ui/Logo';
 import { NavMenu } from '@/components/ui/NavMenu';
@@ -12,7 +12,7 @@ import { headerData } from '@/data';
 import BurgerIcon from '@/../public/icons/menu.svg';
 import { ButtonLess } from '@/components/ui/ButtonLess';
 
-export const Header = () => {
+export const Header:FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
 
 	const toggleMenuOpen = () => {
