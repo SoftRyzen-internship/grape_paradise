@@ -16,10 +16,10 @@ export const History: FC = () => (
 	<Section
 		id={historyData.id}
 		sectionStyles='pt-[60px] pb-[30px] md:pt-20 md:pb-10 lg:pt-[142px] lg:pb-20'
-		containerStyles={`md:flex md:items-center md:justify-between lg:relative ${s.grape}`}
+		containerStyles='md:flex md:items-center md:justify-between'
 	>
 		<div
-			className={`relative mb-12 h-[328px] md:m-0 md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] ${s.frame}`}
+			className={`relative mb-12 h-[328px] md:m-0 md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] ${s.grape}`}
 		>
 			<Image
 				fill

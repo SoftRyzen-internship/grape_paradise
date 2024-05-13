@@ -1,48 +1,10 @@
-.frame::before,
-.frame::after {
-	position: absolute;
-	display: inline-block;
-	top: 0;
-	width: 11px;
-	height: 328px;
-	transform: rotateY(180deg);
-	overflow: hidden;
-	z-index: 5;
-}
-
-.frame::before {
-	content: url('/icons/history-frame.svg');
-	left: -1px;
-}
-
-.frame::after {
-	content: url('/icons/history-frame.svg');
-	right: -1px;
-	rotate: 180deg;
-}
-
-@media screen and (min-width: 768px) {
-	.frame::before,
-	.frame::after {
-		height: 312px;
-	}
-}
-
-@media screen and (min-width: 1280px) {
-	.frame::before,
-	.frame::after {
-		width: 20px;
-		height: 579px;
-	}
-}
-
 @media screen and (min-width: 1280px) {
 	.grape::before {
 		content: url('/icons/bg-grape-section-2.svg');
 		position: absolute;
 		display: inline-block;
 		top: -62px;
-		left: 480px;
+		left: 452px;
 		width: 214px;
 		height: 235px;
 	}
