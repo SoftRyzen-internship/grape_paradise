@@ -21,11 +21,11 @@ export const Header = () => {
 	};
 
 	return (
-		<header className='w-full  py-6'>
+		<header className='w-full py-6'>
 			<div className='container flex items-center justify-between '>
 				<Logo />
-				<NavMenu className='hidden lg:block' />
-				<ButtonMain chapter='header' to='contacts' styles='hidden lg:flex'>
+				<NavMenu className='notLg:hidden' />
+				<ButtonMain chapter='header' to='contacts' styles='notLg:hidden'>
 					{headerData.text}
 				</ButtonMain>
 				<ButtonLess
