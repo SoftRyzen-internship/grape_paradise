@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { buttonsData, titleData } from '@/data';
 
-import { History } from '@/sections/History';
+import { History } from '@/sections';
 import { Section } from '@/components/common/Section/Section';
 import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
