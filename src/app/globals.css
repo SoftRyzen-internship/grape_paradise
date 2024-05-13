@@ -4,22 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--bg-hero-overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-
-	--bg-hero-frame1x: url('/images/hero/hero-bg-frame@1x.png');
-	--bg-hero-frame2x: url('/images/hero/hero-bg-frame@2x.png');
-
-	--bg-hero-image-mob1x: url('/images/hero/hero-bg-mob@1x.webp');
-	--bg-hero-image-mob2x: url('/images/hero/hero-bg-mob@2x.webp');
-
-	--bg-hero-image-tab1x: url('/images/hero/hero-bg-tab@1x.webp');
-	--bg-hero-image-tab2x: url('/images/hero/hero-bg-tab@2x.webp');
-
-	--bg-hero-image-desk1x: url('/images/hero/hero-bg-desk@1x.webp');
-	--bg-hero-image-desk2x: url('/images/hero/hero-bg-desk@2x.webp');
-}
-
 @layer base {
 	body {
 		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;

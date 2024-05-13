@@ -2,10 +2,10 @@ import { FC } from 'react';
 
 import { clsx } from 'clsx';
 
-import { heroData } from '@/data';
-
 import { Section } from '@/components/common/Section';
 import { Title } from '@/components/common/Title';
+
+import { heroData } from '@/data';
 
 import s from './Hero.module.css';
 

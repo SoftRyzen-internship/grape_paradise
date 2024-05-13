@@ -1,10 +1,13 @@
 .hero {
 	background-image: image-set(
-			var(--bg-hero-frame1x) 1x,
-			var(--bg-hero-frame2x) 2x
+			url('/images/hero/hero-bg-frame@1x.webp') 1x,
+			url('/images/hero/hero-bg-frame@2x.webp') 2x
 		),
-		var(--bg-hero-overlay),
-		image-set(var(--bg-hero-image-mob1x) 1x, var(--bg-hero-image-mob2x) 2x);
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		image-set(
+			url('/images/hero/hero-bg-mob@1x.webp') 1x,
+			url('/images/hero/hero-bg-mob@2x.webp') 2x
+		);
 	background-size:
 		100% 20px,
 		100% 100%,
@@ -16,22 +19,28 @@
 @media (min-width: 768px) {
 	.hero {
 		background-image: image-set(
-				var(--bg-hero-frame1x) 1x,
-				var(--bg-hero-frame2x) 2x
+				url('/images/hero/hero-bg-frame@1x.webp') 1x,
+				url('/images/hero/hero-bg-frame@2x.webp') 2x
 			),
-			var(--bg-hero-overlay),
-			image-set(var(--bg-hero-image-tab1x) 1x, var(--bg-hero-image-tab2x) 2x);
+			linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			image-set(
+				url('/images/hero/hero-bg-tab@1x.webp') 1x,
+				url('/images/hero/hero-bg-tab@2x.webp') 2x
+			);
 	}
 }
 
 @media (min-width: 1280px) {
 	.hero {
 		background-image: image-set(
-				var(--bg-hero-frame1x) 1x,
-				var(--bg-hero-frame2x) 2x
+				url('/images/hero/hero-bg-frame@1x.webp') 1x,
+				url('/images/hero/hero-bg-frame@2x.webp') 2x
 			),
-			var(--bg-hero-overlay),
-			image-set(var(--bg-hero-image-desk1x) 1x, var(--bg-hero-image-desk2x) 2x);
+			linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			image-set(
+				url('/images/hero/hero-bg-desk@1x.webp') 1x,
+				url('/images/hero/hero-bg-desk@2x.webp') 2x
+			);
 		background-size:
 			100% 28px,
 			100% 100%,
