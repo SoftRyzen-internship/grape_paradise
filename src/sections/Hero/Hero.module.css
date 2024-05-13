@@ -32,5 +32,9 @@
 			),
 			var(--bg-hero-overlay),
 			image-set(var(--bg-hero-image-desk1x) 1x, var(--bg-hero-image-desk2x) 2x);
+		background-size:
+			100% 28px,
+			100% 100%,
+			cover;
 	}
 }

@@ -11,16 +11,14 @@ import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { FormBlock } from '@/components/common/Form';
 
 import { serviceCardData } from '@/data';
-import { productCardData } from '@/data'; 
+import { productCardData } from '@/data';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
-import { Hero } from '@/sections/Hero/Hero';
 
 export const Observer: FC = () => {
 	return (
 		<>
-			<Hero />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
 				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>

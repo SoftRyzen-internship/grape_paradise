@@ -10,13 +10,13 @@ export const Hero = () => {
 		<Section
 			sectionStyles={clsx(
 				s.hero,
-				'h-[640px] pb-[102px] pt-[144px] md:pb-[80px] md:pt-[120px] lg:pb-[95px] lg:pt-[170px]',
+				'relative min-h-[640px] pb-[102px] pt-[144px] md:min-h-[584px] md:pb-[80px] md:pt-[120px] lg:min-h-[800px] lg:pb-[95px] lg:pt-[170px]',
 			)}
 		>
-			<Title chapter='hero' styles='mb-[64px]'>
+			<Title chapter='hero' styles='mb-[64px] md:mb-[48px] lg:mb-[49px]'>
 				{heroData.title}
 			</Title>
-			<p className='mb-[102px] font-tenor text-normal font-extralight text-white'>
+			<p className='font-tenor text-normal font-extralight text-white md:ml-auto md:w-[398px] lg:w-[487px] lg:text-normal_desk'>
 				{heroData.text}
 			</p>
 		</Section>
