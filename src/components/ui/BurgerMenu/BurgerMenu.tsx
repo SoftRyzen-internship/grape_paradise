@@ -12,12 +12,12 @@ import { IBurgerMenuProps } from './IBurgerMenuProps.types';
 
 import { ButtonLess } from '../ButtonLess';
 
-import styles from './BurgerMenu.module.css';
+import s from './BurgerMenu.module.css';
 
 export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
 	return (
 		<div
-			className={`fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden bg-bg1 lg:hidden ${styles.background}`}
+			className={`fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden bg-bg1 lg:hidden ${s.background}`}
 		>
 			<div className='container'>
 				<div className='flex items-center justify-between py-6'>

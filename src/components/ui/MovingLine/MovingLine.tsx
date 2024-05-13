@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 
 import { movingLineData } from '@/data';
 
-import styles from './MovingLine.module.css';
+import s from './MovingLine.module.css';
 
 export const MovingLine: FC = () => {
 	return (
@@ -15,7 +15,7 @@ export const MovingLine: FC = () => {
 					className='mr-6 flex items-center justify-center md:mr-10'
 				>
 					<p
-						className={`mr-6 font-tenor text-h0 text-accent md:mr-10 md:text-h0_tab lg:text-h0_desk ${styles.item}`}
+						className={`mr-6 font-tenor text-h0 text-accent md:mr-10 md:text-h0_tab lg:text-h0_desk ${s.item}`}
 					>
 						{text}
 					</p>

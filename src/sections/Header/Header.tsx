@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 import { Logo } from '@/components/ui/Logo';
 import { NavMenu } from '@/components/ui/NavMenu';
-import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
+import { ButtonMain } from '@/components/ui/ButtonMain';
+import { ButtonLess } from '@/components/ui/ButtonLess';
 import { BurgerMenu } from '@/components/ui/BurgerMenu';
 
 import { headerData } from '@/data';
 
 import BurgerIcon from '@/../public/icons/menu.svg';
-import { ButtonLess } from '@/components/ui/ButtonLess';
 
 export const Header = () => {
 	const [isOpened, setIsOpened] = useState(false);
