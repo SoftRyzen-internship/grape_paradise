@@ -1,0 +1,78 @@
+.advantages_bg {
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat-x;
+	background-image: image-set(
+		url(/images/advantages/advantages_bg_mob.webp) 1x,
+		url(/images/advantages/advantages_bg_mob@2x.webp) 2x
+	);
+}
+
+@media screen and (min-width: 360px) {
+	.advantages_bg {
+		background-size: contain;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.advantages_bg {
+		background-image: image-set(
+			url(/images/advantages/advantages_bg_tab.webp) 1x,
+			url(/images/advantages/advantages_bg_tab@2x.webp) 2x
+		);
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.advantages_bg {
+		background-size: cover;
+		background-image: image-set(
+			url(/images/advantages/advantages_bg_desk.webp) 1x,
+			url(/images/advantages/advantages_bg_desk@2x.webp) 2x
+		);
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.advantages_bg {
+		background-size: contain;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.leaf::before {
+		content: '';
+		position: absolute;
+		top: -226px;
+		right: 314px;
+		width: 258px;
+		height: 220px;
+		display: inline-block;
+		background-size: cover;
+		background-image: url(/icons/bg-big-leaf-section-4.svg);
+	}
+
+	.leaf::after {
+		content: '';
+		position: absolute;
+		top: -116px;
+		right: 90px;
+		width: 147px;
+		height: 128px;
+		display: inline-block;
+		background-size: cover;
+		background-image: url(/icons/bg-small-leaf-section-4.svg);
+	}
+
+	.bottle::after {
+		content: '';
+		position: absolute;
+		bottom: -303px;
+		right: 313px;
+		width: 387px;
+		height: 275px;
+		display: inline-block;
+		background-size: cover;
+		background-image: url(/icons/bg-bottle-section-4.svg);
+	}
+}

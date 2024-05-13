@@ -1,0 +1,51 @@
+[
+	{
+		"id": "01",
+		"title": "Ягоди",
+		"img": {
+			"src": "/images/products/img-1_521.webp",		
+			"alt": "Ягоди"
+		}		
+	},
+	{
+		"id": "02",
+		"title": "Вино без спирту",
+		"img": {
+			"src": "/images/products/img-2_521.webp",
+			"alt": "Вино без спирту"
+		}
+		
+	},
+	{
+		"id": "03",
+		"title": "Родзинки",
+		"img": {
+			"src": "/images/products/img-3_521.webp",
+			"alt": "Родзинки"
+		}
+	},
+    {
+		"id": "04",
+		"title": "Сік",
+		"img": {
+			"src": "/images/products/img-4_521.webp",
+			"alt": "Сік"
+		}
+	},
+    {
+		"id": "05",
+		"title": "Саджанці",
+		"img": {
+			"src": "/images/products/img-5_521.webp",
+			"alt": "Саджанці"
+		}
+	},
+    {
+		"id": "06",
+		"title": "Чубуки",
+		"img": {
+			"src": "/images/products/img-6_521.webp",
+			"alt": "Чубуки"
+		}
+	}
+]

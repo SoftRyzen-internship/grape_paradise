@@ -1,0 +1,44 @@
+.containerImg::before {
+	content: url('/icons/card-frame.svg');
+	display: block;
+	width: 15px;
+	height: 229px;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: -5px;
+}
+
+@media (min-width: 768px) {
+	.containerImg::before {
+		height: 274px;
+	}
+}
+
+.containerImg::after {
+	content: url('/icons/card-frame.svg');
+	transform: rotate(180deg);
+	display: block;
+	width: 15px;
+	height: 229px;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	right: -5px;
+}
+
+@media (min-width: 768px) {
+	.containerImg::after {	
+		height: 274px;
+	}
+}
+
+.containerCard img {
+	transition: transform 0.3s ease;
+}
+
+@media (min-width: 1280px) {
+	.containerCard:hover img {
+		transform: scale(1.1);
+	}
+}

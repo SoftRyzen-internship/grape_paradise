@@ -1,0 +1,62 @@
+.plant::before,
+.bag::before,
+.watering_can::before,
+.truck::before {
+	content: '';
+	height: 82px;
+	display: inline-block;
+	background-size: cover;
+}
+
+@media screen and (min-width: 1280px) {
+	.plant::before,
+	.bag::before,
+	.watering_can::before,
+	.truck::before {
+		height: 122px;
+	}
+}
+
+.plant::before {
+	width: 64px;
+	background-image: url(/icons/plant.svg);
+}
+
+@media screen and (min-width: 1280px) {
+	.plant::before {
+		width: 96px;
+	}
+}
+
+.bag::before {
+	width: 67px;
+	background-image: url(/icons/bag.svg);
+}
+
+@media screen and (min-width: 1280px) {
+	.bag::before {
+		width: 103px;
+	}
+}
+
+.watering_can::before {
+	width: 88px;
+	background-image: url(/icons/watering-can.svg);
+}
+
+@media screen and (min-width: 1280px) {
+	.watering_can::before {
+		width: 130px;
+	}
+}
+
+.truck::before {
+	width: 128px;
+	background-image: url(/icons/truck.svg);
+}
+
+@media screen and (min-width: 1280px) {
+	.truck::before {
+		width: 180px;
+	}
+}
