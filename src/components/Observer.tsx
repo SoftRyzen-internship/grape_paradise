@@ -8,7 +8,7 @@ import { Logo } from '@/components/ui/Logo';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
-import { FormBlock } from '@/components/common/Form/FormBlock';
+import { FormBlock } from '@/components/common/Form';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';

@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { FC } from 'react';
 import { clsx } from 'clsx';
+import Image from 'next/image';
 
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { Title } from '@/components/common/Title/Title';
@@ -28,10 +28,10 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 		<>
 			<div
 				className={clsx(
-					'w-fill flex min-w-[328px] cursor-pointer flex-col justify-between sm:min-w-[448px] md:w-[330px] md:min-w-[330px] lg:w-[521px] lg:max-w-[521px]',
+					'w-fill flex cursor-pointer flex-col justify-between md:w-[330px] lg:w-[521px]',
 					s.containerCard,
-					{ 'lg:h-[633px]] h-[545px]  md:h-[598px]': slide === 'service' },
-					{ 'h-[354px] md:h-[406px] lg:h-[455px]': slide === 'product' },
+					{ 'min-h-[545px] md:h-[598px] lg:h-[633px]': slide === 'service' },
+					{ 'min-h-[354px] md:h-[406px] lg:h-[455px]': slide === 'product' },
 				)}
 			>
 				<div>
