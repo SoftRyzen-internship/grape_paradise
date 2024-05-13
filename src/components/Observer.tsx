@@ -2,7 +2,6 @@ import { FC } from 'react';
 
 import { buttonsData, titleData } from '@/data';
 
-import { History } from '@/sections';
 import { Section } from '@/components/common/Section/Section';
 import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
@@ -20,7 +19,6 @@ import Play from '@/../public/icons/play.svg';
 export const Observer: FC = () => {
 	return (
 		<>
-			<History />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
 				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>

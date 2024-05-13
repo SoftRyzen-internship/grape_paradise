@@ -19,14 +19,14 @@ export const History: FC = () => (
 		containerStyles='md:flex md:items-center md:justify-between'
 	>
 		<div
-			className={`relative mb-12 h-[328px] md:m-0 md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] ${s.grape}`}
+			className={`relative smOnly:mb-12 h-[328px] md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] ${s.grape}`}
 		>
 			<Image
 				fill
 				priority
 				src={historyData.img}
 				alt={historyData.alt}
-				className='object-cover'
+				className={s.frame}
 				sizes='(max-width: 768px) 448px, (max-width: 1280px) 300px, 567px'
 			/>
 

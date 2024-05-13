@@ -1,3 +1,19 @@
+.frame {
+	object-fit: contain;
+}
+
+@media screen and (min-width: 370px) {
+	.frame {
+		object-fit: cover;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.frame {
+		object-fit: contain;
+	}
+}
+
 @media screen and (min-width: 1280px) {
 	.grape::before {
 		content: url('/icons/bg-grape-section-2.svg');
