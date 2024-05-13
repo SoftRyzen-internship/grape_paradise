@@ -2,18 +2,21 @@
 
 import { FC } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 
 import { formData } from '@/data';
 const { namedField, buttonText } = formData;
 
 import { formSchema } from '@/utils';
 import { sendMessage } from '@/actions';
+import { IFormState } from '@/types';
+
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { CustomInput } from '@/components/common/Form//CustomInput';
 import { CustomTextarea } from '@/components/common/Form//CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form//CustomCheckbox';
 
-import { IFormBlockProps, IFormState } from './FormBlock.types';
+import { IFormBlockProps } from './FormBlock.types';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	const {
@@ -22,9 +25,17 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 		reset,
 		formState: { errors },
 		control,
+		watch,
+		setValue,
 	} = useForm<IFormState>({
 		defaultValues: { approval: false },
 		shouldFocusError: false,
+	});
+
+	useFormPersist('storageForm', {
+		watch,
+		setValue,
+		exclude: ['approval'],
 	});
 
 	const onSubmit: SubmitHandler<IFormState> = async data => {
