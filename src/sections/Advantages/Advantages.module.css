@@ -41,38 +41,32 @@
 
 @media screen and (min-width: 1280px) {
 	.leaf::before {
-		content: '';
+		content: url('/icons/bg-big-leaf-section-4.svg');
 		position: absolute;
+		display: inline-block;
 		top: -226px;
 		right: 314px;
 		width: 258px;
 		height: 220px;
-		display: inline-block;
-		background-size: cover;
-		background-image: url(/icons/bg-big-leaf-section-4.svg);
 	}
 
 	.leaf::after {
-		content: '';
+		content: url('/icons/bg-small-leaf-section-4.svg');
 		position: absolute;
+		display: inline-block;
 		top: -116px;
 		right: 90px;
 		width: 147px;
 		height: 128px;
-		display: inline-block;
-		background-size: cover;
-		background-image: url(/icons/bg-small-leaf-section-4.svg);
 	}
 
 	.bottle::after {
-		content: '';
+		content: url('/icons/bg-bottle-section-4.svg');
 		position: absolute;
+		display: inline-block;
 		bottom: -303px;
 		right: 313px;
 		width: 387px;
 		height: 275px;
-		display: inline-block;
-		background-size: cover;
-		background-image: url(/icons/bg-bottle-section-4.svg);
 	}
 }

@@ -14,6 +14,12 @@ export { default as logo } from './logo.json';
 export { default as formData } from './formData.json';
 
 export { default as headerData } from './headerData.json';
+<<<<<<< HEAD
 export { default as heroData } from './heroData.json';
+=======
+export { default as historyData } from './historyData.json';
+>>>>>>> dev
 
 export { default as movingLineData } from './movingLineData.json';
+
+export { default as contactsData } from './contactsData.json';
