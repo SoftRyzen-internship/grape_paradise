@@ -1,0 +1,7 @@
+.hero {
+	background-image: var(--bg-hero-overlay),
+		image-set(var(--bg-hero-image-mob1x) 1x, var(--bg-hero-image-mob2x) 2x);
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}

@@ -12,3 +12,4 @@ export { default as titleData } from './titleData.json';
 export { default as formData } from './formData.json';
 
 export { default as headerData } from './headerData.json';
+export { default as heroData } from './heroData.json';

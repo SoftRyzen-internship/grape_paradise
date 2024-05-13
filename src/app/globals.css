@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--bg-hero-overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	--bg-hero-image-mob1x: url('/images/hero/hero-bg-mob@1x.webp');
+	--bg-hero-image-mob2x: url('/images/hero/hero-bg-mob@2x.webp');
+}
+
 @layer base {
 	body {
 		@apply bg-bg1 font-geologica text-normal font-extralight text-bodyDark lg:text-normal_desk;
