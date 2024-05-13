@@ -6,4 +6,5 @@ export interface ICustomCheckboxProps
 	handleChange: (checked: boolean) => void;
 	errorMessage?: string;
 	definition?: string;
+	className?: string;
 }

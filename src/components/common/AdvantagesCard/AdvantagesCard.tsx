@@ -1,10 +1,10 @@
-import s from './AdvantagesCard.module.css';
-
-import React from 'react';
+import { FC } from 'react';
 
 import { advantagesData } from '@/data';
 
-export const AdvantagesCard: React.FC = () => {
+import s from './AdvantagesCard.module.css';
+
+export const AdvantagesCard: FC = () => {
 	return (
 		<ul className='flex flex-col items-center gap-8 md:flex-row md:items-baseline'>
 			{advantagesData.advantages.map(({ id, description }) => (
