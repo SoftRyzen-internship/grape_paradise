@@ -15,3 +15,5 @@ export { default as formData } from './formData.json';
 
 export { default as headerData } from './headerData.json';
 export { default as heroData } from './heroData.json';
+
+export { default as movingLineData } from './movingLineData.json';
