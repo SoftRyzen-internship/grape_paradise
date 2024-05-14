@@ -1,4 +1,6 @@
-export const pageStructure = (S: any) => {
+import { StructureBuilder } from 'sanity/desk';
+
+export const pageStructure = (S: StructureBuilder) => {
 
     return S.list()
         .title("Секції сайту")
