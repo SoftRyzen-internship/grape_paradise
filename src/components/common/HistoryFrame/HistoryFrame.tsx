@@ -15,7 +15,6 @@ export const HistoryFrame: FC = () => (
 	>
 		<Image
 			fill
-			priority
 			src={historyData.img}
 			alt={historyData.alt}
 			className={s.frame}
