@@ -3,7 +3,7 @@ interface IImgCardGeneration {
     alt: string;
 }
 
-interface IDataCardGeneration {
+export interface IDataCardGeneration {
     title: string;
     img: IImgCardGeneration;
     description?: string;
