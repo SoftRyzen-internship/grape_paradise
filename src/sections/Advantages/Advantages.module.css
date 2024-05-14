@@ -48,6 +48,7 @@
 		right: 314px;
 		width: 258px;
 		height: 220px;
+		z-index: 5;
 	}
 
 	.leaf::after {
@@ -58,6 +59,7 @@
 		right: 90px;
 		width: 147px;
 		height: 128px;
+		z-index: 5;
 	}
 
 	.bottle::after {
@@ -68,5 +70,6 @@
 		right: 313px;
 		width: 387px;
 		height: 275px;
+		z-index: 5;
 	}
 }
