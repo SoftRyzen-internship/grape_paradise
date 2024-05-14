@@ -1,5 +1,5 @@
 import { Hero, History, Advantages, Contacts } from '@/sections';
-import { Observer } from '@/components/Observer';
+// import { Observer } from '@/components/Observer';
 
 export default function Home() {
 	return (
@@ -9,7 +9,7 @@ export default function Home() {
 			<Advantages />
 			<Contacts />
 
-			<Observer />
+			{/* <Observer /> */}
 		</main>
 	);
 }
