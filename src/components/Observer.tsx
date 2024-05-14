@@ -12,6 +12,7 @@ import { FormBlock } from '@/components/common/Form';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
+import { SlideCardReviews } from './common/SlideCardReview/SlideCardReview';
 
 export const Observer: FC = () => {
 	return (
@@ -68,7 +69,7 @@ export const Observer: FC = () => {
 					<SlideCardGeneration index={1} slide='service' />
 				</div>
 				<SlideCardGeneration index={0} slide='product' />
-
+				<SlideCardReviews/>
 				<FormBlock />
 			</div>
 		</>
