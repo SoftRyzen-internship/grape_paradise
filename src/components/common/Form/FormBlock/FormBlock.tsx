@@ -44,9 +44,7 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	const onSubmit: SubmitHandler<IFormState> = async data => {
 		try {
 			await sendMessage(data);
-			alert(
-				`The next step will send \n${data.name}\n${data.phone}\n${data.message} to the telegram group and display a modal with info about the result for the user`,
-			);
+			setModalOpen(true);
 
 			reset();
 		} catch (error) {
