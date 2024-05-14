@@ -21,7 +21,7 @@ export const Header:FC = () => {
 	};
 
 	return (
-		<header className='w-full py-6'>
+		<header className='absolute left-0 top-0 z-20 w-full bg-transparent py-6'>
 			<div className='container flex items-center justify-between '>
 				<Logo />
 				<NavMenu className='notLg:hidden' />
