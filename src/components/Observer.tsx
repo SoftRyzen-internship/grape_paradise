@@ -8,10 +8,10 @@ import { Logo } from '@/components/ui/Logo';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
-import { FormBlock } from '@/components/common/Form';
+import { MovingLine } from '@/components/ui/MovingLine';
 
 import { serviceCardData } from '@/data';
-import { productCardData } from '@/data'; 
+import { productCardData } from '@/data';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
@@ -19,6 +19,7 @@ import Play from '@/../public/icons/play.svg';
 export const Observer: FC = () => {
 	return (
 		<>
+			<MovingLine />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
 				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>
@@ -71,8 +72,6 @@ export const Observer: FC = () => {
 					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
-
-				<FormBlock />
 			</div>
 		</>
 	);
