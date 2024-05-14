@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, Fragment } from 'react';
 import { clsx } from 'clsx';
 
@@ -13,9 +11,20 @@ import {
 
 import CloseIcon from '@/../public/icons/close.svg';
 
-import { IModalProps } from './Modal.types';
+import { formData } from '@/data';
+const { modalInfo } = formData;
 
-export const Modal: FC<IModalProps> = ({ show, title, onClose, children }) => {
+import { IModalProps } from './Modal.types';
+import styles from './Modal.module.css';
+import { ButtonLess } from '@/components/ui/ButtonLess';
+
+export const Modal: FC<IModalProps> = ({
+	show,
+	title,
+	errorMessage,
+	onClose,
+	children,
+}) => {
 	return (
 		<Transition as={Fragment} appear show={show}>
 			<Dialog
@@ -24,7 +33,7 @@ export const Modal: FC<IModalProps> = ({ show, title, onClose, children }) => {
 				className='fixed inset-0 z-50 flex items-center'
 			>
 				<div
-					className='bg-black60 fixed inset-0 backdrop-blur-12.5'
+					className='fixed inset-0 bg-black60 backdrop-blur-12.5'
 					aria-hidden='true'
 				>
 					<div
@@ -42,31 +51,37 @@ export const Modal: FC<IModalProps> = ({ show, title, onClose, children }) => {
 						>
 							<DialogPanel
 								className={clsx(
-									'flex flex-col rounded-xl border border-green bg-bg2 p-4 pb-8 md:p-6 md:pb-8',
+									'relative flex flex-col overflow-hidden rounded-xl border border-green bg-bg2 p-4 pb-8 text-left md:p-6 md:pb-8',
 									title && 'text-center',
+									title && styles['bg-modal'],
 								)}
 							>
-								<button
+								<ButtonLess
 									type='button'
-									aria-label='Закрити модальне вікно'
+									purpose='burger'
+									aria-label={modalInfo.button.ariaLabelClose}
 									onClick={onClose}
-									className={clsx(
-										'mb-4 h-6 w-6 self-end rounded-full transition hover:scale-125 focus:scale-125 focus:outline lg:mb-6',
+									styles={clsx(
+										'mb-4 self-end rounded-full',
 										title && 'mb-10 md:mb-8 lg:mb-10',
 									)}
 								>
 									<CloseIcon width={24} height={24} className='fill-green' />
-								</button>
+								</ButtonLess>
+
 								{title ? (
 									<DialogTitle
 										as='h3'
-										className='mb-2 text-xl/[1.25] font-normal md:mb-4'
+										className={clsx(
+											'z-10 mb-2 text-h3 font-normal text-greenModal md:mb-4 lg:text-h3_desk',
+											errorMessage ? 'text-red' : 'text-greenModal',
+										)}
 									>
 										{title}
 									</DialogTitle>
 								) : null}
 
-								<div className='text-large font-normal text-black lg:text-large_desk'>
+								<div className='z-10 text-large font-normal text-black lg:text-large_desk'>
 									{children}
 								</div>
 							</DialogPanel>
