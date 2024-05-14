@@ -2,6 +2,7 @@ import { defineConfig } from './node_modules/sanity'
 import { structureTool } from 'sanity/structure'
 
 
+
 import { schemaTypes } from './src/sanity/schemas/index'
 import { pageStructure } from '@/sanity/pageStructure'
 
