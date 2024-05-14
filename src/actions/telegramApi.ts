@@ -1,4 +1,5 @@
-import { IFormState } from '@/components/common/Form/FormBlock/FormBlock.types';
+import { IFormState } from "@/types";
+
 
 const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 const API = process.env.NEXT_PUBLIC_TELEGRAM_API;
