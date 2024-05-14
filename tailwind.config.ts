@@ -42,9 +42,11 @@ const config: Config = {
 				stroke: '#C2B2A2',
 				grey: '#A7A7A7',
 				black: '#343434',
+				black60: 'rgba(0, 0, 0, 0.6)',
 				black80: 'rgba(0, 0, 0, 0.8)',
 				bodyDark: '#4D4843',
 				green: '#4D6116',
+
 				darkGreen: '#405012',
 				green50: 'rgba(77, 97, 22, 0.5)',
 				green30: 'rgba(77, 97, 22, 0.3)',
