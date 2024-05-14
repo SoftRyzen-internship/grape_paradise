@@ -1,14 +1,14 @@
-import { defineConfig } from './node_modules/sanity'
-import { structureTool } from 'sanity/structure'
+import { defineConfig, PluginOptions } from './node_modules/sanity'
 
+import { deskTool, DeskToolOptions } from 'sanity/desk';
 
 import { schemaTypes } from './src/sanity/schemas/index'
 import { pageStructure } from '@/sanity/pageStructure'
 
 
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || ''
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || ''
 
 
 
@@ -21,9 +21,14 @@ export default defineConfig({
   projectId: projectId,
   dataset: dataset,
 
-  plugins: [structureTool({ name: 'content', title: 'Редагування контенту', structure: pageStructure })],
+  plugins: [deskTool({
+    name: 'content',
+    title: 'Редагування контенту',
+    structure: pageStructure
+  } as DeskToolOptions)],
 
   schema: {
     types: schemaTypes,
   },
+
 })
