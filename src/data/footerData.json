@@ -1,6 +1,12 @@
 {
 	"create": "Створено при підтримці",
-	"policy": "Політика конфіденційності",
 	"home": "Головна",
-	"rights": "© 2024 SPILNO. Всі права захищені."
+	"policy": "Політика конфіденційності",
+	"rights": "© 2024 SPILNO. Всі права захищені.",
+	"linkGoIT": "https://goit.global/ua/",
+	"linkSoftRyzen": "https://www.softryzen.com/",
+	"ariaGoIT": "Посилання на офіційний сайт партнера GoIT",
+	"ariaSoftRyzen": "Посилання на офіційний сайт партнера SoftRyzen",
+	"target": "_blank",
+	"rel": "noopener noreferrer nofollow"
 }

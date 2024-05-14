@@ -30,15 +30,44 @@ export const Footer: FC = () => {
 					<Logo theme={'green'} size={'big'} />
 				</div>
 				<div className='flex flex-col border-t-2 border-stroke pt-8'>
-					<p className='mx-auto mb-4 text-center'>{footerData.create}</p>
+					<p className='mx-auto mb-4 text-center font-geologica text-small font-[250] text-bodyDark'>
+						{footerData.create}
+					</p>
 					<div className='mx-auto mb-8 flex w-[211px] items-baseline gap-4'>
-						<GoIT width={64} height={19} />
-						<SoftRyzen className='w-[131px] fill-green' />
+						<Link
+							href={footerData.linkGoIT}
+							target={footerData.target}
+							rel={footerData.rel}
+							aria-label={footerData.ariaGoIT}
+						>
+							<GoIT
+								width={64}
+								height={20}
+								className='fill-greyLogo transition hover:fill-accent focus:fill-accent'
+							/>
+						</Link>
+						<Link
+							href={footerData.linkSoftRyzen}
+							target={footerData.target}
+							rel={footerData.rel}
+							aria-label={footerData.ariaSoftRyzen}
+						>
+							<SoftRyzen
+								width={131}
+								height={20}
+								className='fill-greyLogo transition hover:fill-accent focus:fill-accent'
+							/>
+						</Link>
 					</div>
-					<Link href={policy ? '/' : '/policy'} className='mb-8 text-center'>
+					<Link
+						href={policy ? '/' : '/policy'}
+						className='mb-8 text-center font-geologica text-small font-[250] text-bodyDark hover:text-green focus:text-green'
+					>
 						{policy ? footerData.home : footerData.policy}
 					</Link>
-					<p className='text-center'>{footerData.rights}</p>
+					<p className='text-center font-geologica text-small font-[250] text-bodyDark'>
+						{footerData.rights}
+					</p>
 				</div>
 			</div>
 		</footer>
