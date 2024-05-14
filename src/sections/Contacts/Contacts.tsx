@@ -16,10 +16,10 @@ export const Contacts: FC = () => {
 			containerStyles='md:flex justify-between'
 		>
 			<div className='smOnly:mb-10'>
-				<Title chapter='chapter' styles='text-green font-normal'>
+				<Title chapter='chapter' className='font-normal text-green'>
 					{contactsData.subtitle}
 				</Title>
-				<address className='w-[320px] font-tenor text-large not-italic text-black lg:text-h3_desk mdOnly:w-[200px]'>
+				<address className='mdOnly:w-[200px] w-[320px] font-tenor text-large not-italic text-black lg:text-h3_desk'>
 					<p className='mb-[15px] mt-6 md:my-8'>
 						{contactsData.address1}
 						<span className='block'>{contactsData.address2}</span>
