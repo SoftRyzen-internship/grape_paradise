@@ -12,7 +12,7 @@ import { headerData } from '@/data';
 
 import BurgerIcon from '@/../public/icons/menu.svg';
 
-export const Header:FC = () => {
+export const Header: FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
 
 	const toggleMenuOpen = () => {
@@ -25,14 +25,14 @@ export const Header:FC = () => {
 			<div className='container flex items-center justify-between '>
 				<Logo />
 				<NavMenu className='notLg:hidden' />
-				<ButtonMain chapter='header' to='contacts' styles='notLg:hidden'>
+				<ButtonMain chapter='header' to='contacts' className='notLg:hidden'>
 					{headerData.text}
 				</ButtonMain>
 				<ButtonLess
 					type='button'
 					purpose='burger'
 					aria={headerData.ariaLabelOpen}
-					styles='lg:hidden'
+					className='h-12 w-12 p-3 lg:hidden'
 					onClick={toggleMenuOpen}
 				>
 					<BurgerIcon width={24} height={24} />

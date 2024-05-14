@@ -3,7 +3,7 @@ export interface IButtonLessProps {
 	purpose: 'form' | 'slider' | 'video' | 'burger';
 	disabled?: boolean;
 	aria?: string;
-	styles?: string;
+	className?: string;
 	children?: React.ReactNode;
 	onClick?: () => void;
 }
