@@ -20,3 +20,5 @@ export { default as historyData } from './historyData.json';
 export { default as movingLineData } from './movingLineData.json';
 
 export { default as contactsData } from './contactsData.json';
+
+export { default as productsData } from './productsData.json'

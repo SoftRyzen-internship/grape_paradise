@@ -1,5 +1,6 @@
 import { Hero, History, Advantages, Contacts } from '@/sections';
 import { Observer } from '@/components/Observer';
+import { Products } from '@/sections/Products/Products';
 
 export default function Home() {
 	return (
@@ -7,6 +8,7 @@ export default function Home() {
 			<Hero />
 			<History />
 			<Advantages />
+			<Products />
 			<Contacts />
 
 			<Observer />
