@@ -24,18 +24,16 @@ export const Slider: FC<ISliderProps> = ({
   slide = 'product',
   array,
   desktopSpaceBetween = 174,
+	separator = true
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const [isPrevBtnDisabled, setPrevBtnDisabled] = useState<boolean>(true);
-  const [isNextBtnDisabled, setNextBtnDisabled] = useState<boolean>(false);
-  const [isLoop, setIsLoop] = useState<boolean>(false);
-  const [isVisibleSeparator, setIsVisibleSeparator] = useState<boolean>(true);
+  const [isNextBtnDisabled, setNextBtnDisabled] = useState<boolean>(false);  
 
   const swiperRef = useRef<any>(null);
 
   useEffect(() => {
     if (loop === true) {
-      setIsLoop(true);
       setPrevBtnDisabled(false);
     }
   }, [loop]);
@@ -43,27 +41,26 @@ export const Slider: FC<ISliderProps> = ({
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
-      setCurrentIndex(prevIndex => prevIndex - 1);
       setNextBtnDisabled(false);
-			setPrevBtnDisabled(swiperRef.current.swiper.isBeginning && !isLoop);
+			setPrevBtnDisabled(swiperRef.current.swiper.isBeginning && !loop);
     }
   };
 
   const handleNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
-      setCurrentIndex(prevIndex => prevIndex + 1);
       setPrevBtnDisabled(false);
-      if (swiperRef.current.swiper.isEnd && !isLoop) {
+      if (swiperRef.current.swiper.isEnd && !loop) {
         setNextBtnDisabled(true);
       }
     }
   };
 
+
   return (
-    <div
-      className={clsx('w-full', {
-        [`${s.container} relative`]: isVisibleSeparator === true,
+		    <div
+      className={clsx('relative w-full', {
+        [`${s.container} `]: separator  === true,
       })}
     >
       <Swiper
@@ -73,11 +70,8 @@ export const Slider: FC<ISliderProps> = ({
         slidesPerView={2}
         initialSlide={0}
         grabCursor={true}
-        loop={isLoop}
+        loop={loop}
         ref={swiperRef}
-        onSlideChange={swiper => {
-          setCurrentIndex(swiper.activeIndex);
-        }}
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 16 },
           768: { slidesPerView: 2, spaceBetween: 40 },

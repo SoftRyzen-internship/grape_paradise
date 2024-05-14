@@ -74,7 +74,7 @@ export const Observer: FC = () => {
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
 
 				<div className='my-20'>
-				<Slider array={productCardData} slide='product' loop = {true} />
+				<Slider array={productCardData} slide='product' loop = {true} separator = {true} />
 				</div>
 				<div className='my-20'>
 				<Slider array={serviceCardData} slide='service' separator = {false}  />
