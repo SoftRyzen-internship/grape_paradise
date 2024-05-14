@@ -16,7 +16,7 @@
 	}
 
 	.title {
-		@apply font-tenor text-h2 uppercase text-green md:text-h2_tab lg:text-h2_desk;
+		@apply font-tenor font-normal text-h2 uppercase text-green md:text-h2_tab lg:text-h2_desk;
 	}
 
 	.subtitle {

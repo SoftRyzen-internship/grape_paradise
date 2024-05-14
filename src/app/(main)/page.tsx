@@ -1,4 +1,4 @@
-import { Hero, History, Advantages, Contacts } from '@/sections';
+import { Hero, History, Advantages, Contacts, Services } from '@/sections';
 // import { Observer } from '@/components/Observer';
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
 		<main>
 			<Hero />
 			<History />
+			<Services/>
 			<Advantages />
 			<Contacts />
 
