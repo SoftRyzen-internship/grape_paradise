@@ -1,14 +1,15 @@
 'use client';
 
 import { FC } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 
 import { formData } from '@/data';
 const { namedField, buttonText } = formData;
 
-import { IFormState } from '@/types';
 import { formSchema } from '@/utils';
+import { sendMessage } from '@/actions';
+import { IFormState } from '@/types';
 
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { CustomInput } from '@/components/common/Form//CustomInput';
@@ -37,12 +38,17 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 		exclude: ['approval'],
 	});
 
-	const onSubmit = (data: IFormState) => {
-		console.log(data);
-		alert(
-			`The next step will send \n${data.name}\n${data.phone}\n${data.message} to the telegram group and display a modal with info about the result for the user`,
-		);
-		reset();
+	const onSubmit: SubmitHandler<IFormState> = async data => {
+		try {
+			await sendMessage(data);
+			alert(
+				`The next step will send \n${data.name}\n${data.phone}\n${data.message} to the telegram group and display a modal with info about the result for the user`,
+			);
+
+			reset();
+		} catch (error) {
+			alert(error);
+		}
 	};
 
 	return (

@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { clsx } from 'clsx';
-import { Button } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 import { IButtonMainProps } from './ButtonMain.types';
 
@@ -14,7 +14,8 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 	onClick,
 }) => {
 	return (
-		<Button
+		<Link
+			href='#'
 			to={to}
 			spy={true}
 			smooth={true}
@@ -39,6 +40,6 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 			)}
 		>
 			{children}
-		</Button>
+		</Link>
 	);
 };

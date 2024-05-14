@@ -1,18 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
 import { Logo } from '@/components/ui/Logo';
 import { NavMenu } from '@/components/ui/NavMenu';
-import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
+import { ButtonMain } from '@/components/ui/ButtonMain';
+import { ButtonLess } from '@/components/ui/ButtonLess';
 import { BurgerMenu } from '@/components/ui/BurgerMenu';
 
 import { headerData } from '@/data';
 
 import BurgerIcon from '@/../public/icons/menu.svg';
-import { ButtonLess } from '@/components/ui/ButtonLess';
 
-export const Header = () => {
+export const Header:FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
 
 	const toggleMenuOpen = () => {
@@ -21,7 +21,7 @@ export const Header = () => {
 	};
 
 	return (
-		<header className='w-full py-6'>
+		<header className='absolute left-0 top-0 z-20 w-full bg-transparent py-6'>
 			<div className='container flex items-center justify-between '>
 				<Logo />
 				<NavMenu className='notLg:hidden' />
