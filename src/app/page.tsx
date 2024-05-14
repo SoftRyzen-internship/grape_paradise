@@ -7,8 +7,9 @@ export default function Home() {
 			<Hero />
 			<History />
 			<Advantages />
-			<Observer />
 			<Contacts />
+
+			<Observer />
 		</main>
 	);
 }
