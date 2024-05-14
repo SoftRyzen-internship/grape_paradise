@@ -74,10 +74,10 @@ export const Observer: FC = () => {
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
 
 				<div className='my-20'>
-				<Slider array={productCardData} slide='product' />
+				<Slider array={productCardData} slide='product' loop = {true} />
 				</div>
 				<div className='my-20'>
-				<Slider array={serviceCardData} slide='service' desktopSpaceBetween={56}/>
+				<Slider array={serviceCardData} slide='service' separator = {false}  />
 				</div>
 
 				<FormBlock />
