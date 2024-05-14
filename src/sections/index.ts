@@ -5,3 +5,4 @@ export { Advantages } from './Advantages';
 
 export { Contacts } from './Contacts';
 
+export { Footer } from './Footer';

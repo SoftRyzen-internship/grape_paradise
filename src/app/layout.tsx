@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { Tenor_Sans } from 'next/font/google';
 
 import { Header } from '@/sections';
+import { Footer } from '@/sections';
 
 import { metaData } from '@/data';
 
@@ -20,7 +21,6 @@ const tenor = Tenor_Sans({
 	weight: '400',
 });
 
-
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -31,6 +31,7 @@ export default function RootLayout({
 			<body>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
