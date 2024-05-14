@@ -1,21 +1,29 @@
+'use client';
+
 import { FC } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import clsx from 'clsx';
 
 import { Logo } from '@/components/ui/Logo';
 
-import Field from '@/../public/images/footer/footer.svg';
+import { footerData } from '@/data';
+
+import Field from '@/../public/icons/footer-field.svg';
 import GoIT from '@/../public/icons/goit-icon.svg';
 import SoftRyzen from '@/../public/icons/softryzen-icon.svg';
 
-import { footerData } from '@/data';
-
 import s from './Footer.module.css';
-import Link from 'next/link';
 
 export const Footer: FC = () => {
+	const pathname = usePathname();
+	const policy = pathname === '/policy';
+
 	return (
-		<footer className={clsx(s.footer, 'w-full bg-bg2 pb-8 pt-7')}>
+		<footer
+			className={clsx(policy && s.footer, 'relative w-full bg-bg2 pb-8 pt-7')}
+		>
 			<Field />
 			<div className='container'>
 				<div className='mb-8 flex justify-center'>
@@ -27,8 +35,8 @@ export const Footer: FC = () => {
 						<GoIT width={64} height={19} />
 						<SoftRyzen className='w-[131px] fill-green' />
 					</div>
-					<Link href={'/policy'} className='mb-8 text-center'>
-						{footerData.policy}
+					<Link href={policy ? '/' : '/policy'} className='mb-8 text-center'>
+						{policy ? footerData.home : footerData.policy}
 					</Link>
 					<p className='text-center'>{footerData.rights}</p>
 				</div>
