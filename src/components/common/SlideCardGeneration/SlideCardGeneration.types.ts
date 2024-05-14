@@ -11,5 +11,5 @@ interface IDataCardGeneration {
 
 export interface ISlideCardGenerationProps {
     data: IDataCardGeneration;
-    slide: "service" | "product";
+    slide?: string;
 }

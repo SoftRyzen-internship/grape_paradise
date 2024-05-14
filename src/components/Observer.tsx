@@ -15,6 +15,7 @@ import { productCardData } from '@/data';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
+import { Slider } from './common/Slider/Slider';
 
 export const Observer: FC = () => {
 	return (
@@ -71,6 +72,13 @@ export const Observer: FC = () => {
 					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
+
+				<div className='my-20'>
+				<Slider array={productCardData} slide='product' />
+				</div>
+				<div className='my-20'>
+				<Slider array={serviceCardData} slide='service' desktopSpaceBetween={56}/>
+				</div>
 
 				<FormBlock />
 			</div>

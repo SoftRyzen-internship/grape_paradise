@@ -1,0 +1,19 @@
+.container::before {
+	content: '';
+	display: block;
+	width: 1px;
+	height: 0px;
+	background-color: rgba(194, 178, 162, 1);
+	background-size: contain;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+	.container::before {
+		height: 100%;
+	}
+}
