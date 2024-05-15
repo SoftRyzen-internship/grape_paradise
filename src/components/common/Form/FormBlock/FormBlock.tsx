@@ -5,22 +5,23 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 
 import { formData } from '@/data';
-const { namedField, buttonText } = formData;
+const { namedField, buttonText, modalInfo } = formData;
 
 import { formSchema } from '@/utils';
 import { sendMessage } from '@/actions';
 import { IFormState } from '@/types';
 
-import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
-import { CustomInput } from '@/components/common/Form//CustomInput';
+import { ButtonLess } from '@/components/ui/ButtonLess';
+import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
+import { Modal } from '@/components/ui/Modal';
 
 import { IFormBlockProps } from './FormBlock.types';
-import { Modal } from '@/components/ui/Modal';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	const [modalOpen, setModalOpen] = useState<boolean>(false);
+	const [sendError, setSendError] = useState<boolean>(false);
 
 	const {
 		register,
@@ -42,19 +43,16 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 	});
 
 	const onSubmit: SubmitHandler<IFormState> = async data => {
+		setSendError(false);
 		try {
 			await sendMessage(data);
-			setModalOpen(true);
-
 			reset();
 		} catch (error) {
-			alert(error);
+			setSendError(true);
+		} finally {
+			setModalOpen(true);
 		}
 	};
-	// const onSubmit: SubmitHandler<IFormState> = async data => {
-	// 	console.log(data);
-	// 	setModalOpen(true);
-	// };
 
 	return (
 		<>
@@ -99,18 +97,29 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 				<ButtonLess type='submit' purpose='form' className='mt-8 lg:mt-10'>
 					{buttonText}
 				</ButtonLess>
-
-				<Modal
-					onClose={() => setModalOpen(false)}
-					show={modalOpen}
-					title='Дякуємо за вашу заявку!'
-				>
-					<p className=''>
-						{`Ваші дані були успішно відправлені. Будь ласка, очікуйте, ми
-					зв'яжемося з вами найближчим часом для обговорення деталей.`}
-					</p>
-				</Modal>
 			</form>
+			<Modal
+				onClose={() => setModalOpen(false)}
+				show={modalOpen}
+				title={sendError ? modalInfo.failure.title : modalInfo.successful.title}
+				errorMessage={sendError}
+			>
+				<div className='pb-[10px] md:px-[68px] lg:px-48'>
+					<p className='mb-8 whitespace-pre-line text-xs font-extralight leading-[1.5] text-bodyDark md:text-small lg:text-normal'>
+						{sendError ? modalInfo.failure.text : modalInfo.successful.text}
+					</p>
+
+					<ButtonLess
+						type='button'
+						purpose='modal'
+						onClick={() => setModalOpen(false)}
+						aria={modalInfo.button.ariaLabelClose}
+						className=' inline-flex'
+					>
+						{modalInfo.button.text}
+					</ButtonLess>
+				</div>
+			</Modal>
 		</>
 	);
 };

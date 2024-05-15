@@ -2,57 +2,48 @@
 
 The application example - `<FormBlock />`
 
-#### The custom props are optional
-
-- className?: string - The style can be passed to manage placing the component next to others in the section
+| Prop | Required | Type | Description |
+| --- | --- | --- | --- |
+| `className` | not | string | The style can be passed to manage placing the component next to others in the section |
 
 <hr>
+
 ### Component - CustomInput
 
 The application example - `<CustomInput />`
 
-#### The custom props are optional
+| Prop | Required | Type | Description |
+| --- | --- | --- | --- |
+| `label` | not | string | Can pass text displaying for a label |
+| `errorMessage` | not | string | Can pass text displaying for a error message |
+| `className` | not | string | styles can be passed for the component wrapper |
+|  | not |  | any other attributes that are characteristic of the input (type, placeholder, etc) |
 
-- label?: string - Can pass text displaying for a label;
-- errorMessage?: string - Can pass text displaying for a error message;
-- className?: string - styles can be passed for the component wrapper;
-
-####
-
-- any other attributes that are characteristic of the input
 <hr>
 
 ### Component - CustomTextarea
 
 The application example - `<CustomTextarea />`
 
-#### The custom props are optional
+| Prop | Required | Type | Description |
+| --- | --- | --- | --- |
+| `label` | not | string | Can pass text displaying for a label |
+| `className` | not | string | styles can be passed for the component wrapper |
+|  | not |  | Any other attributes that are characteristic of the textarea (placeholder, rows, cols, etc) |
 
-- label?: string - Can pass text displaying for a label;
-- className?: string - styles can be passed for the component wrapper;
-
-####
-
-- Any other attributes that are characteristic of the textarea (placeholder, rows, cols, etc)
 <hr>
 
 ### Component - CustomCheckbox
 
 The application example - `<CustomCheckbox />`
 
-#### The obligated custom props
-
-- checked: boolean - starting value for checked
-- handleChange -The function to control the value into state in the parent component
-
-#### The custom props are optional
-
-- className?: string - styles can be passed for the component wrapper;
-- definition?: text for the checkbox
-
-####
-
-- Any other attributes that are characteristic of the textarea (placeholder, type, etc)
+| Prop | Required | Type | Description |
+| --- | --- | --- | --- |
+| `checked` | yes | boolean | starting value for checked |
+| `handleChange` | yes | function | The function to control the value into state in the parent component |
+| `className` | not | string | styles can be passed for the component wrapper |
+| `definition` | not | string | text for the checkbox |
+|  | not |  | Any other attributes that are characteristic of the checkbox (checked, type, etc) |
 
 #### The remark
 

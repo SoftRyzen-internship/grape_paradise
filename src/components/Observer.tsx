@@ -9,12 +9,14 @@ import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { MovingLine } from '@/components/ui/MovingLine';
+import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
 import { serviceCardData } from '@/data';
 import { productCardData } from '@/data';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
+
 
 export const Observer: FC = () => {
 	return (
@@ -45,9 +47,10 @@ export const Observer: FC = () => {
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
 				</ButtonLess>
-				<ButtonMain to='hero' chapter='modal'>
-					{buttonsData.home}{' '}
-				</ButtonMain>
+				{/* moodal */}
+				<ButtonLess type='button' purpose='modal'>
+					{buttonsData.home}
+				</ButtonLess>
 				<div className='flex gap-2'>
 					<ButtonLess
 						type='button'
@@ -75,6 +78,8 @@ export const Observer: FC = () => {
 					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
+
+				<SlideCardReviews/>
 			</div>
 		</>
 	);

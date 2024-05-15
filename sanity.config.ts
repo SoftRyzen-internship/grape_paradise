@@ -2,6 +2,7 @@ import { defineConfig, PluginOptions } from './node_modules/sanity'
 
 import { deskTool, DeskToolOptions } from 'sanity/desk';
 
+
 import { schemaTypes } from './src/sanity/schemas/index'
 import { pageStructure } from '@/sanity/pageStructure'
 

@@ -1,4 +1,4 @@
-export default function Policy() {
+export default function Page() {
 	return (
 		<>
 			<p className=' pt-[156px]'>
