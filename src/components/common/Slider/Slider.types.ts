@@ -11,8 +11,8 @@ interface IDataCardGeneration {
 
 export interface ISliderProps {
 	loop?: boolean;
-	slide?: 'service' | 'product';
+	slide?: 'service' | 'product' | 'review';
 	array: IDataCardGeneration[];
 	separator?: boolean;
-	desktopSpaceBetween?: number | string;
+	desktopSpaceBetween?: number;
 }

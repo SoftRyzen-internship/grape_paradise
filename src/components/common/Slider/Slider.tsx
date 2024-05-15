@@ -1,19 +1,20 @@
 'use client';
 
-import { FC, useState, useRef, useEffect } from 'react';
-import { clsx } from 'clsx';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation } from 'swiper/modules';
+
+import { FC, useState, useRef, useEffect } from 'react';
+import { clsx } from 'clsx';
+
+import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 
 import Arrow from '@/../public/icons/arrow.svg';
 
-import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
-import { SlideCardGeneration } from '../SlideCardGeneration';
+import { slidersData } from '@/data';
 
 import { ISliderProps } from './Slider.types';
 
@@ -84,14 +85,14 @@ export const Slider: FC<ISliderProps> = ({
             key={item.img.src}
             className='swiper-slide flex items-center'
           >
-            <SlideCardGeneration data={item} slide={slide} />
+            <SlideCardGeneration data={item} slide={slide} />						
           </SwiperSlide>
         ))}
       </Swiper>
       <div className='swiper-navigation absolute -bottom-20 left-1/2 right-auto z-10 flex w-[104px] -translate-x-1/2 transform items-center justify-between md:-top-24 md:bottom-auto md:left-auto md:right-0 md:w-[112px]  md:translate-x-0 lg:-top-40 lg:w-[164px] '>
         <ButtonLess
           type='button'
-          aria={`Slider's button back`}
+          aria={slidersData.ariaLabelBack}
           purpose='slider'
           disabled={isPrevBtnDisabled}
           onClick={handlePrev}
@@ -100,7 +101,7 @@ export const Slider: FC<ISliderProps> = ({
         </ButtonLess>
         <ButtonLess
           type='button'
-          aria={`Slider's button front`}
+          aria={slidersData.ariaLabelNext}
           purpose='slider'
           disabled={isNextBtnDisabled}
           onClick={handleNext}
