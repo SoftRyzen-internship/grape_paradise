@@ -37,7 +37,7 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 				)}
 			>
 				<div>
-					<Title chapter='chapter' styles='text-black'>
+					<Title chapter='chapter' className='text-black'>
 						{title}
 					</Title>
 

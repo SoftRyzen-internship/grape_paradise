@@ -10,7 +10,7 @@ export const privacyPolicy = defineType({
       name: "privacyPolicyTitle1",
       type: "string",
       title: "Головний заголовок сторінки 'Політика конфіденційності'",
-      validation: (rule: any) =>
+      validation: (rule) =>
         rule
           .required()
           .error('Введіть заголовк')
@@ -20,7 +20,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText1",
         type: "text",
         title: "Текст 1",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -30,7 +30,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle2",
         type: "string",
         title: "Заголовок 2",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -40,7 +40,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText2",
         type: "text",
         title: "Текст 2",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -50,7 +50,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle3",
         type: "string",
         title: "Заголовок 3",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -60,7 +60,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText3",
         type: "text",
         title: "Текст 3",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -70,7 +70,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle4",
         type: "string",
         title: "Заголовок 4",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -80,7 +80,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText4",
         type: "text",
         title: "Текст 4",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -90,7 +90,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle5",
         type: "string",
         title: "Заголовок 5",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -100,7 +100,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText5",
         type: "text",
         title: "Текст 5",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -110,7 +110,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle6",
         type: "string",
         title: "Заголовок 6",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -120,7 +120,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText6",
         type: "text",
         title: "Текст 6",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -130,7 +130,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle7",
         type: "string",
         title: "Заголовок 7",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -140,7 +140,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText7",
         type: "text",
         title: "Текст 7",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -150,7 +150,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle8",
         type: "string",
         title: "Заголовок 8",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -160,7 +160,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText8",
         type: "text",
         title: "Текст 8",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -170,7 +170,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle9",
         type: "string",
         title: "Заголовок 9",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -180,7 +180,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText9",
         type: "text",
         title: "Текст 9",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
@@ -190,7 +190,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyTitle10",
         type: "string",
         title: "Заголовок 10",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть заголовок')
@@ -200,7 +200,7 @@ export const privacyPolicy = defineType({
         name: "privacyPolicyText10",
         type: "text",
         title: "Текст 10",
-        validation: (rule: any) =>
+        validation: (rule) =>
           rule
             .required()
             .error('Введіть текст')
