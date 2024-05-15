@@ -1,3 +1,7 @@
+'use client';
+
+import { SwiperSlide } from 'swiper/react';
+
 import { FC } from 'react';
 
 import { buttonsData, titleData } from '@/data';
@@ -9,6 +13,7 @@ import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { MovingLine } from '@/components/ui/MovingLine';
+import { Slider } from '@/components/common/Slider';
 import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
 import { serviceCardData } from '@/data';
@@ -16,7 +21,6 @@ import { productCardData } from '@/data';
 
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
-
 
 export const Observer: FC = () => {
 	return (
@@ -30,6 +34,21 @@ export const Observer: FC = () => {
 				<Title chapter='chapter' className='text-green'>
 					{titleData.contacts}
 				</Title>
+
+				<div className='my-20'>
+					<Slider loop={true}>
+						{productCardData.map(item => (
+							<SwiperSlide
+								tag='li'
+								key={item._id}
+								className='swiper-slide slide-conteiner'>
+								<SlideCardGeneration title={productCardData[1].title}	src={productCardData[1].src}
+	alt={productCardData[1].src} slide='product' />
+							</SwiperSlide>
+						))}
+					</Slider>
+				</div>
+				
 			</Section>
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
@@ -74,11 +93,21 @@ export const Observer: FC = () => {
 				</ButtonLess>
 
 				<div className='flex flex-col gap-4 md:flex-row'>
-					<SlideCardGeneration data={serviceCardData[1]} slide='service' />
-					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
-				</div>
-				<SlideCardGeneration data={productCardData[1]} slide='product' />
-
+					<SlideCardGeneration
+						title={serviceCardData[1].title}
+						src={serviceCardData[1].src}
+						alt={serviceCardData[1].alt}
+						description={serviceCardData[1].description}
+						slide='service'
+					/>
+					<SlideCardGeneration
+						title={serviceCardData[2].title}
+						src={serviceCardData[2].src}
+						alt={serviceCardData[2].alt}
+						description={serviceCardData[2].description}
+						slide='service'
+					/>
+				</div>				
 				<SlideCardReviews/>
 			</div>
 		</>
