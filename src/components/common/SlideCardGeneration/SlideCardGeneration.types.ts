@@ -1,15 +1,9 @@
-interface IImgCardGeneration {
+
+export interface ISlideCardGenerationProps {   
+    title: string;
     src: string;
     alt: string;
-}
-
-interface IDataCardGeneration {
-    title: string;
-    img: IImgCardGeneration;
     description?: string;
+    slide: "service" | "product";
 }
 
-export interface ISlideCardGenerationProps {
-    data: IDataCardGeneration;
-    slide?: 'service' | 'product';    
-}
