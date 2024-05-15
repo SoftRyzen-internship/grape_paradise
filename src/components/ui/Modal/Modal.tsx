@@ -14,9 +14,10 @@ import CloseIcon from '@/../public/icons/close.svg';
 import { formData } from '@/data';
 const { modalInfo } = formData;
 
+import { ButtonLess } from '@/components/ui/ButtonLess';
+
 import { IModalProps } from './Modal.types';
 import styles from './Modal.module.css';
-import { ButtonLess } from '@/components/ui/ButtonLess';
 
 export const Modal: FC<IModalProps> = ({
 	show,
@@ -61,7 +62,7 @@ export const Modal: FC<IModalProps> = ({
 									purpose='burger'
 									aria-label={modalInfo.button.ariaLabelClose}
 									onClick={onClose}
-									styles={clsx(
+									className={clsx(
 										'mb-4 self-end rounded-full',
 										title && 'mb-10 md:mb-8 lg:mb-10',
 									)}

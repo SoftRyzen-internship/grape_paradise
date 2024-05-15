@@ -12,6 +12,7 @@ import { sendMessage } from '@/actions';
 import { IFormState } from '@/types';
 
 import { ButtonLess } from '@/components/ui/ButtonLess';
+import { ButtonMain } from '@/components/ui/ButtonMain';
 import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
@@ -110,14 +111,16 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 						<p className='mb-8 whitespace-pre-line text-xs font-extralight leading-[1.5] text-bodyDark md:text-small lg:text-normal'>
 							{sendError ? modalInfo.failure.text : modalInfo.successful.text}
 						</p>
-						<button
-							type='button'
+
+						<ButtonMain
+							to='hero'
+							chapter='modal'
 							onClick={() => setModalOpen(false)}
 							aria-label={modalInfo.button.ariaLabelClose}
-							className='w-full rounded-full border border-green bg-transparent p-3 text-center text-normal uppercase text-green transition hover:bg-green hover:text-white focus:bg-green focus:text-white md:w-[151px]'
+							className=' inline-flex'
 						>
 							{modalInfo.button.text}
-						</button>
+						</ButtonMain>
 					</div>
 				</Modal>
 			</form>

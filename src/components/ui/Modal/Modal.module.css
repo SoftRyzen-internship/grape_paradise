@@ -1,6 +1,6 @@
 .bg-modal {
 	&::before {
-		content: url('../../../../public/icons/bg-small-leaf-section-4.svg');
+		content: url('/icons/bg-small-leaf-section-4.svg');
 		width: 147px;
 		height: 128px;
 		position: absolute;
@@ -10,7 +10,7 @@
 	}
 
 	&::after {
-		content: url('../../../../public/icons/bg-big-leaf-section-4.svg');
+		content: url('/icons/bg-big-leaf-section-4.svg');
 		width: 257px;
 		height: 220px;
 		position: absolute;
