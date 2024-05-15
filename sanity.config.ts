@@ -1,17 +1,14 @@
 import { defineConfig } from './node_modules/sanity'
 import { structureTool } from 'sanity/structure'
 
+import { schema } from '@/sanity/schemas/schema'
 
-import { schemaTypes } from './src/sanity/schemas/index'
 import { pageStructure } from '@/sanity/pageStructure'
 
+import { visionTool } from '@sanity/vision'
 
-
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET
-
-
-
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || ''
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || ''
 
 export default defineConfig({
   basePath: '/admin',
@@ -20,10 +17,16 @@ export default defineConfig({
 
   projectId: projectId,
   dataset: dataset,
+  schema,
 
-  plugins: [structureTool({ name: 'content', title: 'Редагування контенту', structure: pageStructure })],
 
-  schema: {
-    types: schemaTypes,
-  },
+  plugins: [
+    structureTool({
+    name: 'content',
+    title: 'Редагування контенту',
+    structure: pageStructure,
+  }), visionTool()],
+
+
+
 })

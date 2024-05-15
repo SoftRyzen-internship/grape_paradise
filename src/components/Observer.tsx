@@ -1,3 +1,7 @@
+'use client';
+
+import { SwiperSlide } from 'swiper/react';
+
 import { FC } from 'react';
 
 import { buttonsData, titleData } from '@/data';
@@ -9,6 +13,8 @@ import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { MovingLine } from '@/components/ui/MovingLine';
+import { Slider } from '@/components/common/Slider';
+import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
 import { serviceCardData } from '@/data';
 import { productCardData } from '@/data';
@@ -22,12 +28,27 @@ export const Observer: FC = () => {
 			<MovingLine />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
-				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>
+				<Title className='w-[255px] md:w-[350px] lg:w-[590px]'>
 					{titleData.advantages}
 				</Title>
-				<Title chapter='chapter' styles='text-green'>
+				<Title chapter='chapter' className='text-green'>
 					{titleData.contacts}
 				</Title>
+
+				<div className='my-20'>
+					<Slider loop={true}>
+						{productCardData.map(item => (
+							<SwiperSlide
+								tag='li'
+								key={item._id}
+								className='swiper-slide slide-conteiner'>
+								<SlideCardGeneration title={productCardData[1].title}	src={productCardData[1].src}
+	alt={productCardData[1].src} slide='product' />
+							</SwiperSlide>
+						))}
+					</Slider>
+				</div>
+				
 			</Section>
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
@@ -44,6 +65,10 @@ export const Observer: FC = () => {
 				</ButtonMain>
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
+				</ButtonLess>
+				{/* moodal */}
+				<ButtonLess type='button' purpose='modal'>
+					{buttonsData.home}
 				</ButtonLess>
 				<div className='flex gap-2'>
 					<ButtonLess
@@ -68,10 +93,22 @@ export const Observer: FC = () => {
 				</ButtonLess>
 
 				<div className='flex flex-col gap-4 md:flex-row'>
-					<SlideCardGeneration data={serviceCardData[1]} slide='service' />
-					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
-				</div>
-				<SlideCardGeneration data={productCardData[1]} slide='product' />
+					<SlideCardGeneration
+						title={serviceCardData[1].title}
+						src={serviceCardData[1].src}
+						alt={serviceCardData[1].alt}
+						description={serviceCardData[1].description}
+						slide='service'
+					/>
+					<SlideCardGeneration
+						title={serviceCardData[2].title}
+						src={serviceCardData[2].src}
+						alt={serviceCardData[2].alt}
+						description={serviceCardData[2].description}
+						slide='service'
+					/>
+				</div>				
+				<SlideCardReviews/>
 			</div>
 		</>
 	);

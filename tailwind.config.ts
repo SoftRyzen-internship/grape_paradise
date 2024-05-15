@@ -46,7 +46,7 @@ const config: Config = {
 				black80: 'rgba(0, 0, 0, 0.8)',
 				bodyDark: '#4D4843',
 				green: '#4D6116',
-
+				greenModal: '#395734',
 				darkGreen: '#405012',
 				green50: 'rgba(77, 97, 22, 0.5)',
 				green30: 'rgba(77, 97, 22, 0.3)',
