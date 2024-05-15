@@ -39,7 +39,7 @@ export const Modal: FC<IModalProps> = ({
 				>
 					<div
 						className={clsx(
-							'fixed inset-0 flex w-screen items-center justify-center p-4 md:p-8 lg:px-[185px]',
+							'fixed inset-0 flex w-screen items-center justify-center p-4 md:p-8',
 						)}
 					>
 						<TransitionChild
