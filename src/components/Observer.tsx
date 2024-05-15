@@ -1,3 +1,7 @@
+'use client';
+
+import { SwiperSlide } from 'swiper/react';
+
 import { FC } from 'react';
 
 import { buttonsData, titleData } from '@/data';
@@ -9,6 +13,7 @@ import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { MovingLine } from '@/components/ui/MovingLine';
+import { Slider } from '@/components/common/Slider';
 import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
 import { serviceCardData } from '@/data';
@@ -30,6 +35,20 @@ export const Observer: FC = () => {
 				<Title chapter='chapter' className='text-green'>
 					{titleData.contacts}
 				</Title>
+
+				<div className='my-20'>
+					<Slider loop={true}>
+						{productCardData.map(item => (
+							<SwiperSlide
+								tag='li'
+								key={item.img.src}
+								className='swiper-slide slide-conteiner'>
+								<SlideCardGeneration data={item} slide='product' />
+							</SwiperSlide>
+						))}
+					</Slider>
+				</div>
+				
 			</Section>
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
@@ -78,7 +97,7 @@ export const Observer: FC = () => {
 					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
-
+			
 				<SlideCardReviews/>
 			</div>
 		</>
