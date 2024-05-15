@@ -16,7 +16,7 @@ export const Contacts: FC = () => {
 			containerStyles='md:flex justify-between'
 		>
 			<div className='smOnly:mb-10'>
-				<Title chapter='chapter' styles='text-green font-normal'>
+				<Title chapter='chapter' className='font-normal text-green'>
 					{contactsData.subtitle}
 				</Title>
 				<address className='w-full max-w-[320px] font-tenor text-large not-italic text-black lg:text-h3_desk mdOnly:w-[200px]'>

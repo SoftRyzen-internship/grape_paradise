@@ -37,6 +37,7 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
 						purpose='burger'
 						aria-label={headerData.ariaLabelClose}
 						onClick={onClick}
+						className='h-12 w-12 p-3'
 					>
 						<CloseIcon width={24} height={24} className='fill-green' />
 					</ButtonLess>

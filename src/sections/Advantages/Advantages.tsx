@@ -14,7 +14,7 @@ export const Advantages: FC = () => (
 		containerStyles={`relative ${s.leaf}`}
 	>
 		<div className={`relative ${s.bottle}`}>
-			<Title styles='mb-6 w-[255px] md:w-[350px] md:mb-10 lg:w-[590px] lg:mb-16'>
+			<Title className='mb-6 w-[255px] md:mb-10 md:w-[350px] lg:mb-16 lg:w-[590px]'>
 				{advantagesData.title}
 			</Title>
 
