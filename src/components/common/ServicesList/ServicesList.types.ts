@@ -17,5 +17,5 @@ export interface IServicesListProps {
 }
 
 export interface IServicesListDataProps {
-	data: IServicesListProps;
+	data: IServicesListProps[];
 }

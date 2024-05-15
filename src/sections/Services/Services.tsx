@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Section } from '@/components/common/Section';
 import { Title } from '@/components/common/Title';
-import { Slider } from '@/components/common/Slider';
+// import { Slider } from '@/components/common/Slider';
 import { ServicesList } from '@/components/common/ServicesList';
 
 import { fetchServices } from '@/sanity/request/fetchServices';
@@ -38,11 +38,12 @@ export const Services: FC = async () => {
 				{servicesData.title}
 			</Title>
 
-			<Slider>
+			{/* <Slider>
 				{services.map((service: IServicesProps) => (
-					<ServicesList key={service._id} data={service} />
+					<ServicesList key={service._id} data={services} />
 				))}
-			</Slider>
+			</Slider> */}
+			<ServicesList data={services} />
 		</Section>
 	);
 };
