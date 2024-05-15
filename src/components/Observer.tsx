@@ -1,3 +1,7 @@
+'use client';
+
+import { SwiperSlide } from 'swiper/react';
+
 import { FC } from 'react';
 
 import { buttonsData, titleData } from '@/data';
@@ -17,7 +21,6 @@ import { productCardData } from '@/data';
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
 
-
 export const Observer: FC = () => {
 	return (
 		<>
@@ -31,16 +34,19 @@ export const Observer: FC = () => {
 					{titleData.contacts}
 				</Title>
 
-				{/*  */}
 				<div className='my-20'>
-				<Slider array={productCardData} slide='product' loop = {true} separator = {true} />
+					<Slider loop={true}>
+						{productCardData.map(item => (
+							<SwiperSlide
+								tag='li'
+								key={item.img.src}
+								className='swiper-slide slideConteiner'>
+								<SlideCardGeneration data={item} slide='product' />
+							</SwiperSlide>
+						))}
+					</Slider>
 				</div>
-				<div className='my-20'>
-				<Slider array={serviceCardData} slide='service' separator = {false}  />
-				</div>
-
-
-{/*  */}
+				
 			</Section>
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
@@ -85,14 +91,13 @@ export const Observer: FC = () => {
 					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
-{/* 
+				{/* 
 				<div className='my-20'>
 				<Slider array={productCardData} slide='product' loop = {true} separator = {true} />
 				</div>
 				<div className='my-20'>
 				<Slider array={serviceCardData} slide='service' separator = {false}  />
 				</div> */}
-
 			</div>
 		</>
 	);

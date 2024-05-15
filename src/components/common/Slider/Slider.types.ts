@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 interface IImgCardGeneration {
 	src: string;
 	alt: string;
@@ -11,8 +13,6 @@ interface IDataCardGeneration {
 
 export interface ISliderProps {
 	loop?: boolean;
-	slide?: 'service' | 'product' | 'review';
-	array: IDataCardGeneration[];
-	separator?: boolean;
 	desktopSpaceBetween?: number;
+	children: ReactNode;
 }
