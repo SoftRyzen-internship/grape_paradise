@@ -2,21 +2,56 @@ import { defineField, defineType } from 'sanity'
 
 export const privacyPolicy = defineType({
   name: 'privacyPolicy',
-  title: 'Policy',
+  title: 'Політика конфіденційності',
   type: 'document',
+
   fields: [
     defineField({
-      name: 'title',
-      type: 'string',
-      readOnly: true,
-      initialValue: 'ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ ТА ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ',
-
-    }),
-    defineField({
-      name: 'description',
-      title: 'description',
+      name: 'textPrivacyPolicy',
+      title: 'Текст',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block',
+          marks: {
+            annotations: [
+              {
+                name: 'link',
+                type: 'object',
+                title: 'Link',
+                fields: [
+                  {
+                    name: 'href',
+                    type: 'url',
+                    title: 'URL',
+                    validation: Rule =>
+                      Rule.uri({
+                        scheme: ['http', 'https', 'mailto', 'tel'],
+                      }).error('Невірне посилання'),
+                  },
+                  {
+                    name: 'target',
+                    type: 'string',
+                    title: 'Target',
+                    options: {
+                      list: [{ title: '_blank', value: '_blank' }],
+                      layout: 'radio',
+                    },
+                    validation: Rule =>
+                      Rule.custom(value => {
+                        if (value !== '_blank') {
+                          return 'Оберіть _blank';
+                        }
+                        return true;
+                      }),
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
     }),
   ],
 });
+

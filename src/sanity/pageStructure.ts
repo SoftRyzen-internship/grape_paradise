@@ -1,5 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const pageStructure = (S: any) => {
+import { StructureBuilder } from "sanity/structure"
+
+export const pageStructure = (S: StructureBuilder) => {
 
     return S.list()
         .title("Секції сайту")
@@ -27,7 +28,7 @@ export const pageStructure = (S: any) => {
             S.divider(),
             S.listItem()
                 .title("Політика конфіденційності")
-                .child(S.document().schemaType('privacyPolicy').documentId('privacyPolicy')),
-                
+                .child(S.document().schemaType('privacyPolicy')),
+
         ])
 }

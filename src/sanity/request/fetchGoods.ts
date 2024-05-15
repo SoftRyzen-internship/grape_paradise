@@ -3,6 +3,11 @@ import { client } from '../lib/client';
 
 
 export const fetchGoods = async () => {
-  const goods = await client.fetch(goodsGroq);
+  try {
+    const goods = await client.fetch(goodsGroq);
   return goods;
+  } catch (error) {
+    return error
+  }
+  
 };

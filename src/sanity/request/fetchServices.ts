@@ -4,6 +4,11 @@ import { client } from '../lib/client';
 
 
 export const fetchServices = async () => {
-  const services = await client.fetch(servicesGroq);
+  try {
+    const services = await client.fetch(servicesGroq);
   return services;
+  } catch (error) {
+    return error
+  }
+  
 };
