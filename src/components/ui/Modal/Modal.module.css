@@ -1,0 +1,44 @@
+.bg-modal {
+	&::before {
+		content: url('/icons/bg-small-leaf-section-4.svg');
+		width: 147px;
+		height: 128px;
+		position: absolute;
+		top: -27px;
+		left: -43px;
+		z-index: 5;
+	}
+
+	&::after {
+		content: url('/icons/bg-big-leaf-section-4.svg');
+		width: 257px;
+		height: 220px;
+		position: absolute;
+		bottom: -147px;
+		right: -134px;
+		z-index: 5;
+	}
+
+	@media screen and (min-width: 768px) {
+		&::before {
+			top: -8px;
+		}
+
+		&::after {
+			bottom: -106px;
+			right: -84px;
+		}
+	}
+
+	@media screen and (min-width: 1280px) {
+		&::before {
+			top: 13px;
+			left: 4px;
+		}
+
+		&::after {
+			bottom: -49px;
+			right: -64px;
+		}
+	}
+}

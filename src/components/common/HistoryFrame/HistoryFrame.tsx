@@ -7,9 +7,11 @@ import { historyData } from '@/data';
 
 import Play from '@/../public/icons/play.svg';
 
+import { IHistoryFrame } from './HistoryFrame.types';
+
 import s from './HistoryFrame.module.css';
 
-export const HistoryFrame: FC = () => (
+export const HistoryFrame: FC<IHistoryFrame> = ({ onClick }) => (
 	<div
 		className={`relative h-[328px] md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] smOnly:mb-12 ${s.grape}`}
 	>
@@ -24,7 +26,8 @@ export const HistoryFrame: FC = () => (
 		<ButtonLess
 			type='button'
 			purpose='video'
-			styles='absolute -bottom-5 right-5 md:bottom-[42px] md:-right-8 lg:bottom-[109px] lg:-right-11 z-10'
+			onClick={onClick}
+			className='absolute -bottom-5 right-5 z-10 md:-right-8 md:bottom-[42px] lg:-right-11 lg:bottom-[109px]'
 		>
 			<Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />
 		</ButtonLess>
