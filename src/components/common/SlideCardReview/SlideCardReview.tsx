@@ -1,29 +1,27 @@
 'use client';
 
 import { clsx } from 'clsx';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, FC } from 'react';
 
 import { buttonsData } from '@/data';
 
 import s from './SlideCardReview.module.css';
 
-
-export const SlideCardReviews = () => {
-
+export const SlideCardReviews: FC = () => {
+	const paragraphRef = useRef<HTMLParagraphElement>(null);
 	const [isOverflow, setOverflow] = useState<boolean>(false);
-
-	const paragraphRef = useRef(null);
 
 	useEffect(() => {
 		const element = paragraphRef.current;
-
-		if (
-			element.scrollHeight > element.clientHeight ||
-			element.scrollWidth > element.clientWidth
-		) {
-			setOverflow(true);
-		} else {
-			setOverflow(false);
+		if (element) {
+			if (
+				element.scrollHeight > element.clientHeight ||
+				element.scrollWidth > element.clientWidth
+			) {
+				setOverflow(true);
+			} else {
+				setOverflow(false);
+			}
 		}
 	}, []);
 
