@@ -45,9 +45,10 @@ export const Observer: FC = () => {
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
 				</ButtonLess>
-				<ButtonMain to='hero' chapter='modal'>
-					{buttonsData.home}{' '}
-				</ButtonMain>
+				{/* moodal */}
+				<ButtonLess type='button' purpose='modal'>
+					{buttonsData.home}
+				</ButtonLess>
 				<div className='flex gap-2'>
 					<ButtonLess
 						type='button'
