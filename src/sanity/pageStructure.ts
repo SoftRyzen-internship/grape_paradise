@@ -1,4 +1,4 @@
-import { StructureBuilder } from 'sanity/desk';
+import { StructureBuilder } from "sanity/structure"
 
 export const pageStructure = (S: StructureBuilder) => {
 
@@ -29,8 +29,6 @@ export const pageStructure = (S: StructureBuilder) => {
             S.listItem()
                 .title("Політика конфіденційності")
                 .child(S.document().schemaType('privacyPolicy')),
+
         ])
-
-
-
 }
