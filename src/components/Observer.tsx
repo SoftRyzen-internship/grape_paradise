@@ -30,6 +30,17 @@ export const Observer: FC = () => {
 				<Title chapter='chapter' styles='text-green'>
 					{titleData.contacts}
 				</Title>
+
+				{/*  */}
+				<div className='my-20'>
+				<Slider array={productCardData} slide='product' loop = {true} separator = {true} />
+				</div>
+				<div className='my-20'>
+				<Slider array={serviceCardData} slide='service' separator = {false}  />
+				</div>
+
+
+{/*  */}
 			</Section>
 			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
@@ -74,13 +85,13 @@ export const Observer: FC = () => {
 					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
 				</div>
 				<SlideCardGeneration data={productCardData[1]} slide='product' />
-
+{/* 
 				<div className='my-20'>
 				<Slider array={productCardData} slide='product' loop = {true} separator = {true} />
 				</div>
 				<div className='my-20'>
 				<Slider array={serviceCardData} slide='service' separator = {false}  />
-				</div>
+				</div> */}
 
 			</div>
 		</>
