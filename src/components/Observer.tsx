@@ -17,7 +17,6 @@ import { productCardData } from '@/data';
 import Arrow from '@/../public/icons/arrow.svg';
 import Play from '@/../public/icons/play.svg';
 
-
 export const Observer: FC = () => {
 	return (
 		<>
@@ -74,12 +73,23 @@ export const Observer: FC = () => {
 				</ButtonLess>
 
 				<div className='flex flex-col gap-4 md:flex-row'>
-					<SlideCardGeneration data={serviceCardData[1]} slide='service' />
-					<SlideCardGeneration data={serviceCardData[2]} slide='service' />
+					<SlideCardGeneration
+						title={serviceCardData[1].title}
+						src={serviceCardData[1].src}
+						alt={serviceCardData[1].alt}
+						description={serviceCardData[1].description}
+						slide='service'
+					/>
+					<SlideCardGeneration
+						title={serviceCardData[2].title}
+						src={serviceCardData[2].src}
+						alt={serviceCardData[2].alt}
+						description={serviceCardData[2].description}
+						slide='service'
+					/>
 				</div>
-				<SlideCardGeneration data={productCardData[1]} slide='product' />
 
-				<SlideCardReviews/>
+				<SlideCardReviews />
 			</div>
 		</>
 	);
