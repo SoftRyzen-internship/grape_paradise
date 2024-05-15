@@ -2,5 +2,9 @@
 	"callButton": "Зв'язатись з нами",
 	"orderButton": "Замовити",
 	"sendButton": "Надіслати заявку",
+<<<<<<< HEAD
 	"readMoreButton": "Читати більше"
+=======
+	"home": "На головну"
+>>>>>>> dev
 }
