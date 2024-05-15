@@ -21,4 +21,6 @@ export { default as movingLineData } from './movingLineData.json';
 
 export { default as contactsData } from './contactsData.json';
 
+export { default as slidersData } from './sliderData.json';
+
 export { default as footerData } from './footerData.json';
