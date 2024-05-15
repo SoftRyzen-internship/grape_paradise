@@ -17,7 +17,7 @@ export const sendMessage = async (data: IFormState): Promise<void> => {
 		if (!value || typeof value !== 'string') {
 			continue;
 		}
-		message += `${TitleFold[key as keyof typeof TitleFold]}: ${value.trim()}; `;
+		message += `${TitleFold[key as keyof typeof TitleFold]}: ${value.trim()};%0A`;
 	}
 
 	const url: string = `${baseUrl}sendMessage?chat_id=${CHAT_ID}&text=${message}`;

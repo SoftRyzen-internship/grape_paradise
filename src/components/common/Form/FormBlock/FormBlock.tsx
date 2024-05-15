@@ -12,7 +12,6 @@ import { sendMessage } from '@/actions';
 import { IFormState } from '@/types';
 
 import { ButtonLess } from '@/components/ui/ButtonLess';
-import { ButtonMain } from '@/components/ui/ButtonMain';
 import { CustomInput } from '@/components/common/Form/CustomInput';
 import { CustomTextarea } from '@/components/common/Form/CustomTextarea';
 import { CustomCheckbox } from '@/components/common/Form/CustomCheckbox';
@@ -98,32 +97,29 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 				<ButtonLess type='submit' purpose='form' className='mt-8 lg:mt-10'>
 					{buttonText}
 				</ButtonLess>
-
-				<Modal
-					onClose={() => setModalOpen(false)}
-					show={modalOpen}
-					title={
-						sendError ? modalInfo.failure.title : modalInfo.successful.title
-					}
-					errorMessage={sendError}
-				>
-					<div className='pb-[10px] md:px-[68px] lg:px-48'>
-						<p className='mb-8 whitespace-pre-line text-xs font-extralight leading-[1.5] text-bodyDark md:text-small lg:text-normal'>
-							{sendError ? modalInfo.failure.text : modalInfo.successful.text}
-						</p>
-
-						<ButtonMain
-							to='hero'
-							chapter='modal'
-							onClick={() => setModalOpen(false)}
-							aria-label={modalInfo.button.ariaLabelClose}
-							className=' inline-flex'
-						>
-							{modalInfo.button.text}
-						</ButtonMain>
-					</div>
-				</Modal>
 			</form>
+			<Modal
+				onClose={() => setModalOpen(false)}
+				show={modalOpen}
+				title={sendError ? modalInfo.failure.title : modalInfo.successful.title}
+				errorMessage={sendError}
+			>
+				<div className='pb-[10px] md:px-[68px] lg:px-48'>
+					<p className='mb-8 whitespace-pre-line text-xs font-extralight leading-[1.5] text-bodyDark md:text-small lg:text-normal'>
+						{sendError ? modalInfo.failure.text : modalInfo.successful.text}
+					</p>
+
+					<ButtonLess
+						type='button'
+						purpose='modal'
+						onClick={() => setModalOpen(false)}
+						aria={modalInfo.button.ariaLabelClose}
+						className=' inline-flex'
+					>
+						{modalInfo.button.text}
+					</ButtonLess>
+				</div>
+			</Modal>
 		</>
 	);
 };

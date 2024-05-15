@@ -6,3 +6,4 @@ export interface ISlideCardGenerationProps {
     description?: string;
     slide: "service" | "product";
 }
+
