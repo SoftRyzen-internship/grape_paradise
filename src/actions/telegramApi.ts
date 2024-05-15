@@ -1,10 +1,15 @@
-import { IFormState } from "@/types";
-
+import { IFormState } from '@/types';
 
 const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 const API = process.env.NEXT_PUBLIC_TELEGRAM_API;
 
 const baseUrl: string = `https://api.telegram.org/bot${API}/`;
+
+enum TitleFold {
+	name = 'ІМ`Я',
+	phone = 'НОМЕР',
+	message = 'ПОВІДОМЛЕННЯ',
+}
 
 export const sendMessage = async (data: IFormState): Promise<void> => {
 	let message = '';
@@ -12,7 +17,7 @@ export const sendMessage = async (data: IFormState): Promise<void> => {
 		if (!value || typeof value !== 'string') {
 			continue;
 		}
-		message += `${key.toUpperCase()}: ${value.trim()}; `;
+		message += `${TitleFold[key as keyof typeof TitleFold]}: ${value.trim()}; `;
 	}
 
 	const url: string = `${baseUrl}sendMessage?chat_id=${CHAT_ID}&text=${message}`;
