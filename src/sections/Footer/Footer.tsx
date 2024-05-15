@@ -10,7 +10,6 @@ import { Logo } from '@/components/ui/Logo';
 
 import { footerData } from '@/data';
 
-import Field from '@/../public/icons/footer-field.svg';
 import GoIT from '@/../public/icons/goit-icon.svg';
 import SoftRyzen from '@/../public/icons/softryzen-icon.svg';
 
@@ -22,9 +21,14 @@ export const Footer: FC = () => {
 
 	return (
 		<footer
-			className={clsx(policy && s.footer, 'relative w-full bg-bg2 pb-8 pt-5')}
+			className={clsx(
+				s.background,
+				'relative w-full bg-bg2 bg-repeat-x pb-8',
+				!policy && 'bg-[center_top] pt-[115px] md:pt-[238px] lg:pt-[438px]',
+				policy && s.footer,
+				policy && 'bg-[center_28px] pt-[140px] md:pt-[270px] lg:pt-[480px]',
+			)}
 		>
-			<Field />
 			<div className='container'>
 				<div className='mb-8 flex justify-center lg:mb-6'>
 					<Logo theme={'green'} size={'big'} />
