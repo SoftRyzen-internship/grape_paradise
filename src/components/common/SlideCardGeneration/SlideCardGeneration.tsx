@@ -11,12 +11,11 @@ import { ISlideCardGenerationProps } from './SlideCardGeneration.types';
 
 import s from './SlideCardGeneration.module.css';
 
-export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
-	data: {
-		title,
-		img: { src, alt },
-		description,
-	},
+export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({	
+	title,
+	src,
+	alt,
+	description,
 	slide,
 }) => {
 	const className = clsx(
@@ -30,7 +29,7 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 		<>
 			<div
 				className={clsx(
-					'w-fill flex cursor-pointer flex-col justify-between md:w-[330px] lg:w-[521px]',
+					'w-fill flex flex-col justify-between md:w-[330px] lg:w-[521px]',
 					s.containerCard,
 					{ 'min-h-[545px] md:h-[598px] lg:h-[633px]': slide === 'service' },
 					{ 'min-h-[354px] md:h-[406px] lg:h-[455px]': slide === 'product' },
