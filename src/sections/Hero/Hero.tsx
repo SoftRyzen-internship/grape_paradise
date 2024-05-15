@@ -12,12 +12,13 @@ import s from './Hero.module.css';
 export const Hero: FC = () => {
 	return (
 		<Section
+			id={heroData.id}
 			sectionStyles={clsx(
 				s.hero,
 				'relative min-h-[640px] pb-[102px] pt-[144px] md:min-h-[584px] md:pb-[80px] md:pt-[120px] lg:min-h-[800px] lg:pb-[95px] lg:pt-[170px]',
 			)}
 		>
-			<Title chapter='hero' styles='mb-[64px] md:mb-[48px] lg:mb-[49px]'>
+			<Title chapter='hero' className='mb-[64px] md:mb-[48px] lg:mb-[49px]'>
 				{heroData.title}
 			</Title>
 			<p className='font-tenor text-normal font-extralight text-white md:ml-auto md:w-[398px] lg:w-[487px] lg:text-normal_desk'>

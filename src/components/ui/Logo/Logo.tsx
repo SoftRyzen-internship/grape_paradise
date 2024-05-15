@@ -21,6 +21,4 @@ export const Logo: FC<ILogoProps> = ({ theme = 'white', size = 'small' }) => {
 			</Link>
 		</>
 	);
-
-    
 };

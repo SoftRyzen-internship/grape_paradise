@@ -22,10 +22,10 @@ export const Observer: FC = () => {
 			<MovingLine />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<Title chapter='hero'>{titleData.hero}</Title>
-				<Title styles='w-[255px] md:w-[350px] lg:w-[590px]'>
+				<Title className='w-[255px] md:w-[350px] lg:w-[590px]'>
 					{titleData.advantages}
 				</Title>
-				<Title chapter='chapter' styles='text-green'>
+				<Title chapter='chapter' className='text-green'>
 					{titleData.contacts}
 				</Title>
 			</Section>
@@ -45,6 +45,9 @@ export const Observer: FC = () => {
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
 				</ButtonLess>
+				<ButtonMain to='hero' chapter='modal'>
+					{buttonsData.home}{' '}
+				</ButtonMain>
 				<div className='flex gap-2'>
 					<ButtonLess
 						type='button'

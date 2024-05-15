@@ -11,7 +11,7 @@ export const goods = defineType({
       title: 'Найменування товару',
       type: 'string',
       placeholder: 'Додайте назву товару',
-      validation: (rule: any) =>
+      validation: (rule) =>
         rule
           .required()
           .error("Додайте назву товару")
@@ -23,7 +23,7 @@ export const goods = defineType({
       name: 'imageGoods',
       title: 'Фото товару',
       type: 'image',
-      validation: (rule: any) =>
+      validation: (rule) =>
         rule.required()
     }),
 
@@ -32,7 +32,7 @@ export const goods = defineType({
       type: 'string',
       title: 'Короткий опис того, що зображено на фото',
       placeholder: 'Опис фото',
-      validation: (rule: any) =>
+      validation: (rule) =>
         rule
           .required()
           .error("Додайте опис фото")
@@ -44,12 +44,12 @@ export const goods = defineType({
       name: 'slug',
       type: 'slug',
       title: 'Згенеруйте URL адресу для фотографії товару',
-      validation: (rule: any) =>
+      validation: (rule) =>
         rule.required(),
       options: {
         source: 'goodsTitle',
         maxLength: 200,
-        slugify: (input: any) => input
+        slugify: (input) => input
           .toLowerCase()
           .replace(/\s+/g, '-')
           .slice(0, 200)

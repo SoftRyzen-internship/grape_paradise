@@ -94,7 +94,7 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
 					)}
 				/>
 
-				<ButtonLess type='submit' purpose='form' styles='mt-8 lg:mt-10'>
+				<ButtonLess type='submit' purpose='form' className='mt-8 lg:mt-10'>
 					{buttonText}
 				</ButtonLess>
 
