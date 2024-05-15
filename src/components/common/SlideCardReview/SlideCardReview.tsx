@@ -8,7 +8,7 @@ import { buttonsData } from '@/data';
 import s from './SlideCardReview.module.css';
 
 
-export const SlideCardReviews =  () => {
+export const SlideCardReviews = () => {
 
 	const [isOverflow, setOverflow] = useState<boolean>(false);
 
