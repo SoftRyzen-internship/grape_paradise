@@ -22,52 +22,61 @@ export const Footer: FC = () => {
 
 	return (
 		<footer
-			className={clsx(policy && s.footer, 'relative w-full bg-bg2 pb-8 pt-7')}
+			className={clsx(policy && s.footer, 'relative w-full bg-bg2 pb-8 pt-5')}
 		>
 			<Field />
 			<div className='container'>
-				<div className='mb-8 flex justify-center'>
+				<div className='mb-8 flex justify-center lg:mb-6'>
 					<Logo theme={'green'} size={'big'} />
 				</div>
-				<div className='flex flex-col border-t-2 border-stroke pt-8'>
-					<p className='mx-auto mb-4 text-center font-geologica text-small font-[250] text-bodyDark'>
-						{footerData.create}
-					</p>
-					<div className='mx-auto mb-8 flex w-[211px] items-baseline gap-4'>
-						<Link
-							href={footerData.linkGoIT}
-							target={footerData.target}
-							rel={footerData.rel}
-							aria-label={footerData.ariaGoIT}
-						>
-							<GoIT
-								width={64}
-								height={20}
-								className='fill-greyLogo transition hover:fill-accent focus:fill-accent'
-							/>
-						</Link>
-						<Link
-							href={footerData.linkSoftRyzen}
-							target={footerData.target}
-							rel={footerData.rel}
-							aria-label={footerData.ariaSoftRyzen}
-						>
-							<SoftRyzen
-								width={131}
-								height={20}
-								className='fill-greyLogo transition hover:fill-accent focus:fill-accent'
-							/>
-						</Link>
+				<div className='border-t-2 border-stroke pt-8 lg:flex lg:flex-row-reverse lg:justify-between'>
+					<div className='mb-8 flex flex-col gap-4 md:mx-auto md:mb-4 md:w-[402px] md:flex-row md:gap-6 lg:mx-0 lg:mb-0'>
+						<p className='mdOnly:font-[250] mx-auto text-center font-geologica text-small font-extralight text-bodyDark'>
+							{footerData.create}
+						</p>
+						<div className='mx-auto flex w-[211px] items-baseline gap-4'>
+							<Link
+								href={footerData.linkGoIT}
+								target={footerData.target}
+								rel={footerData.rel}
+								aria-label={footerData.ariaGoIT}
+							>
+								<GoIT
+									width={64}
+									height={20}
+									className='fill-greyLogo transition hover:fill-accent focus:fill-accent'
+								/>
+							</Link>
+							<Link
+								href={footerData.linkSoftRyzen}
+								target={footerData.target}
+								rel={footerData.rel}
+								aria-label={footerData.ariaSoftRyzen}
+							>
+								<SoftRyzen
+									width={131}
+									height={20}
+									className='fill-greyLogo transition hover:fill-accent focus:fill-accent'
+								/>
+							</Link>
+						</div>
 					</div>
-					<Link
-						href={policy ? '/' : '/policy'}
-						className='mb-8 text-center font-geologica text-small font-[250] text-bodyDark hover:text-green focus:text-green'
-					>
-						{policy ? footerData.home : footerData.policy}
-					</Link>
-					<p className='text-center font-geologica text-small font-[250] text-bodyDark'>
-						{footerData.rights}
-					</p>
+					<div className='lg:flex lg:flex-row-reverse lg:justify-end'>
+						<Link
+							href={policy ? '/' : '/policy'}
+							className='mdOnly:font-[250] mx-auto mb-8 block w-fit font-geologica text-small font-extralight text-bodyDark hover:text-green focus:text-green md:mb-4 lg:mx-0 lg:mb-0'
+						>
+							{policy ? footerData.home : footerData.policy}
+						</Link>
+						<p
+							className={clsx(
+								policy ? 'lg:mr-[260px]' : 'lg:mr-[158px]',
+								'mdOnly:font-[250] text-center font-geologica text-small font-extralight text-bodyDark',
+							)}
+						>
+							{footerData.rights}
+						</p>
+					</div>
 				</div>
 			</div>
 		</footer>

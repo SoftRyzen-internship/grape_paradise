@@ -1,8 +1,8 @@
 .footer::before {
-	content: url('../../../public/images/footer/footer-bg-frame.webp');
+	content: url('/images/footer/footer-bg-frame.webp');
 	position: absolute;
 	display: inline-block;
-	top: -6px;
+	top: -8px;
 	left: 0;
 	width: 100%;
 	transform: rotate(180deg);
