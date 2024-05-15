@@ -1,6 +1,5 @@
-import { StructureBuilder } from 'sanity/desk';
-
-export const pageStructure = (S: StructureBuilder) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const pageStructure = (S: any) => {
 
     return S.list()
         .title("Секції сайту")
@@ -28,9 +27,7 @@ export const pageStructure = (S: StructureBuilder) => {
             S.divider(),
             S.listItem()
                 .title("Політика конфіденційності")
-                .child(S.document().schemaType('privacyPolicy')),
+                .child(S.document().schemaType('privacyPolicy').documentId('privacyPolicy')),
+                
         ])
-
-
-
 }
