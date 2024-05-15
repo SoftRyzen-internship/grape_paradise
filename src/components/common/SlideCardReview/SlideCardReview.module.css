@@ -1,5 +1,5 @@
 .backgroundImg {
-	background-image: url('../../../../public/icons/bg-reviews2.svg');
+	background-image: url('/icons/bg-reviews.svg');
 	background-position: center;
 	background-size: contain;
 }

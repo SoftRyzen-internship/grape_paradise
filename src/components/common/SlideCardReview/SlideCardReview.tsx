@@ -3,13 +3,16 @@
 import { clsx } from 'clsx';
 import { useRef, useState, useEffect } from 'react';
 
+import { buttonsData } from '@/data';
+
 import s from './SlideCardReview.module.css';
 
 
-export const SlideCardReviews = () => {
-	const paragraphRef = useRef(null);
+export const SlideCardReviews =  () => {
 
 	const [isOverflow, setOverflow] = useState<boolean>(false);
+
+	const paragraphRef = useRef(null);
 
 	useEffect(() => {
 		const element = paragraphRef.current;
@@ -36,14 +39,16 @@ export const SlideCardReviews = () => {
 				ref={paragraphRef}
 			>
 				Добрий день, пані Наталя. Ще раз вам дякую за прекрасні смаколики і
-				візит Добрий день, пані Наталя. Ще раз вам дякую за прекрасні смаколики і
-				візит 
-				Добрий день, пані Наталя. Ще раз вам дякую за прекрасні смаколики і
-				візит 
-				Добрий день, пані Наталя. Ще раз вам дякую за прекрасні смаколики і
-				візит 
+				візит Добрий день, пані Наталя. Ще раз вам дякую за прекрасні смаколики
+				і візит Добрий день, пані Наталя. Ще раз вам дякую за прекрасні
+				смаколики і візит Добрий день, пані Наталя. Ще раз вам дякую за
+				прекрасні смаколики і візит
 			</p>
-			{isOverflow && <button className='font-tenor text-normal_desk lg:text-large_desk underline text-left'>Читати більше</button>}
+			{isOverflow && (
+				<button className='text-left font-tenor text-normal_desk underline lg:text-large_desk'>
+					{buttonsData.readMoreButton}
+				</button>
+			)}
 			<p className='font-tenor text-normal text-green lg:text-h2'>
 				<span>—</span> Глинський Олександр
 			</p>
