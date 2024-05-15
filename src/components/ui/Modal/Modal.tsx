@@ -60,7 +60,7 @@ export const Modal: FC<IModalProps> = ({
 								<ButtonLess
 									type='button'
 									purpose='burger'
-									aria-label={modalInfo.button.ariaLabelClose}
+									aria={modalInfo.button.ariaLabelClose}
 									onClick={onClose}
 									className={clsx(
 										'mb-4 self-end rounded-full',
