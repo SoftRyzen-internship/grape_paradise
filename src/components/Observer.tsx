@@ -42,7 +42,7 @@ export const Observer: FC = () => {
 							<SwiperSlide
 								tag='li'
 								key={item.img.src}
-								className='swiper-slide slideConteiner'>
+								className='swiper-slide slide-conteiner'>
 								<SlideCardGeneration data={item} slide='product' />
 							</SwiperSlide>
 						))}
