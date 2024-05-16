@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { Tenor_Sans } from 'next/font/google';
 
 import { Header } from '@/sections';
+import { Footer } from '@/sections';
 
 import { metaData } from '@/data';
 
@@ -61,6 +62,7 @@ export default function RootLayout({
 			<body>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
