@@ -60,7 +60,7 @@ export default function RootLayout({
 		<html lang='uk' className={`${tenor.variable}`}>
 			<body>
 				<Header />
-				{children}
+				<main>{children}</main>
 			</body>
 		</html>
 	);
