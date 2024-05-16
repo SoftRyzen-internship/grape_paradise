@@ -23,7 +23,6 @@ export const ServicesSlider: FC<IServicesSliderProps> = ({ data }) => {
 				}) => (
 					<SwiperSlide
 						key={_id}
-						tag='li'
 						className='swiper-slide slide-conteiner'
 					>
 						<SlideCardGeneration
