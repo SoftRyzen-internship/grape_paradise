@@ -53,7 +53,7 @@ export const CustomComponents: PortableTextComponents = {
 	block: {
 		normal: CustomParagraph,
 		h2: ({ children }) => (
-			<h2 className='mb-4 mt-10 font-tenor text-base/[1.3] font-normal text-green lg:text-h2_desk'>
+			<h2 className='mb-4 mt-10 font-tenor text-base/[1.3] font-normal text-green lg:text-h2'>
 				{children}
 			</h2>
 		),

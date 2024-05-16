@@ -19,6 +19,7 @@
 | --- | --- | --- | --- |
 | `show` | yes | boolean | - give created state `show={modalOpen}` |
 | `onClose` | yes | `() => void` | callback with false for your components state `onClose={() => setModalOpen(false)}` |
+| `whiteBg` | not | string | for white modal`s background |
 | `title` | not | string | text for the Title Modal |
 | `errorMessage` | not | boolean | for title text color |
 | `children` | yes | ReactNode | your component for showing in Modal |
