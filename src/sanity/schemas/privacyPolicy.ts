@@ -7,6 +7,15 @@ export const privacyPolicy = defineType({
 
   fields: [
     defineField({
+      name: 'privacyPolicyTitle',
+      title: 'Головний заголовок сторінки "Політика конфіденційності"',
+      type: 'string',
+      validation: (rule) =>
+        rule
+          .required()
+          .error("Додайте заголовок сторінки 'Політика конфіденційності'")
+    }),
+    defineField({
       name: 'textPrivacyPolicy',
       title: 'Текст',
       type: 'array',
