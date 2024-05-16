@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
 export interface ISliderProps {
-	nameBtnBack: "servicesBtnBack" | "productsBtnBack" | "ReviewsBtnBack";
-	nameBtnNext: "servicesBtnNext" | "productsBtnNext" | "ReviewsBtnNext";	
+	prevEl: "servicesBtnBack" | "productsBtnBack" | "reviewsBtnBack";
+	nextEl: "servicesBtnNext" | "productsBtnNext" | "reviewsBtnNext";	
 	loop?: boolean; 
 	desktopSpaceBetween?: number;
 	children: ReactNode;

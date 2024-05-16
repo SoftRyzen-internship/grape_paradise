@@ -12,11 +12,7 @@ import { IServicesSliderProps } from './ServicesSlider.types';
 
 export const ServicesSlider: FC<IServicesSliderProps> = ({ data }) => {
 	return (
-		<Slider
-		// TODO пропси для кнопок додадуться, коли Оля допише в Слайдері
-		// prevEl={servicesBtnPrev}
-		// nextEl={servicesBtnNext}
-		>
+		<Slider prevEl='servicesBtnBack' nextEl='servicesBtnNext'>
 			{data.map(
 				({
 					_id,

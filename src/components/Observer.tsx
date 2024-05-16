@@ -36,13 +36,9 @@ export const Observer: FC = () => {
 				</Title>
 
 				<div className='my-20'>
-					<Slider
-						nameBtnBack='productsBtnBack'
-						nameBtnNext='productsBtnNext'
-						loop={true}
-					>
+					<Slider prevEl='productsBtnBack' nextEl='productsBtnNext' loop={true}>
 						{productCardData.map(item => (
-							<SwiperSlide								
+							<SwiperSlide
 								key={item._id}
 								className='swiper-slide slide-conteiner'
 							>
@@ -57,7 +53,7 @@ export const Observer: FC = () => {
 					</Slider>
 				</div>
 			</Section>
-			<div className='container flex flex-col gap-10 py-5'> 
+			<div className='container flex flex-col gap-10 py-5'>
 				<Logo />
 				<Logo theme='green' size='big' />
 
