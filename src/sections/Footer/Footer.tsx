@@ -23,7 +23,7 @@ export const Footer: FC = () => {
 		<footer
 			className={clsx(
 				s.background,
-				'relative w-full bg-bg2 bg-repeat-x pb-8',
+				'relative w-full bg-bg2 bg-no-repeat pb-8',
 				!policy && 'bg-[center_top] pt-[115px] md:pt-[238px] lg:pt-[438px]',
 				policy && s.footer,
 				policy && 'bg-[center_28px] pt-[140px] md:pt-[270px] lg:pt-[480px]',
