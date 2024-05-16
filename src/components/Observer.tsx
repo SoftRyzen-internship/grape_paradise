@@ -4,36 +4,36 @@ import { SwiperSlide } from 'swiper/react';
 
 import { FC } from 'react';
 
-// import { buttonsData, titleData } from '@/data';
+import { buttonsData, titleData } from '@/data';
 
 import { Section } from '@/components/common/Section/Section';
-// import { Title } from '@/components/common/Title/Title';
-// import { Logo } from '@/components/ui/Logo';
-// import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
-// import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+import { Title } from '@/components/common/Title/Title';
+import { Logo } from '@/components/ui/Logo';
+import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
+import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
-// import { MovingLine } from '@/components/ui/MovingLine';
+import { MovingLine } from '@/components/ui/MovingLine';
 import { Slider } from '@/components/common/Slider';
-// import { SlideCardReviews } from '@/components/common/SlideCardReview';
+import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
-// import { serviceCardData } from '@/data';
+import { serviceCardData } from '@/data';
 import { productCardData } from '@/data';
 
-// import Arrow from '@/../public/icons/arrow.svg';
-// import Play from '@/../public/icons/play.svg';
+import Arrow from '@/../public/icons/arrow.svg';
+import Play from '@/../public/icons/play.svg';
 
 export const Observer: FC = () => {
 	return (
 		<>
-			{/* <MovingLine /> */}
+			<MovingLine />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
-				{/* <Title chapter='hero'>{titleData.hero}</Title>
+				<Title chapter='hero'>{titleData.hero}</Title>
 				<Title className='w-[255px] md:w-[350px] lg:w-[590px]'>
 					{titleData.advantages}
 				</Title>
 				<Title chapter='chapter' className='text-green'>
 					{titleData.contacts}
-				</Title> */}
+				</Title>
 
 				<div className='my-20'>
 					<Slider loop={true}>
@@ -50,11 +50,11 @@ export const Observer: FC = () => {
 				</div>
 				
 			</Section>
-			{/* <div className='container flex flex-col gap-10 py-5'> */}
-				{/* <Logo />
-				<Logo theme='green' size='big' /> */}
+			<div className='container flex flex-col gap-10 py-5'> 
+				<Logo />
+				<Logo theme='green' size='big' />
 
-				{/* <ButtonMain chapter='header' to='контакти'>
+				<ButtonMain chapter='header' to='контакти'>
 					{buttonsData.callButton}
 				</ButtonMain>
 				<ButtonMain chapter='about' to='контакти'>
@@ -65,9 +65,9 @@ export const Observer: FC = () => {
 				</ButtonMain>
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
-				</ButtonLess> */}
+				</ButtonLess>
 				{/* moodal */}
-				{/* <ButtonLess type='button' purpose='modal'>
+				<ButtonLess type='button' purpose='modal'>
 					{buttonsData.home}
 				</ButtonLess>
 				<div className='flex gap-2'>
@@ -109,7 +109,7 @@ export const Observer: FC = () => {
 					/>
 				</div>				
 				<SlideCardReviews/>
-			</div> */}
+			</div>
 		</>
 	);
 };
