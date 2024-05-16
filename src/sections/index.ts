@@ -6,4 +6,4 @@ export { Advantages } from './Advantages';
 
 export { Contacts } from './Contacts';
 export { Services } from './Services';
-
+export { Reviews } from './Reviews';
