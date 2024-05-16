@@ -40,7 +40,7 @@ export const Header: FC = () => {
 					to='contacts'
 					className={clsx('notLg:hidden', {
 						'lg:bg-white lg:text-green lg:hover:bg-green lg:hover:text-white':
-							pathname === '/policy',
+							pathname === '/policy'
 					})}
 					onClick={() => handleClick()}
 				>

@@ -14,6 +14,7 @@ export const ReviewsSlider: FC<IReviewsSliderProps> = ({ data }) => {
 			prevEl='reviewsBtnBack'
 			nextEl='reviewsBtnNext'
 			desktopSpaceBetween={80}
+			btnConteinerStyle='md:-top-[88px] lg:-top-40'
 		>
 			{data.map(({ _id, reviewAuthor, reviewText }) => (
 				<SwiperSlide key={_id} className='swiper-slide'>

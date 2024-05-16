@@ -12,7 +12,10 @@ export const Services: FC = async () => {
 	const services = await fetchServices();
 
 	return (
-		<Section id={servicesData.id} sectionStyles='py-[30px] md:py-10 lg:py-20'>
+		<Section
+			id={servicesData.id}
+			sectionStyles='pt-[30px] pb-[102px] md:pt-10 md:pb-20 lg:pt-20'
+		>
 			<Title className='mb-6 md:mb-8 lg:mb-16 smOnly:w-[129px]'>
 				{servicesData.title}
 			</Title>
