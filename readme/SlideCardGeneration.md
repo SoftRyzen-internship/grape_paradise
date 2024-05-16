@@ -1,24 +1,25 @@
 ### Component - SlideCardGeneration
 
-- Create state for control showing modal `const [modalOpen, setModalOpen] = useState<boolean>(false);`
+<hr>
 
-- The application example - `<Modal>...</Modal>`
+The component is designed to create a product, service card, etc.
 
-#### Importantly
+<hr>
 
-- for control sizes for Modal - transfer sizes into your component
-- to increase padding internal Modal - transfer your padding minus the default ones with your component:
+The application example - 
+`	<SlideCardGeneration <br>
+		src={urlFor(item.imageGoods).url()} <br>
+		alt={item.imageGoodsAlt} <br>
+	/> <br>`
 
-| Screen | Top  | Right | Bottom | Left |
-| ------ | ---- | ----- | ------ | ---- |
-| `mob`  | 16px | 16px  | 32px   | 16px |
-| `tab`  | 24px | 24px  | 32px   | 24px |
-| `desk` | 24px | 24px  | 32px   | 24px |
+<hr>
 
 | Prop | Required | Type | Description |
 | --- | --- | --- | --- |
-| `show` | yes | boolean | - give created state `show={modalOpen}` |
-| `onClose` | yes | `() => void` | callback with false for your components state `onClose={() => setModalOpen(false)}` |
-| `title` | not | string | text for the Title Modal |
-| `errorMessage` | not | boolean | for title text color |
-| `children` | yes | ReactNode | your component for showing in Modal |
+| `title` | yes | string | sets the title |
+| `src` | yes | string | sets the src of image |
+| `alt` | yes | string | sets the alt of image |
+| `description` | not | string | sets the description a product, service, etc. |
+| `children` | yes | ReactNode | list of slides |
+| `slide` | yes | "service" or "product" | sets the css styles for card |
+
