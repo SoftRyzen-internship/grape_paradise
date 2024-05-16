@@ -25,5 +25,7 @@ export { default as productsData } from './productsData.json'
 
 export { default as slidersData } from './sliderData.json';
 
+export { default as servicesData } from './servicesData.json';
+
 
 

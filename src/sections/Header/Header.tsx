@@ -2,6 +2,7 @@
 
 import { FC, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { clsx } from 'clsx';
 
 import { Logo } from '@/components/ui/Logo';
 import { NavMenu } from '@/components/ui/NavMenu';
@@ -32,12 +33,15 @@ export const Header: FC = () => {
 	return (
 		<header className='absolute left-0 top-0 z-20 w-full bg-transparent py-6'>
 			<div className='container flex items-center justify-between '>
-				<Logo />
+				<Logo theme={`${pathname === '/policy' ? 'green' : 'white'}`} />
 				<NavMenu className='notLg:hidden' onClick={() => handleClick()} />
 				<ButtonMain
 					chapter='header'
 					to='contacts'
-					className='notLg:hidden'
+					className={clsx('notLg:hidden', {
+						'lg:bg-white lg:text-green lg:hover:bg-green lg:hover:text-white':
+							pathname === '/policy',
+					})}
 					onClick={() => handleClick()}
 				>
 					{headerData.text}
@@ -46,10 +50,16 @@ export const Header: FC = () => {
 					type='button'
 					purpose='burger'
 					aria={headerData.ariaLabelOpen}
-					className='h-12 w-12 p-3 lg:hidden'
+					className=' h-12 w-12 p-3 lg:hidden'
 					onClick={toggleMenuOpen}
 				>
-					<BurgerIcon width={24} height={24} />
+					<BurgerIcon
+						width={24}
+						height={24}
+						className={clsx(
+							pathname === '/policy' ? 'stroke-green' : 'stroke-white',
+						)}
+					/>
 				</ButtonLess>
 				{isOpened && <BurgerMenu onClick={toggleMenuOpen} />}
 			</div>
