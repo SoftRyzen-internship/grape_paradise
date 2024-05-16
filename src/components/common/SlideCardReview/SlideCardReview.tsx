@@ -5,14 +5,15 @@ import { useRef, useState, useEffect, FC } from 'react';
 
 import { buttonsData } from '@/data';
 
-import s from './SlideCardReview.module.css';
 import { Modal } from '@/components/ui/Modal';
+
+import s from './SlideCardReview.module.css';
 
 export const SlideCardReviews: FC = () => {
 	const paragraphRef = useRef<HTMLParagraphElement>(null);
 
-	const [modalOpen, setModalOpen] = useState<boolean>(false);
-	const [isOverflow, setOverflow] = useState<boolean>(false);
+	const [modalOpen, setModalOpen] = useState(false);
+	const [isOverflow, setOverflow] = useState(false);
 
 	useEffect(() => {
 		const element = paragraphRef.current;
@@ -46,6 +47,7 @@ export const SlideCardReviews: FC = () => {
 					прекрасні смаколики і візит Добрий день, пані Наталя. Ще раз вам дякую
 					за прекрасні смаколики і візит
 				</p>
+
 				{isOverflow && (
 					<button
 						className='text-left font-tenor text-normal_desk underline lg:text-large_desk'
@@ -54,10 +56,12 @@ export const SlideCardReviews: FC = () => {
 						{buttonsData.readMoreButton}
 					</button>
 				)}
+
 				<p className='font-tenor text-normal text-green lg:text-h2'>
 					<span>—</span> Глинський Олександр
 				</p>
 			</div>
+			
 			<Modal show={modalOpen} onClose={() => setModalOpen(false)}>
 				<div></div>
 			</Modal>
