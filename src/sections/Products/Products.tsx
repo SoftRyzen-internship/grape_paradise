@@ -15,15 +15,15 @@ export const Products: FC = async () => {
 	return (
 		<Section
 			id={productsData.id}
+			render={
+					<MovingLine />
+			}
 			sectionStyles='py-[30px] md:py-[40px] lg:pt-[80px] lg:pb-0'
 		>
 			<Title className='mb-6 w-[255px] md:mb-8 md:w-[302px] lg:mb-16 lg:w-1/2'>
 				{productsData.title}
 			</Title>
 			<ProductsSlides products={products} />
-			<div className='mt-[140px] md:mt-[80px]'>
-				<MovingLine />
-			</div>
 		</Section>
 	);
 };
