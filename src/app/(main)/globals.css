@@ -32,6 +32,6 @@
 	}
 
 	.slide-conteiner {
-		@apply relative flex items-center before:content-[''] before:w-0 before:block md:before:w-[1px] md:before:h-full before:bg-stroke before:absolute before:top-0 md:before:-right-[20px] lg:before:-right-[87px];
+		@apply relative flex items-center before:content-[''] before:w-0 before:block lg:before:w-[1px] lg:before:h-full before:bg-stroke before:absolute before:top-0 lg:before:-right-[87px];
 	}
 }
