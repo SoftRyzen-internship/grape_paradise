@@ -17,6 +17,8 @@ import { slidersData } from '@/data';
 import { ISliderProps } from './Slider.types';
 
 export const Slider: FC<ISliderProps> = ({
+	nameBtnBack,
+	nameBtnNext,	
 	loop = false,
 	desktopSpaceBetween = 174,
 	children,
@@ -50,6 +52,7 @@ export const Slider: FC<ISliderProps> = ({
 					type='button'
 					aria={slidersData.ariaLabelBack}
 					purpose='slider'
+					name={nameBtnBack}
 				>
 					{<Arrow className='arrow-icon rotate-180' />}
 				</ButtonLess>
@@ -58,6 +61,7 @@ export const Slider: FC<ISliderProps> = ({
 					type='button'
 					aria={slidersData.ariaLabelNext}
 					purpose='slider'
+					name={nameBtnNext}
 				>
 					{<Arrow className='arrow-icon' />}
 				</ButtonLess>
