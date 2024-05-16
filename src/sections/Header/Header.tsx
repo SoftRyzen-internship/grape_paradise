@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { clsx } from 'clsx';
 
 import { Logo } from '@/components/ui/Logo';
@@ -17,6 +17,7 @@ import BurgerIcon from '@/../public/icons/menu.svg';
 export const Header: FC = () => {
 	const [isOpened, setIsOpened] = useState(false);
 	const pathname = usePathname();
+	const routers = useRouter();
 
 	const toggleMenuOpen = () => {
 		setIsOpened(prev => !prev);
@@ -25,7 +26,7 @@ export const Header: FC = () => {
 
 	const handleClick = () => {
 		if (pathname === '/policy') {
-			window.location.href = '/';
+			routers.push('/')
 		}
 		return;
 	};
@@ -37,13 +38,13 @@ export const Header: FC = () => {
 				<NavMenu className='notLg:hidden' onClick={() => handleClick()} />
 				<ButtonMain
 					chapter='header'
-					to='contacts'
 					className={clsx(
 						'notLg:hidden',
 						pathname === '/policy' &&
 							'lg:bg-white lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white',
 					)}
 					onClick={() => handleClick()}
+					to='contacts'
 				>
 					{headerData.text}
 				</ButtonMain>

@@ -23,6 +23,7 @@ export const Modal: FC<IModalProps> = ({
 	show,
 	title,
 	errorMessage,
+	whiteBg,
 	onClose,
 	children,
 }) => {
@@ -55,6 +56,7 @@ export const Modal: FC<IModalProps> = ({
 									'relative flex flex-col overflow-hidden rounded-xl border border-green bg-bg2 p-4 pb-8 text-left md:p-6 md:pb-8',
 									title && 'text-center',
 									title && styles['bg-modal'],
+									whiteBg && 'bg-white',
 								)}
 							>
 								<ButtonLess
