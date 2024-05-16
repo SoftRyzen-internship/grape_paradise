@@ -32,7 +32,7 @@ const CustomParagraph: PortableTextBlockComponent = ({ children }) => {
 	const hasContent = Children.toArray(children).some(
 		child =>
 			(typeof child === 'string' && child.trim().length > 0) ||
-			isValidElement(child),
+			(isValidElement(child) && child.type === 'br'),
 	);
 
 	if (!hasContent) {
