@@ -50,7 +50,7 @@ export const Observer: FC = () => {
 				</div>
 				
 			</Section>
-			<div className='container flex flex-col gap-10 py-5'>
+			<div className='container flex flex-col gap-10 py-5'> 
 				<Logo />
 				<Logo theme='green' size='big' />
 
