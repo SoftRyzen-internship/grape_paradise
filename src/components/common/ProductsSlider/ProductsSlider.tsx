@@ -13,10 +13,9 @@ import { IProductsSlidesProps } from './ProductsSlider.types';
 
 export const ProductsSlides: FC<IProductsSlidesProps> = ({ products }) => {
 	return (		
-			<Slider loop={true}>
+			<Slider prevEl='productsBtnBack' nextEl='productsBtnNext' loop={true}>
 				{products.map(item => (
 					<SwiperSlide
-						tag='li'
 						key={item._id}
 						className='swiper-slide slide-conteiner'
 					>

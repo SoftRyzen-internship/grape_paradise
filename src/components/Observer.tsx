@@ -12,7 +12,7 @@ import { Logo } from '@/components/ui/Logo';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
 import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
-import { MovingLine } from '@/components/ui/MovingLine';
+import { MovingLine } from '@/components/common/MovingLine';
 import { Slider } from '@/components/common/Slider';
 import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
