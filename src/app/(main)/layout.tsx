@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 		],
 		shortcut: ['favicon/favicon.ico'],
 		apple: [{ url: 'favicon/apple-touch-icon.png' }],
-		other: [{ rel: 'manifest', url: '/site.webmanifest' }],
+		other: [{ rel: 'manifest', url: 'favicon/site.webmanifest' }],
 	},
 	openGraph: {
 		type: 'website',
