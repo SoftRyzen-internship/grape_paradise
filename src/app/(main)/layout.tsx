@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import { Tenor_Sans } from 'next/font/google';
 
 import { Header } from '@/sections';
+import { Footer } from '@/sections';
 
 import { metaData } from '@/data';
 
@@ -14,7 +15,6 @@ export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
 	title: metaData.title,
 	description: metaData.description,
-	manifest: metaData.manifest,
 	icons: {
 		icon: [
 			{ url: 'favicon/favicon.ico' },
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 		],
 		shortcut: ['favicon/favicon.ico'],
 		apple: [{ url: 'favicon/apple-touch-icon.png' }],
+		other: [{ rel: 'manifest', url: 'favicon/site.webmanifest' }],
 	},
 	openGraph: {
 		type: 'website',
@@ -61,6 +62,7 @@ export default function RootLayout({
 			<body>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

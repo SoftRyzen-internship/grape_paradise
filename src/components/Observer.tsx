@@ -4,10 +4,9 @@ import { SwiperSlide } from 'swiper/react';
 
 import { FC } from 'react';
 
-import { buttonsData, titleData } from '@/data';
+import { buttonsData } from '@/data';
 
 import { Section } from '@/components/common/Section/Section';
-import { Title } from '@/components/common/Title/Title';
 import { Logo } from '@/components/ui/Logo';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
@@ -27,14 +26,6 @@ export const Observer: FC = () => {
 		<>
 			<MovingLine />
 			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
-				<Title chapter='hero'>{titleData.hero}</Title>
-				<Title className='w-[255px] md:w-[350px] lg:w-[590px]'>
-					{titleData.advantages}
-				</Title>
-				<Title chapter='chapter' className='text-green'>
-					{titleData.contacts}
-				</Title>
-
 				<div className='my-20'>
 					<Slider prevEl='productsBtnBack' nextEl='productsBtnNext' loop={true}>
 						{productCardData.map(item => (

@@ -9,3 +9,4 @@ export { Contacts } from './Contacts';
 export { Products } from './Products';
 export { Services } from './Services';
 
+export { Footer } from './Footer';

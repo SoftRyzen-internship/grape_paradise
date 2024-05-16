@@ -41,6 +41,7 @@ const config: Config = {
 				accent: '#9F8C79',
 				stroke: '#C2B2A2',
 				grey: '#A7A7A7',
+				greyLogo: '#9A9A9A',
 				black: '#343434',
 				black60: 'rgba(0, 0, 0, 0.6)',
 				black80: 'rgba(0, 0, 0, 0.8)',

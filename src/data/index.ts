@@ -27,5 +27,4 @@ export { default as slidersData } from './sliderData.json';
 
 export { default as servicesData } from './servicesData.json';
 
-
-
+export { default as footerData } from './footerData.json';
