@@ -9,7 +9,7 @@ import { Footer } from '@/sections';
 
 import { metaData } from '@/data';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL as string;
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || '';
 
 export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
