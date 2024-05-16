@@ -11,7 +11,7 @@ import { ISlideCardGenerationProps } from './SlideCardGeneration.types';
 
 import s from './SlideCardGeneration.module.css';
 
-export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({	
+export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 	title,
 	src,
 	alt,

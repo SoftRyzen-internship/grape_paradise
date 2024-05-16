@@ -8,10 +8,9 @@ import {
 	Reviews,
 } from '@/sections';
 
-
 export default function Home() {
 	return (
-		<main>
+		<>
 			<Hero />
 			<History />
 			<Services />
@@ -19,6 +18,6 @@ export default function Home() {
 			<Products />
 			<Reviews />
 			<Contacts />
-		</main>
+		</>
 	);
 }

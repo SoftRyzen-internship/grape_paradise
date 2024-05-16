@@ -20,8 +20,8 @@ import { Modal } from '@/components/ui/Modal';
 import { IFormBlockProps } from './FormBlock.types';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
-	const [modalOpen, setModalOpen] = useState<boolean>(false);
-	const [sendError, setSendError] = useState<boolean>(false);
+	const [modalOpen, setModalOpen] = useState(false);
+	const [sendError, setSendError] = useState(false);
 
 	const {
 		register,
