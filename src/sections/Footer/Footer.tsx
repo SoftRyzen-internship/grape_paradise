@@ -1,10 +1,10 @@
 'use client';
 
 import { FC } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 import { Logo } from '@/components/ui/Logo';
 
@@ -78,7 +78,7 @@ export const Footer: FC = () => {
 								'mdOnly:font-[250] text-center font-geologica text-small font-extralight text-bodyDark',
 							)}
 						>
-							{footerData.rights}
+							&copy; {footerData.rights}
 						</p>
 					</div>
 				</div>
