@@ -8,8 +8,9 @@ import { buttonsData } from '@/data';
 import { Modal } from '@/components/ui/Modal';
 
 import s from './SlideCardReview.module.css';
+import { ISlideCardReviewsProps } from './SlideCardReviews.types';
 
-export const SlideCardReviews: FC = () => {
+export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({text, author}) => {
 	const paragraphRef = useRef<HTMLParagraphElement>(null);
 
 	const [modalOpen, setModalOpen] = useState(false);
@@ -41,11 +42,7 @@ export const SlideCardReviews: FC = () => {
 					className='h-[161px] overflow-hidden font-tenor text-normal_desk lg:h-[243px] lg:text-large_desk '
 					ref={paragraphRef}
 				>
-					Добрий день, пані Наталя. Ще раз вам дякую за прекрасні смаколики і
-					візит Добрий день, пані Наталя. Ще раз вам дякую за прекрасні
-					смаколики і візит Добрий день, пані Наталя. Ще раз вам дякую за
-					прекрасні смаколики і візит Добрий день, пані Наталя. Ще раз вам дякую
-					за прекрасні смаколики і візит
+					{text}
 				</p>
 
 				{isOverflow && (
@@ -58,7 +55,7 @@ export const SlideCardReviews: FC = () => {
 				)}
 
 				<p className='font-tenor text-normal text-green lg:text-h2'>
-					<span>—</span> Глинський Олександр
+					<span>—</span> {author}
 				</p>
 			</div>
 			

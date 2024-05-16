@@ -1,8 +1,22 @@
+import { FC } from "react";
+import { Section } from '@/components/common/Section';
+import { Title } from '@/components/common/Title';
+import { ReviewsSlider } from "@/components/common/ReviewsSlider";
 
+import { fetchReviews } from "@/sanity/request/fetchReviews";
 
-export const Reviews = () => {
+import { reviewsData } from '@/data';
+
+export const Reviews: FC = async () => {
+	const reviews = await fetchReviews();
+  
   return (
-    <div>Reviews</div>
-  )
-}
+		<Section id={reviewsData.id} sectionStyles='py-[30px] md:py-10 lg:py-20'>
+			<Title className='mb-8 w-[216px] md:w-[261px] lg:mb-16 lg:w-[592px]'>
+				{reviewsData.title}
+			</Title>
+			<ReviewsSlider data={reviews} />
+		</Section>
+	);
+};
 

@@ -12,12 +12,8 @@ export const Services: FC = async () => {
 	const services = await fetchServices();
 
 	return (
-		<Section
-			id={servicesData.id}
-			sectionStyles='py-[30px] md:py-10 lg:py-20'
-			containerStyles='relative'
-		>
-			<Title className=' md:mb-8 lg:mb-16 smOnly:mb-6 smOnly:w-[129px]'>
+		<Section id={servicesData.id} sectionStyles='py-[30px] md:py-10 lg:py-20'>
+			<Title className='mb-6 md:mb-8 lg:mb-16 smOnly:w-[129px]'>
 				{servicesData.title}
 			</Title>
 			<ServicesSlider data={services} />

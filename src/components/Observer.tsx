@@ -1,31 +1,31 @@
 'use client';
 
-import { SwiperSlide } from 'swiper/react';
+// import { SwiperSlide } from 'swiper/react';
 
 import { FC } from 'react';
 
-import { buttonsData } from '@/data';
+// import { buttonsData } from '@/data';
 
-import { Section } from '@/components/common/Section/Section';
-import { Logo } from '@/components/ui/Logo';
-import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
-import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
-import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
+// import { Section } from '@/components/common/Section/Section';
+// import { Logo } from '@/components/ui/Logo';
+// import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
+// import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+// import { SlideCardGeneration } from '@/components/common/SlideCardGeneration';
 import { MovingLine } from '@/components/ui/MovingLine';
-import { Slider } from '@/components/common/Slider';
-import { SlideCardReviews } from '@/components/common/SlideCardReview';
+// import { Slider } from '@/components/common/Slider';
+// import { SlideCardReviews } from '@/components/common/SlideCardReview';
 
-import { serviceCardData } from '@/data';
-import { productCardData } from '@/data';
+// import { serviceCardData } from '@/data';
+// import { productCardData } from '@/data';
 
-import Arrow from '@/../public/icons/arrow.svg';
-import Play from '@/../public/icons/play.svg';
+// import Arrow from '@/../public/icons/arrow.svg';
+// import Play from '@/../public/icons/play.svg';
 
 export const Observer: FC = () => {
 	return (
 		<>
 			<MovingLine />
-			<Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
+			{/* <Section sectionStyles='pt-[144px] pb-[102px] md:pt-[120px] md:pb-[80px] lg:pt-[170px] lg:pb-[95px]'>
 				<div className='my-20'>
 					<Slider prevEl='productsBtnBack' nextEl='productsBtnNext' loop={true}>
 						{productCardData.map(item => (
@@ -59,9 +59,9 @@ export const Observer: FC = () => {
 				</ButtonMain>
 				<ButtonLess type='submit' purpose='form'>
 					{buttonsData.sendButton}
-				</ButtonLess>
+				</ButtonLess> */}
 				{/* moodal */}
-				<ButtonLess type='button' purpose='modal'>
+				{/* <ButtonLess type='button' purpose='modal'>
 					{buttonsData.home}
 				</ButtonLess>
 				<div className='flex gap-2'>
@@ -103,7 +103,7 @@ export const Observer: FC = () => {
 					/>
 				</div>
 				<SlideCardReviews />
-			</div>
+			</div> */}
 		</>
 	);
 };
