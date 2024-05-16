@@ -18,12 +18,11 @@ import { ISliderProps } from './Slider.types';
 
 export const Slider: FC<ISliderProps> = ({
 	nameBtnBack,
-	nameBtnNext,	
+	nameBtnNext,
 	loop = false,
 	desktopSpaceBetween = 174,
 	children,
 }) => {
-
 	return (
 		<div className='relative w-full'>
 			<Swiper
@@ -34,8 +33,8 @@ export const Slider: FC<ISliderProps> = ({
 				grabCursor={true}
 				loop={loop}
 				navigation={{
-					prevEl: '.prev-btn',
-					nextEl: '.next-btn',
+					prevEl: `.${nameBtnBack}`,
+					nextEl: `.${nameBtnNext}`,
 				}}
 				breakpoints={{
 					0: { slidesPerView: 1, spaceBetween: 16 },
@@ -48,20 +47,18 @@ export const Slider: FC<ISliderProps> = ({
 
 			<div className='swiper-navigation absolute -bottom-20 left-1/2 right-auto z-10 flex w-[104px] -translate-x-1/2 transform items-center justify-between md:-top-24 md:bottom-auto md:left-auto md:right-0 md:w-[112px]  md:translate-x-0 lg:-top-40 lg:w-[164px] '>
 				<ButtonLess
-					className='prev-btn'
+					className={`prev-btn ${nameBtnBack}`}
 					type='button'
 					aria={slidersData.ariaLabelBack}
 					purpose='slider'
-					name={nameBtnBack}
 				>
 					{<Arrow className='arrow-icon rotate-180' />}
 				</ButtonLess>
 				<ButtonLess
-					className='next-btn'
+					className={`next-btn ${nameBtnNext}`}
 					type='button'
 					aria={slidersData.ariaLabelNext}
 					purpose='slider'
-					name={nameBtnNext}
 				>
 					{<Arrow className='arrow-icon' />}
 				</ButtonLess>
