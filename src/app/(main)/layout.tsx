@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 	metadataBase: new URL(BASE_URL),
 	title: metaData.title,
 	description: metaData.description,
-	manifest: metaData.manifest,
 	icons: {
 		icon: [
 			{ url: 'favicon/favicon.ico' },
@@ -33,6 +32,7 @@ export const metadata: Metadata = {
 		],
 		shortcut: ['favicon/favicon.ico'],
 		apple: [{ url: 'favicon/apple-touch-icon.png' }],
+		other: [{ rel: 'manifest', url: '/site.webmanifest' }],
 	},
 	openGraph: {
 		type: 'website',
