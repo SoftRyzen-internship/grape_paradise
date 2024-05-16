@@ -8,11 +8,13 @@ export const Section: FC<ISectionProps> = ({
 	id,
 	sectionStyles,
 	containerStyles,
+	render,
 	children,
 }) => {
 	return (
 		<section id={id} className={clsx('w-full', sectionStyles)}>
 			<div className={clsx('container', containerStyles)}>{children}</div>
+			{render}
 		</section>
 	);
 };

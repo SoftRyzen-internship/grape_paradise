@@ -1,16 +1,17 @@
-import { FC } from "react";
+import { FC } from 'react';
+
 import { Section } from '@/components/common/Section';
 import { Title } from '@/components/common/Title';
-import { ReviewsSlider } from "@/components/common/ReviewsSlider";
+import { ReviewsSlider } from '@/components/common/ReviewsSlider';
 
-import { fetchReviews } from "@/sanity/request/fetchReviews";
+import { fetchReviews } from '@/sanity/request/fetchReviews';
 
 import { reviewsData } from '@/data';
 
 export const Reviews: FC = async () => {
 	const reviews = await fetchReviews();
-  
-  return (
+
+	return (
 		<Section
 			id={reviewsData.id}
 			sectionStyles='pt-[30px] pb-[110px] md:pt-10 md:pb-20 lg:py-20'
@@ -22,4 +23,3 @@ export const Reviews: FC = async () => {
 		</Section>
 	);
 };
-

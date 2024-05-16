@@ -38,10 +38,11 @@ export const Header: FC = () => {
 				<ButtonMain
 					chapter='header'
 					to='contacts'
-					className={clsx('notLg:hidden', {
-						'lg:bg-white lg:text-green lg:hover:bg-green lg:hover:text-white':
-							pathname === '/policy'
-					})}
+					className={clsx(
+						'notLg:hidden',
+						pathname === '/policy' &&
+							'lg:bg-white lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white',
+					)}
 					onClick={() => handleClick()}
 				>
 					{headerData.text}
