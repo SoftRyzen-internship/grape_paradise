@@ -13,7 +13,7 @@ import { IProductsSlidesProps } from './ProductsSlider.types';
 
 export const ProductsSlides: FC<IProductsSlidesProps> = ({ products }) => {
 	return (		
-			<Slider prevEl='productsBtnBack' nextEl='productsBtnNext' loop={true}>
+			<Slider prevEl='productsBtnBack' nextEl='productsBtnNext' loop={true} btnConteinerStyle='md:-top-[88px] lg:-top-40'>
 				{products.map(item => (
 					<SwiperSlide
 						key={item._id}

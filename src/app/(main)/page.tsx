@@ -1,6 +1,5 @@
-import { Hero, History, Advantages, Contacts, Services } from '@/sections';
+import { Hero, History, Advantages, Contacts, Services, Products } from '@/sections';
 import { Observer } from '@/components/Observer';
-import { Products } from '@/sections/Products';
 
 export default function Home() {
 	return (
