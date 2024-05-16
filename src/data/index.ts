@@ -23,4 +23,6 @@ export { default as contactsData } from './contactsData.json';
 
 export { default as slidersData } from './sliderData.json';
 
+export { default as servicesData } from './servicesData.json';
+
 
