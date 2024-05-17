@@ -17,6 +17,7 @@ export const HistoryFrame: FC<IHistoryFrame> = ({ onClick }) => (
 	>
 		<Image
 			fill
+			priority
 			src={historyData.img}
 			alt={historyData.alt}
 			className={s.frame}
@@ -24,6 +25,7 @@ export const HistoryFrame: FC<IHistoryFrame> = ({ onClick }) => (
 		/>
 
 		<ButtonLess
+		    aria={historyData.aria}
 			type='button'
 			purpose='video'
 			onClick={onClick}

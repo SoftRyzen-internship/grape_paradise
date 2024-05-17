@@ -4,9 +4,8 @@ import { client } from '../lib/client';
 export const fetchReviews = async () => {
   try {
     const reviews = await client.fetch(reviewsGroq);
-    return reviews
+    return reviews;
   } catch (error) {
-    return error
+    return error;
   }
- 
 };

@@ -1,4 +1,4 @@
 export interface INavMenuProps {
-	onClick?: () => void;
-	className?: string;
+  onClick?: () => void;
+  className?: string;
 }

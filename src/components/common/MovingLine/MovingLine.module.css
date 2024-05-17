@@ -1,31 +1,31 @@
 .item {
-	position: relative;
+  position: relative;
 
-	&::before {
-		content: '';
-		display: block;
-		width: 8px;
-		height: 8px;
-		border-radius: 10000px;
-		background-color: #9f8c79;
+  &::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 10000px;
+    background-color: #9f8c79;
 
-		position: absolute;
-		top: 11px;
-		left: -24px;
-	}
+    position: absolute;
+    top: 11px;
+    left: -24px;
+  }
 
-	@media screen and (min-width: 768px) {
-		&::before {
-			width: 12px;
-			height: 12px;
-			top: 19px;
-			left: -40px;
-		}
-	}
+  @media screen and (min-width: 768px) {
+    &::before {
+      width: 12px;
+      height: 12px;
+      top: 19px;
+      left: -40px;
+    }
+  }
 
-	@media screen and (min-width: 1280px) {
-		&::before {
-			top: 33px;
-		}
-	}
+  @media screen and (min-width: 1280px) {
+    &::before {
+      top: 33px;
+    }
+  }
 }
