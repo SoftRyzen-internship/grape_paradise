@@ -42,7 +42,7 @@ export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({
 				)}
 			>
 				<p
-					className='h-[161px] overflow-hidden font-tenor text-normal_desk lg:h-[243px] lg:text-large_desk '
+					className={clsx('h-[161px] overflow-hidden font-tenor text-large lg:h-[243px] lg:text-large_desk', s.reviews)}
 					ref={paragraphRef}
 				>
 					{text}
