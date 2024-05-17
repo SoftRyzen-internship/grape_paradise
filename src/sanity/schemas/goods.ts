@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export const goods = defineType({
   name: 'goods',
@@ -11,20 +11,19 @@ export const goods = defineType({
       title: 'Найменування товару',
       type: 'string',
       placeholder: 'Додайте назву товару',
-      validation: (rule) =>
+      validation: rule =>
         rule
           .required()
-          .error("Додайте назву товару")
+          .error('Додайте назву товару')
           .max(30)
-          .error('Введіть назву товару, яка містить не більше 30 символів')
+          .error('Введіть назву товару, яка містить не більше 30 символів'),
     }),
 
     defineField({
       name: 'imageGoods',
       title: 'Фото товару',
       type: 'image',
-      validation: (rule) =>
-        rule.required()
+      validation: rule => rule.required(),
     }),
 
     defineField({
@@ -32,30 +31,25 @@ export const goods = defineType({
       type: 'string',
       title: 'Короткий опис того, що зображено на фото',
       placeholder: 'Опис фото',
-      validation: (rule) =>
+      validation: rule =>
         rule
           .required()
-          .error("Додайте опис фото")
+          .error('Додайте опис фото')
           .max(100)
-          .error('Введіть опис фото, який містить не більше 100 символів')
+          .error('Введіть опис фото, який містить не більше 100 символів'),
     }),
 
     defineField({
       name: 'slug',
       type: 'slug',
       title: 'Згенеруйте URL адресу для фотографії товару',
-      validation: (rule) =>
-        rule.required(),
+      validation: rule => rule.required(),
       options: {
         source: 'goodsTitle',
         maxLength: 200,
-        slugify: (input) => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .slice(0, 200)
-      }
+        slugify: input =>
+          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
     }),
-
-    
   ],
-})
+});

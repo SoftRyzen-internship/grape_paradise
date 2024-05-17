@@ -1,3 +1,3 @@
 export interface IHistoryFrame {
-	onClick: () => void;
+  onClick: () => void;
 }

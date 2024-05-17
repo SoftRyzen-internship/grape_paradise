@@ -1,4 +1,4 @@
 export interface ISlideCardReviewsProps {
-	text: string;
-	author: string;
+  text: string;
+  author: string;
 }
