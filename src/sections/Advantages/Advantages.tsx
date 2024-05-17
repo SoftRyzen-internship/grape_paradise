@@ -3,15 +3,15 @@ import { FC } from 'react';
 import { Section } from '@/components/common/Section';
 import { Title } from '@/components/common/Title';
 import { AdvantagesCard } from '@/components/common/AdvantagesCard';
-
-import { advantagesData } from '@/data';
-
-import s from './Advantages.module.css';
 import {
   BottleAfter,
   LeafAfter,
   LeafBefore,
-} from '@/components/common/HistoryAnimation';
+} from '@/components/common/AdvantagesAnimation';
+
+import { advantagesData } from '@/data';
+
+import s from './Advantages.module.css';
 
 export const Advantages: FC = () => (
   <Section

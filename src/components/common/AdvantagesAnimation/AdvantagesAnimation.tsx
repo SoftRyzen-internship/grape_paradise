@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import s from './HistoryAnimation.module.css';
+import s from './AdvantagesAnimation.module.css';
 
 export const LeafBefore: FC = () => {
   return (
@@ -58,6 +58,7 @@ export const LeafAfter: FC = () => {
 export const BottleAfter: FC = () => {
   return (
     <motion.div
+      className={s.icons}
       style={{
         content: "url('/icons/bg-bottle-section-4.svg')",
         position: 'absolute',
