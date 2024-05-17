@@ -10,7 +10,6 @@
 	"singleQuote": true,
 	"tabWidth": 2,
 	"trailingComma": "all",
-	"useTabs": true,
 	"singleAttributePerLine": false,
 	"endOfLine": "lf",
 	"tailwindConfig": "./tailwind.config.ts",

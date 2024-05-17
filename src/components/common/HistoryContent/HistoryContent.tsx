@@ -7,7 +7,7 @@ import { historyData } from '@/data';
 
 export const HistoryContent: FC = () => (
 	<div className='md:w-[334px] lg:w-[488px]'>
-		<Title className='mb-4 w-[320px] md:mb-6 md:w-full'>
+		<Title history={true} className='mb-4 w-[320px] md:mb-6 md:w-full'>
 			{historyData.title}
 		</Title>
 
