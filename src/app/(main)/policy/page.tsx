@@ -1,5 +1,6 @@
 import { PortableText } from '@portabletext/react';
 import { fetchPrivacyPolicy } from '@/sanity/request/fetchPrivacyPolicy';
+
 import { Section } from '@/components/common/Section';
 import { CustomComponents } from '@/components/common/CustomComponent';
 

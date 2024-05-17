@@ -1,11 +1,11 @@
 import {
 	Hero,
 	History,
-	Advantages,
-	Contacts,
 	Services,
+	Advantages,
 	Products,
 	Reviews,
+	Contacts,
 } from '@/sections';
 
 export default function Home() {

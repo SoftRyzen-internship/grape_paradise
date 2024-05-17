@@ -50,12 +50,14 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 							priority
 						/>
 					</div>
+
 					{slide === 'service' && (
 						<p className='w-full text-normal lg:text-normal_desk'>
 							{description}
 						</p>
 					)}
 				</div>
+
 				<div className='mt-6 md:mt-0 '>
 					<ButtonMain chapter='card' to='контакти'>
 						{buttonsData.orderButton}

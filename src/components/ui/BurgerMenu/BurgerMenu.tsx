@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
-import { Logo } from '../Logo';
-import { ButtonLess } from '../ButtonLess';
-import { NavMenu } from '../NavMenu';
-import { ButtonMain } from '../ButtonMain';
+import { Logo } from '@/components/ui/Logo';
+import { ButtonLess } from '@/components/ui/ButtonLess';
+import { NavMenu } from '@/components/ui/NavMenu';
+import { ButtonMain } from '@/components/ui/ButtonMain';
 
 import CloseIcon from '@/../public/icons/close.svg';
 

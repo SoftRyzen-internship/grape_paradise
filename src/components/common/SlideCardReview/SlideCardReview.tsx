@@ -10,7 +10,10 @@ import { Modal } from '@/components/ui/Modal';
 import s from './SlideCardReview.module.css';
 import { ISlideCardReviewsProps } from './SlideCardReviews.types';
 
-export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({text, author}) => {
+export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({
+	text,
+	author,
+}) => {
 	const paragraphRef = useRef<HTMLParagraphElement>(null);
 
 	const [modalOpen, setModalOpen] = useState(false);
@@ -58,7 +61,7 @@ export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({text, author}) => 
 					<span>—</span> {author}
 				</p>
 			</div>
-			
+
 			<Modal show={modalOpen} onClose={() => setModalOpen(false)}>
 				<div></div>
 			</Modal>

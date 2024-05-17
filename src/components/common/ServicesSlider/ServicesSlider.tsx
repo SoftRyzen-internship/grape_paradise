@@ -21,10 +21,7 @@ export const ServicesSlider: FC<IServicesSliderProps> = ({ data }) => {
 					imageServicesAlt,
 					servicesText,
 				}) => (
-					<SwiperSlide
-						key={_id}
-						className='swiper-slide slide-conteiner'
-					>
+					<SwiperSlide key={_id} className='swiper-slide slide-conteiner'>
 						<SlideCardGeneration
 							title={servicesTitle}
 							src={urlFor(imageServices).url()}
