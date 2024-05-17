@@ -331,7 +331,7 @@ Also include the use of components: [Logo](#component-logo)
 To run the application locally, follow these steps:
 
 1. Clone the repository:
-   `git clone https://github.com/UserAndrii/ryzen_carp_travel.git`
+   `git clone https://github.com/SoftRyzen-internship/grape_paradise.git`
 2. Install dependencies: `npm install`
 3. Run the app: `npm run dev`
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
