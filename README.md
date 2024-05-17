@@ -288,7 +288,7 @@ Also include the use of components: [Modal](#component-modal)
 <div align="center"><img src="/public/images/readme/footer.webp" alt="footer images" width="800" align="center"></div>
 
 - #### component Footer
-- 
+
 | Prop    | Type    | Description                                                                                                                                                                |
 | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         |         | The Footer includes links to the homepage (Logo) and the privacy policy page. Additionally, it contains links to the partners involved in the creation of this application |
