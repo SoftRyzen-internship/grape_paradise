@@ -5,18 +5,17 @@ import Image from 'next/image';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { Title } from '@/components/common/Title/Title';
 
-import { buttonsData } from '@/data';
+import { slidersData } from '@/data';
 
 import { ISlideCardGenerationProps } from './SlideCardGeneration.types';
 
 import s from './SlideCardGeneration.module.css';
 
 export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
-	data: {
-		title,
-		img: { src, alt },
-		description,
-	},
+	title,
+	src,
+	alt,
+	description,
 	slide,
 }) => {
 	const className = clsx(
@@ -30,14 +29,14 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 		<>
 			<div
 				className={clsx(
-					'w-fill flex cursor-pointer flex-col justify-between md:w-[330px] lg:w-[521px]',
+					'w-fill flex flex-col justify-between md:w-[330px] lg:w-[521px]',
 					s.containerCard,
 					{ 'min-h-[545px] md:h-[598px] lg:h-[633px]': slide === 'service' },
 					{ 'min-h-[354px] md:h-[406px] lg:h-[455px]': slide === 'product' },
 				)}
 			>
 				<div>
-					<Title chapter='chapter' styles='text-black'>
+					<Title chapter='chapter' className='text-black'>
 						{title}
 					</Title>
 
@@ -51,15 +50,17 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 							priority
 						/>
 					</div>
+
 					{slide === 'service' && (
 						<p className='w-full text-normal lg:text-normal_desk'>
 							{description}
 						</p>
 					)}
 				</div>
+
 				<div className='mt-6 md:mt-0 '>
-					<ButtonMain chapter='card' to='контакти'>
-						{buttonsData.orderButton}
+					<ButtonMain chapter='card' to='contacts'>
+						{slidersData.orderButton}
 					</ButtonMain>
 				</div>
 			</div>

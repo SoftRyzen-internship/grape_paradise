@@ -1,15 +1,23 @@
-import { Hero, History, Advantages, Contacts } from '@/sections';
-import { Observer } from '@/components/Observer';
+import {
+	Hero,
+	History,
+	Services,
+	Advantages,
+	Products,
+	Reviews,
+	Contacts,
+} from '@/sections';
 
 export default function Home() {
 	return (
-		<main>
+		<>
 			<Hero />
 			<History />
+			<Services />
 			<Advantages />
+			<Products />
+			<Reviews />
 			<Contacts />
-
-			<Observer />
-		</main>
+		</>
 	);
 }

@@ -1,0 +1,11 @@
+.backgroundImg {
+	background-image: url('/icons/bg-reviews.svg');
+	background-position: center;
+	background-size: contain;
+}
+
+.reviews {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 7;
+}

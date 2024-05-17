@@ -1,8 +1,10 @@
 import { FC } from 'react';
+import { usePathname } from 'next/navigation';
 
-import { NavMenu } from '../NavMenu';
-import { Logo } from '../Logo';
-import { ButtonMain } from '../ButtonMain';
+import { Logo } from '@/components/ui/Logo';
+import { ButtonLess } from '@/components/ui/ButtonLess';
+import { NavMenu } from '@/components/ui/NavMenu';
+import { ButtonMain } from '@/components/ui/ButtonMain';
 
 import CloseIcon from '@/../public/icons/close.svg';
 
@@ -10,11 +12,19 @@ import { headerData } from '@/data';
 
 import { IBurgerMenuProps } from './IBurgerMenuProps.types';
 
-import { ButtonLess } from '../ButtonLess';
-
 import s from './BurgerMenu.module.css';
 
 export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
+	const pathname = usePathname();
+
+	const handleClick = () => {
+		if (pathname === '/policy') {
+			window.location.href = '/';
+		} else {
+			onClick();
+		}
+	};
+
 	return (
 		<div
 			className={`fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden bg-bg1 lg:hidden ${s.background}`}
@@ -27,14 +37,19 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
 						purpose='burger'
 						aria-label={headerData.ariaLabelClose}
 						onClick={onClick}
+						className='h-12 w-12 p-3'
 					>
 						<CloseIcon width={24} height={24} className='fill-green' />
 					</ButtonLess>
 				</div>
 
 				<div className='mb-[152px] mt-[96px] flex flex-col items-center gap-[73px] md:mb-[96px]'>
-					<NavMenu onClick={onClick} />
-					<ButtonMain to='contacts' chapter='header' onClick={onClick}>
+					<NavMenu onClick={() => handleClick()} />
+					<ButtonMain
+						to='contacts'
+						chapter='header'
+						onClick={() => handleClick()}
+					>
 						{headerData.text}
 					</ButtonMain>
 				</div>

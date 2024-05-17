@@ -7,7 +7,9 @@ import { historyData } from '@/data';
 
 export const HistoryContent: FC = () => (
 	<div className='md:w-[334px] lg:w-[488px]'>
-		<Title styles='mb-4 w-[320px] md:mb-6 md:w-full'>{historyData.title}</Title>
+		<Title className='mb-4 w-[320px] md:mb-6 md:w-full'>
+			{historyData.title}
+		</Title>
 
 		<p className='mb-3 md:mb-4 lg:mb-6 lg:text-normal_desk'>
 			{historyData.description}

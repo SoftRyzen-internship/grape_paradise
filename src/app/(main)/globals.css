@@ -16,7 +16,7 @@
 	}
 
 	.title {
-		@apply font-tenor text-h2 uppercase text-green md:text-h2_tab lg:text-h2_desk;
+		@apply font-tenor text-h2 font-normal uppercase text-green md:text-h2_tab lg:text-h2_desk;
 	}
 
 	.subtitle {
@@ -29,5 +29,9 @@
 
 	.arrow-icon {
 		@apply h-6 w-6 fill-green stroke-green transition group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white group-disabled:fill-green30 group-disabled:stroke-green30;
+	}
+
+	.slide-conteiner {
+		@apply relative flex items-center before:absolute before:top-0 before:block before:w-0 before:bg-stroke before:content-[''] lg:before:-right-[87px] lg:before:h-full lg:before:w-[1px];
 	}
 }
