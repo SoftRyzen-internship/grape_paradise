@@ -1,1 +1,1 @@
-export { ProductsSlides } from './ProductsSlider'
+export { ProductsSlides } from './ProductsSlider';

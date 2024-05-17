@@ -1,2 +1,1 @@
-export { SlideCardReviews } from "./SlideCardReview";
-
+export { SlideCardReviews } from './SlideCardReview';

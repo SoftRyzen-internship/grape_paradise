@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export const privacyPolicy = defineType({
   name: 'privacyPolicy',
@@ -10,10 +10,10 @@ export const privacyPolicy = defineType({
       name: 'privacyPolicyTitle',
       title: 'Головний заголовок сторінки "Політика конфіденційності"',
       type: 'string',
-      validation: (rule) =>
+      validation: rule =>
         rule
           .required()
-          .error("Додайте заголовок сторінки 'Політика конфіденційності'")
+          .error("Додайте заголовок сторінки 'Політика конфіденційності'"),
     }),
     defineField({
       name: 'textPrivacyPolicy',
@@ -63,4 +63,3 @@ export const privacyPolicy = defineType({
     }),
   ],
 });
-

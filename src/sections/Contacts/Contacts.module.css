@@ -1,33 +1,33 @@
 .contacts_bg {
-	background-size: cover;
-	background-position: center;
-	background-repeat: repeat-x;
-	background-image: image-set(
-		url(/images/contacts/contacts_bg_mob.webp) 1x,
-		url(/images/contacts/contacts_bg_mob@2x.webp) 2x
-	);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-image: image-set(
+    url(/images/contacts/contacts_bg_mob.webp) 1x,
+    url(/images/contacts/contacts_bg_mob@2x.webp) 2x
+  );
 }
 
 @media screen and (min-width: 360px) {
-	.contacts_bg {
-		background-size: contain;
-	}
+  .contacts_bg {
+    background-size: contain;
+  }
 }
 
 @media screen and (min-width: 768px) {
-	.contacts_bg {
-		background-image: image-set(
-			url(/images/contacts/contacts_bg_tab.webp) 1x,
-			url(/images/contacts/contacts_bg_tab@2x.webp) 2x
-		);
-	}
+  .contacts_bg {
+    background-image: image-set(
+      url(/images/contacts/contacts_bg_tab.webp) 1x,
+      url(/images/contacts/contacts_bg_tab@2x.webp) 2x
+    );
+  }
 }
 
 @media screen and (min-width: 1280px) {
-	.contacts_bg {
-		background-image: image-set(
-			url(/images/contacts/contacts_bg_desk.webp) 1x,
-			url(/images/contacts/contacts_bg_desk@2x.webp) 2x
-		);
-	}
+  .contacts_bg {
+    background-image: image-set(
+      url(/images/contacts/contacts_bg_desk.webp) 1x,
+      url(/images/contacts/contacts_bg_desk@2x.webp) 2x
+    );
+  }
 }

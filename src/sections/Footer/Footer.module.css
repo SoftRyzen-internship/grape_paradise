@@ -1,29 +1,29 @@
 .footer::before {
-	content: url('/images/footer/footer-bg-frame.webp');
-	position: absolute;
-	display: inline-block;
-	top: -8px;
-	left: 0;
-	width: 100%;
-	transform: rotate(180deg);
+  content: url('/images/footer/footer-bg-frame.webp');
+  position: absolute;
+  display: inline-block;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  transform: rotate(180deg);
 }
 
 .background {
-	background-image: image-set(
-		url('/images/footer/footer-bg@1x.webp') 1x,
-		url('/images/footer/footer-bg@2x.webp') 2x
-	);
-	background-size: auto 112px;
+  background-image: image-set(
+    url('/images/footer/footer-bg@1x.webp') 1x,
+    url('/images/footer/footer-bg@2x.webp') 2x
+  );
+  background-size: auto 112px;
 }
 
 @media (min-width: 768px) {
-	.background {
-		background-size: auto 236px;
-	}
+  .background {
+    background-size: auto 236px;
+  }
 }
 
 @media (min-width: 1280px) {
-	.background {
-		background-size: auto 438px;
-	}
+  .background {
+    background-size: auto 438px;
+  }
 }

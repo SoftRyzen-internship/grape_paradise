@@ -8,7 +8,7 @@ import { contactsData } from '@/data';
 import s from './Contacts.module.css';
 
 export const Contacts: FC = () => {
-	return (
+  return (
     <Section
       id={contactsData.id}
       sectionStyles={`relative pt-[80px] lg:pt-[130px] ${s.contacts_bg}`}

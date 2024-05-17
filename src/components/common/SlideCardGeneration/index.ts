@@ -1,1 +1,1 @@
-export { SlideCardGeneration } from './SlideCardGeneration'
+export { SlideCardGeneration } from './SlideCardGeneration';

@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export const review = defineType({
   name: 'review',
@@ -7,29 +7,24 @@ export const review = defineType({
 
   fields: [
     defineField({
-      name: "reviewText",
-      type: "text",
-      title: "Текст відгуку",
+      name: 'reviewText',
+      type: 'text',
+      title: 'Текст відгуку',
       placeholder: 'Введіть повний текст нового відгуку',
-      validation: (rule) =>
-        rule
-          .required()
-          .error('Введіть текст відгука')
+      validation: rule => rule.required().error('Введіть текст відгука'),
     }),
 
     defineField({
-      name: "reviewAuthor",
-      type: "string",
+      name: 'reviewAuthor',
+      type: 'string',
       title: "Ім'я та прізвище автора відгуку",
       placeholder: "Введіть ім'я та прізвище автора відгуку",
-      validation: (rule) =>
+      validation: rule =>
         rule
           .required()
           .error("Введіть ім'я та прізвище автора відгуку")
           .max(30)
-          .error('Введіть імя, яке містить не більше 30 символів')
+          .error('Введіть імя, яке містить не більше 30 символів'),
     }),
   ],
-})
-
-
+});

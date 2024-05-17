@@ -1,3 +1,3 @@
 export interface IFormBlockProps {
-	className?: string;
+  className?: string;
 }

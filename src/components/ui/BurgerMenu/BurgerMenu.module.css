@@ -1,32 +1,32 @@
 .background {
-	&::before {
-		content: url('../../../../public/icons/bg-small-leaf-section-4.svg');
-		width: 147px;
-		height: 128px;
-		position: absolute;
-		top: 96px;
-		left: -35px;
-	}
+  &::before {
+    content: url('../../../../public/icons/bg-small-leaf-section-4.svg');
+    width: 147px;
+    height: 128px;
+    position: absolute;
+    top: 96px;
+    left: -35px;
+  }
 
-	&::after {
-		content: url('../../../../public/icons/bg-big-leaf-section-4.svg');
-		width: 199px;
-		height: 170px;
-		position: absolute;
-		top: 488px;
-		right: -71px;
-	}
+  &::after {
+    content: url('../../../../public/icons/bg-big-leaf-section-4.svg');
+    width: 199px;
+    height: 170px;
+    position: absolute;
+    top: 488px;
+    right: -71px;
+  }
 
-	@media screen and (min-width: 768px) {
-    &::before  {
+  @media screen and (min-width: 768px) {
+    &::before {
       top: 128px;
-		left: 37px;
+      left: 37px;
     }
-		&::after {
-			width: 257.428px;
-			height: 220.003px;
-			top: 319px;
-			right: -58.38px;
-		}
-	}
+    &::after {
+      width: 257.428px;
+      height: 220.003px;
+      top: 319px;
+      right: -58.38px;
+    }
+  }
 }
