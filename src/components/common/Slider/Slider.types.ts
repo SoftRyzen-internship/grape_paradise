@@ -1,7 +1,10 @@
 import { ReactNode } from 'react';
 
 export interface ISliderProps {
-	loop?: boolean;
+	prevEl: "servicesBtnBack" | "productsBtnBack" | "reviewsBtnBack";
+	nextEl: "servicesBtnNext" | "productsBtnNext" | "reviewsBtnNext";	
+	loop?: boolean; 
 	desktopSpaceBetween?: number;
 	children: ReactNode;
+	btnConteinerStyle?: string;
 }

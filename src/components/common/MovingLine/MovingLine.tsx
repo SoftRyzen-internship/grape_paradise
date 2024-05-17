@@ -8,7 +8,11 @@ import s from './MovingLine.module.css';
 
 export const MovingLine: FC = () => {
 	return (
-		<Marquee autoFill speed={80} className='py-4 md:py-6 lg:py-8'>
+		<Marquee
+			autoFill
+			speed={80}
+			className='mt-[140px] py-4 md:mt-[80px] md:py-6 lg:py-8'
+		>
 			{movingLineData.map(({ id, text }) => (
 				<div
 					key={id}

@@ -340,12 +340,13 @@ To run the application locally, follow these steps:
 
 #### `NEXT`:
 
-- Next.js is a React framework for building server-side rendered (SSR) and
+- This is a Next.js project bootstrapped with `create-next-app`. Next.js is a React 
+  framework for building server-side rendered (SSR) and
   statically generated web applications. It provides features like automatic
   code splitting, hot module replacement, and server-side rendering out of the
   box.
 
-#### `REACT`:
+#### `react`:
 
 - React is a JavaScript library for building user interfaces. It enables
   developers to create reusable UI components and manage the application's state
@@ -357,7 +358,7 @@ To run the application locally, follow these steps:
   renderers for React. It provides DOM-specific methods that can be used to
   interact with the DOM during React component lifecycle.
 
-#### `Sanity`: 
+#### `sanity`: 
 
 - A headless CMS (Content Management System) that provides a convenient way to
   structure and manage content. Sanity has a powerful content editing platform,
@@ -381,7 +382,7 @@ To run the application locally, follow these steps:
 - A UI component library for Sanity, providing a set of pre-styled components that make
   it easier to develop custom interfaces for editing content in Sanity.
 
-#### `Swiper`: 
+#### `swiper`: 
 
 - A library for creating sliders and carousels in web applications. It provides smooth
   animations, touch gesture support for mobile devices, and many configuration options
