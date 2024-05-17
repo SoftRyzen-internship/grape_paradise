@@ -1,6 +1,5 @@
 import { FC, Fragment } from 'react';
 import { clsx } from 'clsx';
-
 import {
 	Transition,
 	Dialog,
@@ -17,12 +16,14 @@ const { modalInfo } = formData;
 import { ButtonLess } from '@/components/ui/ButtonLess';
 
 import { IModalProps } from './Modal.types';
-import styles from './Modal.module.css';
+
+import s from './Modal.module.css';
 
 export const Modal: FC<IModalProps> = ({
 	show,
 	title,
 	errorMessage,
+	whiteBg,
 	onClose,
 	children,
 }) => {
@@ -54,7 +55,8 @@ export const Modal: FC<IModalProps> = ({
 								className={clsx(
 									'relative flex flex-col overflow-hidden rounded-xl border border-green bg-bg2 p-4 pb-8 text-left md:p-6 md:pb-8',
 									title && 'text-center',
-									title && styles['bg-modal'],
+									title && s['bg-modal'],
+									whiteBg && 'bg-white',
 								)}
 							>
 								<ButtonLess

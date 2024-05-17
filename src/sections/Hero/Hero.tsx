@@ -1,5 +1,4 @@
 import { FC } from 'react';
-
 import { clsx } from 'clsx';
 
 import { Section } from '@/components/common/Section';

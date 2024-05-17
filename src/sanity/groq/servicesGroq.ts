@@ -4,6 +4,7 @@ export const servicesGroq = groq`*[_type == "services" && !(_id in path("drafts.
     servicesTitle,
     imageServices,
     imageServicesAlt,
+    servicesText,
     slug,
     _id
 }`;

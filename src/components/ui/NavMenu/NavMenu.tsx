@@ -1,8 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-
 import { Link } from 'react-scroll';
+import { usePathname } from 'next/navigation';
+import { clsx } from 'clsx';
 
 import { navMenuData } from '@/data';
 
@@ -11,13 +12,18 @@ import { INavMenuProps } from './INavMenuProps.types';
 import s from './NavMenu.module.css';
 
 export const NavMenu: FC<INavMenuProps> = ({ onClick, className }) => {
+	const pathname = usePathname();
+
 	return (
 		<nav className={`${className}`}>
 			<ul className='flex flex-col items-center gap-6 lg:flex-row'>
 				{navMenuData.map(({ id, section, children }) => (
 					<li
 						key={id}
-						className='font-tenor text-h3 font-normal text-green lg:font-geologica lg:text-normal lg:font-extralight lg:text-white'
+						className={clsx(
+							'font-tenor text-h3 font-normal text-green lg:font-geologica lg:text-normal lg:font-extralight ',
+							pathname === '/policy' ? 'lg:text-green' : 'lg:text-white',
+						)}
 					>
 						<Link
 							to={section}
