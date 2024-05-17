@@ -4,16 +4,16 @@ import { clsx } from 'clsx';
 import { ISectionProps } from './Section.types';
 
 export const Section: FC<ISectionProps> = ({
-	id,
-	sectionStyles,
-	containerStyles,
-	render,
-	children,
+  id,
+  sectionStyles,
+  containerStyles,
+  render,
+  children,
 }) => {
-	return (
-		<section id={id} className={clsx('w-full', sectionStyles)}>
-			<div className={clsx('container', containerStyles)}>{children}</div>
-			{render}
-		</section>
-	);
+  return (
+    <section id={id} className={clsx('w-full', sectionStyles)}>
+      <div className={clsx('container', containerStyles)}>{children}</div>
+      {render}
+    </section>
+  );
 };

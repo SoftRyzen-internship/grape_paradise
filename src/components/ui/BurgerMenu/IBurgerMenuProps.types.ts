@@ -1,3 +1,3 @@
 export interface IBurgerMenuProps {
-	onClick: () => void;
+  onClick: () => void;
 }

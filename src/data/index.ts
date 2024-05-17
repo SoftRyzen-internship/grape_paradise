@@ -8,7 +8,7 @@ export { default as heroData } from './heroData.json';
 export { default as historyData } from './historyData.json';
 export { default as servicesData } from './servicesData.json';
 export { default as advantagesData } from './advantagesData.json';
-export { default as productsData } from './productsData.json'
+export { default as productsData } from './productsData.json';
 export { default as movingLineData } from './movingLineData.json';
 export { default as reviewsData } from './reviewsData.json';
 export { default as contactsData } from './contactsData.json';

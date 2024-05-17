@@ -1,22 +1,22 @@
 [
-	{
-		"id": "01",
-		"section": "about",
-		"children": "Про нас"
-	},
-	{
-		"id": "02",
-		"section": "services",
-		"children": "Послуги"
-	},
-	{
-		"id": "03",
-		"section": "goods",
-		"children": "Товари"
-	},
-	{
-		"id": "04",
-		"section": "contacts",
-		"children": "Контакти"
-	}
+  {
+    "id": "01",
+    "section": "about",
+    "children": "Про нас"
+  },
+  {
+    "id": "02",
+    "section": "services",
+    "children": "Послуги"
+  },
+  {
+    "id": "03",
+    "section": "goods",
+    "children": "Товари"
+  },
+  {
+    "id": "04",
+    "section": "contacts",
+    "children": "Контакти"
+  }
 ]
