@@ -3,7 +3,7 @@
 import { clsx } from 'clsx';
 import { useRef, useState, useEffect, FC } from 'react';
 
-import { buttonsData } from '@/data';
+import { slidersData } from '@/data';
 
 import { Modal } from '@/components/ui/Modal';
 
@@ -53,7 +53,7 @@ export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({
 						className='text-left font-tenor text-normal_desk underline lg:text-large_desk'
 						onClick={() => setModalOpen(true)}
 					>
-						{buttonsData.readMoreButton}
+						{slidersData.readMoreButton}
 					</button>
 				)}
 
