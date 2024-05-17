@@ -23,9 +23,9 @@ export const Footer: FC = () => {
       className={clsx(
         s.background,
         'relative w-full bg-bg2 bg-no-repeat pb-8',
-        !policy && 'bg-[center_top] pt-[115px] md:pt-[238px] lg:pt-[438px]',
+        !policy && 'bg-[center_28px] pt-[140px] md:pt-[238px] lg:pt-[438px]',
         policy && s.footer,
-        policy && 'bg-[center_28px] pt-[140px] md:pt-[270px] lg:pt-[480px]',
+        policy && 'bg-[center_48px] pt-[160px] md:pt-[270px] lg:pt-[480px]',
       )}
     >
       <div className='container'>
@@ -34,7 +34,7 @@ export const Footer: FC = () => {
         </div>
         <div className='border-t-2 border-stroke pt-8 lg:flex lg:flex-row-reverse lg:justify-between'>
           <div className='mb-8 flex flex-col gap-4 md:mx-auto md:mb-4 md:w-[402px] md:flex-row md:gap-6 lg:mx-0 lg:mb-0'>
-            <p className='mx-auto text-center font-geologica text-small font-extralight text-bodyDark mdOnly:font-[250]'>
+            <p className='mdOnly:font-[250] mx-auto text-center font-geologica text-small font-extralight text-bodyDark'>
               {footerData.create}
             </p>
             <div className='mx-auto flex w-[211px] items-baseline gap-4'>
@@ -67,14 +67,14 @@ export const Footer: FC = () => {
           <div className='lg:flex lg:flex-row-reverse lg:justify-end'>
             <Link
               href={policy ? '/' : '/policy'}
-              className='mx-auto mb-8 block w-fit font-geologica text-small font-extralight text-bodyDark hover:text-green focus:text-green md:mb-4 lg:mx-0 lg:mb-0 mdOnly:font-[250]'
+              className='mdOnly:font-[250] mx-auto mb-8 block w-fit font-geologica text-small font-extralight text-bodyDark hover:text-green focus:text-green md:mb-4 lg:mx-0 lg:mb-0'
             >
               {policy ? footerData.home : footerData.policy}
             </Link>
             <p
               className={clsx(
                 policy ? 'lg:mr-[260px]' : 'lg:mr-[158px]',
-                'text-center font-geologica text-small font-extralight text-bodyDark mdOnly:font-[250]',
+                'mdOnly:font-[250] text-center font-geologica text-small font-extralight text-bodyDark',
               )}
             >
               &copy; {footerData.rights}
