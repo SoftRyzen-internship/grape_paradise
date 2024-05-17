@@ -226,7 +226,12 @@ Also include the use of components: [Section](#component-section), [Title](#comp
 
 - #### component SlideCardReviews
 
-The component uses Modal, appears when the comment does not fit in the card. You can view the full comment in the modal window.
+**The SlideCardReviews component** is designed to display a review card with the review text. If the text overflows the designated area, a "Read More" button appears. When clicked, this button opens a modal displaying the full review text.
+
+**Features:**
+- Displays a review card with text.
+- Shows a "Read More" button if the text overflows.
+- Opens a modal with the full review text when "Read More" is clicked.
 
 | Prop         | Type           | Description                                                       |
 | ------------ | -------------- | ------------------------------------------------------------------|
