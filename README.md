@@ -180,6 +180,15 @@ The component is designed to create a product, service card, etc.
 Also include the use of components: [Section](#component-section), [Title](#component-title)
 <hr>
 
+- #### component MovingLine
+
+| Prop    | Type    | Description                                                                                                                                                 |
+| ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         |         | The MovingLine component utilizes the React Fast Marquee library - a lightweight and easy-to-use React component for creating smooth and performant marquee or scrolling text effects. A marquee is a horizontal scrolling animation, commonly used for displaying news tickers, announcements, or displaying a long piece of text in a limited space.                     |
+
+Also include the use of components: [Section](#component-section), [Title](#component-title), [Slider](#component-slider), [SlideCardGeneration](#component-slidecardgeneration), [ButtonMain](#component-buttonmain)
+<hr>
+
 <h3 align="center">Advantages</h3>
 
 <div align="center"><img src="/public/images/readme/advantages.webp" alt="advantages images" width="800" align="center"></div>
@@ -200,15 +209,6 @@ Also include the use of components: [Section](#component-section), [Title](#comp
 | Prop    | Type    | Description                                                                                                                                                 |
 | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `data`  | `sanity`| Contains a title and slider with product card. Navigates with arrows and swipe gestures. The slider is infinite. The data is obtained from the sanity admin |
-<hr>
-
-- #### component MovingLine
-
-| Prop    | Type    | Description                                                                                                                                                 |
-| ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         |         | The MovingLine component utilizes the React Fast Marquee library - a lightweight and easy-to-use React component for creating smooth and performant marquee or scrolling text effects. A marquee is a horizontal scrolling animation, commonly used for displaying news tickers, announcements, or displaying a long piece of text in a limited space.                     |
-
-Also include the use of components: [Section](#component-section), [Title](#component-title), [Slider](#component-slider), [SlideCardGeneration](#component-slidecardgeneration), [ButtonMain](#component-buttonmain)
 <hr>
 
 <h3 align="center">Reviews</h3>
