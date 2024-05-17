@@ -2,9 +2,8 @@
 
 import { FC } from 'react';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-
 import { clsx } from 'clsx';
+import Link from 'next/link';
 
 import { Logo } from '@/components/ui/Logo';
 
@@ -35,7 +34,7 @@ export const Footer: FC = () => {
 				</div>
 				<div className='border-t-2 border-stroke pt-8 lg:flex lg:flex-row-reverse lg:justify-between'>
 					<div className='mb-8 flex flex-col gap-4 md:mx-auto md:mb-4 md:w-[402px] md:flex-row md:gap-6 lg:mx-0 lg:mb-0'>
-						<p className='mdOnly:font-[250] mx-auto text-center font-geologica text-small font-extralight text-bodyDark'>
+						<p className='mx-auto text-center font-geologica text-small font-extralight text-bodyDark mdOnly:font-[250]'>
 							{footerData.create}
 						</p>
 						<div className='mx-auto flex w-[211px] items-baseline gap-4'>
@@ -68,14 +67,14 @@ export const Footer: FC = () => {
 					<div className='lg:flex lg:flex-row-reverse lg:justify-end'>
 						<Link
 							href={policy ? '/' : '/policy'}
-							className='mdOnly:font-[250] mx-auto mb-8 block w-fit font-geologica text-small font-extralight text-bodyDark hover:text-green focus:text-green md:mb-4 lg:mx-0 lg:mb-0'
+							className='mx-auto mb-8 block w-fit font-geologica text-small font-extralight text-bodyDark hover:text-green focus:text-green md:mb-4 lg:mx-0 lg:mb-0 mdOnly:font-[250]'
 						>
 							{policy ? footerData.home : footerData.policy}
 						</Link>
 						<p
 							className={clsx(
 								policy ? 'lg:mr-[260px]' : 'lg:mr-[158px]',
-								'mdOnly:font-[250] text-center font-geologica text-small font-extralight text-bodyDark',
+								'text-center font-geologica text-small font-extralight text-bodyDark mdOnly:font-[250]',
 							)}
 						>
 							&copy; {footerData.rights}

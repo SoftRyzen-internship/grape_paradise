@@ -4,8 +4,9 @@ import { FC } from 'react';
 import { SwiperSlide } from 'swiper/react';
 
 import { Slider } from '@/components/common/Slider';
+import { SlideCardReviews } from '@/components/common/SlideCardReview';
+
 import { IReviewsSliderProps } from './ReviewsSlider.types';
-import { SlideCardReviews } from '../SlideCardReview';
 
 export const ReviewsSlider: FC<IReviewsSliderProps> = ({ data }) => {
 	return (

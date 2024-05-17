@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ButtonMain } from '@/components/ui/ButtonMain/ButtonMain';
 import { Title } from '@/components/common/Title/Title';
 
-import { buttonsData } from '@/data';
+import { slidersData } from '@/data';
 
 import { ISlideCardGenerationProps } from './SlideCardGeneration.types';
 
@@ -50,15 +50,17 @@ export const SlideCardGeneration: FC<ISlideCardGenerationProps> = ({
 							priority
 						/>
 					</div>
+
 					{slide === 'service' && (
 						<p className='w-full text-normal lg:text-normal_desk'>
 							{description}
 						</p>
 					)}
 				</div>
+
 				<div className='mt-6 md:mt-0 '>
 					<ButtonMain chapter='card' to='контакти'>
-						{buttonsData.orderButton}
+						{slidersData.orderButton}
 					</ButtonMain>
 				</div>
 			</div>

@@ -26,7 +26,7 @@ export const Header: FC = () => {
 
 	const handleClick = () => {
 		if (pathname === '/policy') {
-			routers.push('/')
+			routers.push('/');
 		}
 		return;
 	};

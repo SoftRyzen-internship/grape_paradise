@@ -3,12 +3,11 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+import { FC } from 'react';
 import { Swiper } from 'swiper/react';
 import { EffectFade, Navigation } from 'swiper/modules';
 
-import { FC } from 'react';
-
-import { ButtonLess } from '@/components/ui/ButtonLess/ButtonLess';
+import { ButtonLess } from '@/components/ui/ButtonLess';
 
 import Arrow from '@/../public/icons/arrow.svg';
 
@@ -22,7 +21,7 @@ export const Slider: FC<ISliderProps> = ({
 	loop = false,
 	desktopSpaceBetween = 174,
 	children,
-	btnConteinerStyle
+	btnConteinerStyle,
 }) => {
 	return (
 		<div className='relative w-full'>
@@ -46,7 +45,9 @@ export const Slider: FC<ISliderProps> = ({
 				{children}
 			</Swiper>
 
-			<div className={`swiper-navigation absolute -bottom-20 left-1/2 right-auto z-10 flex w-[104px] -translate-x-1/2 transform items-center justify-between md:-top-[72px] md:bottom-auto md:left-auto md:right-0 md:w-[112px]  md:translate-x-0 lg:-top-32 lg:w-[164px] ${btnConteinerStyle}`}>
+			<div
+				className={`swiper-navigation absolute -bottom-20 left-1/2 right-auto z-10 flex w-[104px] -translate-x-1/2 transform items-center justify-between md:-top-[72px] md:bottom-auto md:left-auto md:right-0 md:w-[112px]  md:translate-x-0 lg:-top-32 lg:w-[164px] ${btnConteinerStyle}`}
+			>
 				<ButtonLess
 					className={`prev-btn ${prevEl}`}
 					type='button'
