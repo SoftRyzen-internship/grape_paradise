@@ -70,7 +70,7 @@
 
 <h3 align="center">Our History</h3>
 
-<div align="center"><img src="/public/images/readme/history.webp" alt="hero images" width="800" align="center"></div>
+<div align="center"><img src="/public/images/readme/history.webp" alt="history images" width="800" align="center"></div>
 
 - #### component Section
 
@@ -83,6 +83,17 @@
 | `containerStyles`| `string`   | optional, string of styles for container if it needed |
 | `children`       | `ReactNode`| required, components & JSX-markup                     |
 | `render`         | `ReactNode`| optional, components & JSX-markup                     |
+<hr>
+
+- #### component Title
+
+**Title** - reusable component for all titles on the project, includes h1 & h2 & h3
+
+| Prop         | Type       | Description                                                                              |
+| ------------ | ---------- | -----------------------------------------------------------------------------------------|
+| `chapter`    | `string`   | optional, 'hero' | 'chapter', for h1 & h3 accordingly, and for h2 this prop don't needed |
+| `className`  | `string`   | optional, string of styles if it needed                                                  |
+| `children`   | `ReactNode`| required, title of the section                                                           |
 <hr>
 
 - #### component HistoryFrame
@@ -99,6 +110,8 @@ Also include the use of components: [ButtonLess](#component-buttonless)
 | Prop      | Type        | Description                                                                            |
 | --------- | ----------- | ---------------------------------------------------------------------------------------|
 |           |             | includes a title and a brief description of the services offered by the business       |
+
+Also include the use of components: [ButtonMain](#component-buttonmain)
 <hr>
 
 - #### component HistoryVideo
@@ -127,18 +140,288 @@ Also include the use of components: [ButtonLess](#component-buttonless)
 | ------------- | ----------- | ---------------------------------------------------------------------------------------------|
 | `show`        | `boolean`   | required, give created state `show={modalOpen}`                                              |
 | `onClose`     | `() => void`| required, callback with false for your components state `onClose={() => setModalOpen(false)}`|
+| `whiteBg`     | `string`    | optional, for white modal`s background`                                                      |
 | `title`       | `string`    | optional, text for the Title Modal                                                           |
 | `errorMessage`| `boolean`   | optional, for title text color                                                               |
 | `children`    | `ReactNode` | required, your component for showing in Modal                                                |
 <hr>
 
+<h3 align="center">Our Services</h3>
 
+<div align="center"><img src="/public/images/readme/services.webp" alt="services images" width="800" align="center"></div>
 
+- #### component Slider
 
+**Slider** - component is implemented using Swiper, an open-source, free JavaScript library for creating touch-enabled sliders with hardware-accelerated transitions and modern touch interaction on mobile devices, as well as modern slide-shows and animated carousels. It is widely used for building websites and web applications, including mobile ones. You need to write to use: `'use client'` and `import { SwiperSlide } from 'swiper/react'`. The data is obtained from the sanity admin.
 
+| Prop                 | Type           | Description                                                                                                     |
+| -------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------|
+| `prevEl`             | `special value`| required, "servicesBtnBack" or "productsBtnBack" or "reviewsBtnBack", sets the css class for the prevEl button  |
+| `nextEl`             | `special value`| required, "servicesBtnNext" or "productsBtnNext" or "reviewsBtnNext", sets the css class for the nextEl button  |
+| `loop`               | `boolean`      | optional, sets the slider type. By default loop = false                                                         |
+| `desktopSpaceBetween`| `number`       | optional, sets the distance between slides on the desktop. By default desktopSpaceBetween = 174                 |
+| `children`           | `ReactNode`    | required, list of slides                                                                                        |
+| `btnConteinerStyle`  | `string`       | optional, sets an additional css class for the button container                                                 |
+<hr>
 
+- #### component SlideCardGeneration
 
+The component is designed to create a product, service card, etc.
 
+| Prop         | Type           | Description                                                    |
+| ------------ | -------------- | ---------------------------------------------------------------|
+| `title`      | `string`       | required, sets the title                                       |
+| `src`        | `string`       | required, sets the src of image                                |
+| `alt`        | `string`       | required, sets the alt of image                                |
+| `description`| `string`       | optional, sets the description a product, service, etc.        |
+| `children`   | `ReactNode`    | required, list of slides                                       |
+| `slide`      | `special value`| required, "service" or "product", sets the css styles for card |
+
+Also include the use of components: [Section](#component-section), [Title](#component-title)
+<hr>
+
+<h3 align="center">Advantages</h3>
+
+<div align="center"><img src="/public/images/readme/advantages.webp" alt="advantages images" width="800" align="center"></div>
+
+- #### component AdvantagesCard
+
+| Prop | Type  | Description                                                    |
+| ---- | ----- | ---------------------------------------------------------------|
+|      |       | The "Advantages" component is a part of a web application and is designed to display the benefits or features of a product and service. It provides users with a convenient way to learn about the key advantages offered by the company.                                      |
+<hr>
+
+<h3 align="center">Our Goods</h3>
+
+<div align="center"><img src="/public/images/readme/product.webp" alt="product images" width="800" align="center"></div>
+
+- #### component ProductsSlides
+
+| Prop    | Type    | Description                                                                                                                                                 |
+| ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `data`  | `sanity`| Contains a title and slider with product card. Navigates with arrows and swipe gestures. The slider is infinite. The data is obtained from the sanity admin |
+<hr>
+
+- #### component MovingLine
+
+| Prop    | Type    | Description                                                                                                                                                 |
+| ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         |         | The MovingLine component utilizes the React Fast Marquee library - a lightweight and easy-to-use React component for creating smooth and performant marquee or scrolling text effects. A marquee is a horizontal scrolling animation, commonly used for displaying news tickers, announcements, or displaying a long piece of text in a limited space.                     |
+
+Also include the use of components: [Section](#component-section), [Title](#component-title), [Slider](#component-slider), [SlideCardGeneration](#component-slidecardgeneration), [ButtonMain](#component-buttonmain)
+<hr>
+
+<h3 align="center">Reviews</h3>
+
+<div align="center"><img src="/public/images/readme/review.webp" alt="review images" width="800" align="center"></div>
+
+- #### component ReviewsSlider
+
+| Prop    | Type    | Description                                                                                                                                                 |
+| ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `data`  | `sanity`| Contains a title and slider with product card. Navigates with arrows and swipe gestures. The slider is infinite. The data is obtained from the sanity admin |
+
+Also include the use of components: [Section](#component-section), [Title](#component-title), [Slider](#component-slider), [ButtonMain](#component-buttonmain)
+<hr>
+
+- #### component SlideCardReviews
+
+The component uses Modal, appears when the comment does not fit in the card. You can view the full comment in the modal window.
+
+| Prop         | Type           | Description                                                       |
+| ------------ | -------------- | ------------------------------------------------------------------|
+| `text`       | `string`       | required, the author's comment is transmitted by props            |
+| `author`     | `string`       | required, the full name of the author is transferred to the props |
+
+Also include the use of components: [Modal](#component-modal)
+<hr>
+
+<h3 align="center">Contacts & Form</h3>
+
+<div align="center"><img src="/public/images/readme/contacts.webp" alt="contacts images" width="800" align="center"></div>
+
+**Contacts** includes the address semantic tag, which indicates the location of the business and the contact phone number (link)
+
+**FormBlock** includes a form assembly that includes custom inputs, textareas, and checkboxes
+
+**The remark:** To apply with React-Hook-Form using the library's component - <Controller />
+
+- #### component FormBlock
+
+| Prop         | Type           | Description                                                                                     |
+| ------------ | -------------- | ------------------------------------------------------------------------------------------------|
+| `className`  | `string`       | optional, the style can be passed to manage placing the component next to others in the section |
+<hr>
+
+- #### component CustomInput
+
+| Prop          | Type           | Description                                                                                  |
+| ------------- | -------------- | ---------------------------------------------------------------------------------------------|
+| `label`       | `string`       | optional, can pass text displaying for a label                                               |
+| `errorMessage`| `string`       | optional, can pass text displaying for a error message                                       |
+| `className`   | `string`       | optional, styles can be passed for the component wrapper                                     |
+| `{...data}`   | `string`       | optional, any other attributes that are characteristic of the input (type, placeholder, etc) |
+<hr>
+
+- #### component CustomTextarea
+
+| Prop          | Type           | Description                                                                                           |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------|
+| `label`       | `string`       | optional, can pass text displaying for a label                                                        |
+| `className`   | `string`       | optional, styles can be passed for the component wrapper                                              |
+| `{...data}`   | `string`       | optional, any other attributes that are characteristic of the textarea (placeholder, rows, cols, etc) |
+<hr>
+
+- #### component CustomCheckbox
+
+| Prop          | Type       | Description                                                                                 |
+| ------------- | ---------- | --------------------------------------------------------------------------------------------|
+| `checked`     | `boolean`  | required, starting value for checked                                                        |
+| `handleChange`| `function` | required, the function to control the value into state in the parent component              |
+| `className`   | `string`   | optional, styles can be passed for the component wrapper                                    |
+| `definition`  | `string`   | optional, text for the checkbox                                                             |
+| `{...data}`   | `string`   | optional, any other attributes that are characteristic of the checkbox (checked, type, etc) |
+<hr>
+
+<h3 align="center">Footer</h3>
+
+<div align="center"><img src="/public/images/readme/footer.webp" alt="footer images" width="800" align="center"></div>
+
+- #### component Footer
+- 
+| Prop    | Type    | Description                                                                                                                                                                |
+| ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|         |         | The Footer includes links to the homepage (Logo) and the privacy policy page. Additionally, it contains links to the partners involved in the creation of this application |
+
+Also include the use of components: [Logo](#component-logo)
+<hr>
+
+<h3 align="center">Policy</h3>
+
+<div align="center"><img src="/public/images/readme/policy.webp" alt="policy images" width="800" align="center"></div>
+
+| Prop    | Type    | Description                                                                                                                        |
+| ------- | ------- | -----------------------------------------------------------------------------------------------------------------------------------|
+| `data`  | `sanity`| A separate page. Header and Footer are common. Contains the title and text of the privacy policy. Data obtained from sanity admin. |
+<hr>
+
+- #### component PortableText
+
+**The PortableText component** is part of the `@portabletext/react` library, which provides a convenient way to render structured portable text data in React. It accepts an array of portable text blocks or objects and renders them according to the specified components. It is designed for integration with content management systems that use the portable text format for structured data, allowing you to flexibly and conveniently render this content using React with full customization capabilities.
+
+| Prop        | Type          | Description                                  |
+| ----------- | ------------- | -------------------------------------------- |
+| `value`     | `string`      | required, Privacy Policy Title               |
+| `components`| `JSX.Element` | required, an array of portable text blocks   |
+<hr>
+
+- #### component CustomComponents
+
+| Prop        | Type          | Description                                                                                                         |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
+|             |               | This code defines several custom React components for rendering different elements of structured portable text data.|
+<hr>
+
+## License
+
+© 2024 SPILNO. All rights reserved.
+
+## Getting Started
+
+To run the application locally, follow these steps:
+
+1. Clone the repository:
+   `git clone https://github.com/UserAndrii/ryzen_carp_travel.git`
+2. Install dependencies: `npm install`
+3. Run the app: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Technologies Used
+
+#### `NEXT`:
+
+- Next.js is a React framework for building server-side rendered (SSR) and
+  statically generated web applications. It provides features like automatic
+  code splitting, hot module replacement, and server-side rendering out of the
+  box.
+
+#### `REACT`:
+
+- React is a JavaScript library for building user interfaces. It enables
+  developers to create reusable UI components and manage the application's state
+  efficiently.
+
+#### `react-dom`:
+
+- React DOM is a package that serves as the entry point to the DOM and server
+  renderers for React. It provides DOM-specific methods that can be used to
+  interact with the DOM during React component lifecycle.
+
+#### `Sanity`: 
+
+- A headless CMS (Content Management System) that provides a convenient way to
+  structure and manage content. Sanity has a powerful content editing platform,
+  a flexible API for fetching data, and the ability to easily integrate with various
+  front-end frameworks like React.
+  
+#### `@sanity/client`: 
+
+- The official Sanity library for interacting with the Sanity API and fetching data
+  from your Sanity content management platform. It provides a convenient and type-safe
+  way to query and manipulate data.
+
+#### `@sanity/vision`: 
+
+- A Sanity plugin that provides data structure visualization and allows you to preview
+  content directly in the Sanity studio. This helps developers and content editors better
+  understand and manage the data structure.
+  
+#### `@sanity/ui`: 
+
+- A UI component library for Sanity, providing a set of pre-styled components that make
+  it easier to develop custom interfaces for editing content in Sanity.
+
+#### `Swiper`: 
+
+- A library for creating sliders and carousels in web applications. It provides smooth
+  animations, touch gesture support for mobile devices, and many configuration options
+  and customization possibilities.
+
+#### `react-fast-marquee`: 
+
+- A lightweight and easy-to-use React component for creating marquee or scrolling text
+  effects. It is optimized for smooth animations and high performance.
+
+#### `react-hook-form`: 
+
+- A popular library for managing forms in React, using hooks to handle form state and
+  validation. It provides a convenient and flexible way to work with forms.
+
+#### `react-hook-form-persist`: 
+
+- A plugin for react-hook-form that allows persisting form state in the browser's
+  local storage. This is useful for maintaining form state across page refreshes or sessions.
+
+#### `react-scroll`: 
+
+- A library for adding smooth scrolling to web pages. It provides convenient methods for
+  scrolling to specific elements or positions on the page with customizable animation parameters.
+
+#### `clsx`: 
+
+- A tiny utility for conditionally joining CSS classNames together. It makes it easier
+  to dynamically create strings of classes in React based on certain conditions or component state.
+
+#### `@headlessui/react`: 
+
+- A UI component library for React, providing a set of ready-made and accessible components
+  such as menus, modals, dropdowns, and more.
+
+#### `sharp`: 
+
+- A Node.js library for processing images on the server-side. It provides powerful tools for
+  transforming, compressing, resizing, and manipulating images, which is useful for optimizing
+  images before sending them to the client.
 
 
 
