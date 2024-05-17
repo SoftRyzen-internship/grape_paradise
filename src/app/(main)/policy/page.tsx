@@ -1,24 +1,21 @@
-import { Section } from '@/components/common/Section';
-import { Title } from '@/components/common/Title';
-import { titleData } from '@/data';
+import { PortableText } from '@portabletext/react';
+import { fetchPrivacyPolicy } from '@/sanity/request/fetchPrivacyPolicy';
 
-export default function Page() {
+import { Section } from '@/components/common/Section';
+import { CustomComponents } from '@/components/common/CustomComponent';
+
+export default async function Page() {
+	const { privacyPolicyTitle, textPrivacyPolicy } = await fetchPrivacyPolicy();
+
 	return (
-		<Section sectionStyles='pt-[156px]'>
-			<Title>{titleData.policy}</Title>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est explicabo
-				rerum a laborum voluptas? Culpa, aperiam nesciunt nam iste reprehenderit
-				quae numquam. Eligendi vero magni culpa magnam unde inventore nemo ipsum
-				quia! Id explicabo hic accusamus quis nihil aliquam nisi at ut autem
-				magni quae consequuntur necessitatibus, praesentium eligendi error
-				cumque saepe. Itaque quaerat ad incidunt illum, reiciendis dicta?
-				Voluptas distinctio ipsam assumenda exercitationem fuga aut eaque
-				ratione voluptatum, ex, dolorum similique magni repudiandae animi rerum
-				molestiae labore officia dolor hic consequuntur. Ipsum quas alias, aut
-				placeat atque tempora sapiente voluptates blanditiis, dolorum distinctio
-				quidem ab, dicta odio itaque neque.
-			</p>
+		<Section
+			sectionStyles='relative pt-[168px] pb-20 md:pb-[108px] lg:pt-[184px] lg:pb-[120px]'
+			containerStyles='lg:px-[136px] md:px-[70px]'
+		>
+			<h1 className='mb-14 font-tenor text-h2 font-normal uppercase text-green md:text-center md:text-h1 lg:text-h2_desk'>
+				{privacyPolicyTitle}
+			</h1>
+			<PortableText value={textPrivacyPolicy} components={CustomComponents} />
 		</Section>
 	);
 }
