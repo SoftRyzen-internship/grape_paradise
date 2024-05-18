@@ -25,7 +25,8 @@ export const Footer: FC = () => {
         'relative w-full bg-bg2 bg-no-repeat pb-8',
         !policy && 'bg-[center_20px] pt-[140px] md:pt-[260px] lg:pt-[460px]',
         policy && s.footer,
-        policy && 'bg-[center_60px] pt-[180px] md:pt-[300px] lg:pt-[500px]',
+        policy &&
+          'bg-[center_60px] pt-[180px] md:pt-[300px] lg:bg-[center_80px] lg:pt-[500px]',
       )}
     >
       <div className='container'>

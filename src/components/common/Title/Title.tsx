@@ -3,10 +3,18 @@
 import { FC } from 'react';
 import { clsx } from 'clsx';
 
-import { ITitleProps } from './Title.types';
-import { AnimationContainer } from '../AnimationContainer';
+import { AnimationContainer } from '@/components/common/AnimationContainer';
 
-export const Title: FC<ITitleProps> = ({ chapter, className, children }) => {
+import { ITitleProps } from './Title.types';
+
+export const Title: FC<ITitleProps> = ({
+  chapter,
+  history,
+  className,
+  children,
+}) => {
+  const animation = history ? 'lg:[--x-hidden:80]' : 'lg:[--x-hidden:-80]';
+
   return (
     <>
       {chapter === 'hero' ? (
@@ -14,7 +22,7 @@ export const Title: FC<ITitleProps> = ({ chapter, className, children }) => {
       ) : chapter === 'chapter' ? (
         <h3 className={clsx('subtitle', className)}>{children} </h3>
       ) : (
-        <AnimationContainer className='lg:[--x-hidden:-80]'>
+        <AnimationContainer className={animation}>
           <h2 className={clsx('title', className)}>{children}</h2>
         </AnimationContainer>
       )}

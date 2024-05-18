@@ -49,6 +49,7 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
             to='contacts'
             chapter='header'
             onClick={() => handleClick('contacts')}
+            className='border-green'
           >
             {headerData.text}
           </ButtonMain>
