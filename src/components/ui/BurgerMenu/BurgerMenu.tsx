@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { Logo } from '@/components/ui/Logo';
@@ -45,13 +45,15 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
 
         <div className='mb-[152px] mt-[96px] flex flex-col items-center gap-[73px] md:mb-[96px]'>
           <NavMenu onClick={() => handleClick()} />
-          <ButtonMain
-            to='contacts'
-            chapter='header'
-            onClick={() => handleClick()}
-          >
-            {headerData.text}
-          </ButtonMain>
+          <Suspense>
+            <ButtonMain
+              to='contacts'
+              chapter='header'
+              onClick={() => handleClick()}
+            >
+              {headerData.text}
+            </ButtonMain>
+          </Suspense>
         </div>
       </div>
     </div>

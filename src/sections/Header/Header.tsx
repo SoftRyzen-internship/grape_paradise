@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, Suspense, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { clsx } from 'clsx';
 
@@ -36,14 +36,16 @@ export const Header: FC = () => {
       <div className='container flex items-center justify-between '>
         <Logo theme={`${pathname === '/policy' ? 'green' : 'white'}`} />
         <NavMenu className='notLg:hidden' onClick={() => handleClick()} />
-        <ButtonMain
-          chapter={pathname === '/policy' ? 'policy' : 'header'}
-          className={clsx('notLg:hidden')}
-          onClick={() => handleClick()}
-          to='contacts'
-        >
-          {headerData.text}
-        </ButtonMain>
+        <Suspense>
+          <ButtonMain
+            chapter={pathname === '/policy' ? 'policy' : 'header'}
+            className={clsx('notLg:hidden')}
+            onClick={() => handleClick()}
+            to='contacts'
+          >
+            {headerData.text}
+          </ButtonMain>
+        </Suspense>
         <ButtonLess
           type='button'
           purpose='burger'

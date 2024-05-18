@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 
 import { Title } from '@/components/common/Title';
 import { ButtonMain } from '@/components/ui/ButtonMain';
@@ -17,8 +17,10 @@ export const HistoryContent: FC = () => (
 
     <p className='lg:normal_desk mb-6 lg:mb-[52px]'>{historyData.offer}</p>
 
-    <ButtonMain chapter='about' to={historyData.link}>
-      {historyData.button}
-    </ButtonMain>
+    <Suspense>
+      <ButtonMain chapter='about' to={historyData.link}>
+        {historyData.button}
+      </ButtonMain>
+    </Suspense>
   </div>
 );
