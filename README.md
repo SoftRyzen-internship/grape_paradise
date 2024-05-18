@@ -72,6 +72,16 @@
 
 <div align="center"><img src="/public/images/readme/history.webp" alt="history images" width="800" align="center"></div>
 
+- #### component AnimationContainer
+
+**AnimationContainer** – a reusable component for animating certain components.
+
+| Prop             | Type       | Description                                                                    |
+| ---------------- | ---------- | -------------------------------------------------------------------------------|
+| `className`      | `string`   | required, you need to pass the class `lg:[--x-hidden:-80px]` or `lg:[--x-hidden:80px]` depending on how you want to animate from left to right or right to left. Other classes can also be transferred. |
+| `children`       | `ReactNode`| required, components & JSX-markup                                              |
+<hr>
+
 - #### component Section
 
 **Section** - reusable component for all sections on the project, include adaptive container
