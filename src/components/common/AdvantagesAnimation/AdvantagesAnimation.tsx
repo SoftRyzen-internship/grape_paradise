@@ -25,6 +25,7 @@ export const LeafBefore: FC = () => (
     }}
   />
 );
+
 export const LeafAfter: FC = () => (
   <motion.div
     className='notLg:hidden'

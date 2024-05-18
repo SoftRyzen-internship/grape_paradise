@@ -67,18 +67,18 @@ export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({
 
       <Modal show={modalOpen} onClose={() => setModalOpen(false)} whiteBg>
         <div>
-        <p
-          className={clsx(
-            'h-[161px] overflow-hidden font-tenor text-large lg:h-[243px] lg:text-large_desk',
-            s.reviews,
-          )}
-          ref={paragraphRef}
-        >
-          {text}
-        </p>
-        <p className='font-tenor text-normal text-green lg:text-h2'>
-          <span>—</span> {author}
-        </p>
+          <p
+            className={clsx(
+              'h-[161px] overflow-hidden font-tenor text-large lg:h-[243px] lg:text-large_desk',
+              s.reviews,
+            )}
+            ref={paragraphRef}
+          >
+            {text}
+          </p>
+          <p className='font-tenor text-normal text-green lg:text-h2'>
+            <span>—</span> {author}
+          </p>
         </div>
       </Modal>
     </>

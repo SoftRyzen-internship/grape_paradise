@@ -1,8 +1,8 @@
-"use client"
+'use client';
 
 import { FC } from 'react';
 
-import { AnimationContainer } from "@/components/common/AnimationContainer"
+import { AnimationContainer } from '@/components/common/AnimationContainer';
 
 import { advantagesData } from '@/data';
 
