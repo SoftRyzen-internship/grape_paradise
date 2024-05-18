@@ -17,9 +17,9 @@ import s from './BurgerMenu.module.css';
 export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
   const pathname = usePathname();
 
-  const handleClick = () => {
+  const handleClick = (to: string) => {
     if (pathname === '/policy') {
-      window.location.href = '/';
+      window.location.href = `/#${to}`;
     } else {
       onClick();
     }
@@ -44,11 +44,11 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
         </div>
 
         <div className='mb-[152px] mt-[96px] flex flex-col items-center gap-[73px] md:mb-[96px]'>
-          <NavMenu onClick={() => handleClick()} />
+          <NavMenu onClick={handleClick} />
           <ButtonMain
             to='contacts'
             chapter='header'
-            onClick={() => handleClick()}
+            onClick={() => handleClick('contacts')}
           >
             {headerData.text}
           </ButtonMain>

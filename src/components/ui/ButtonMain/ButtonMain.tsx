@@ -36,6 +36,10 @@ export const ButtonMain: FC<IButtonMainProps> = ({
           'h-[59px] w-full bg-white md:w-[157px] md:border md:border-green50 lg:h-[63px] lg:w-[182px] lg:text-btn_desk':
             chapter === 'card',
         },
+        {
+          'w-[218px] lg:bg-white h-[43px] lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white':
+            chapter === 'policy',
+        },
         className,
       )}
     >

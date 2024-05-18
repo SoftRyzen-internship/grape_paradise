@@ -29,7 +29,7 @@ export const NavMenu: FC<INavMenuProps> = ({ onClick, className }) => {
               to={section}
               smooth={true}
               duration={500}
-              onClick={onClick}
+              onClick={() => onClick(section)}
               href='#'
               ignoreCancelEvents={true}
               className={`relative px-0.5 pb-0.5 focus:outline-1 focus:outline-current ${s.active}`}

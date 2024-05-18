@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useState } from 'react';
+import { FC, useState  } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { clsx } from 'clsx';
 
@@ -24,9 +24,9 @@ export const Header: FC = () => {
     document.body.style.overflow = isOpened ? 'auto' : 'hidden';
   };
 
-  const handleClick = () => {
+  const handleClick = (to: string) => {
     if (pathname === '/policy') {
-      routers.push('/');
+      routers.push(`/#${to}`);
     }
     return;
   };
@@ -35,15 +35,11 @@ export const Header: FC = () => {
     <header className='absolute left-0 top-0 z-20 w-full bg-transparent py-6'>
       <div className='container flex items-center justify-between '>
         <Logo theme={`${pathname === '/policy' ? 'green' : 'white'}`} />
-        <NavMenu className='notLg:hidden' onClick={() => handleClick()} />
+        <NavMenu className='notLg:hidden' onClick={handleClick} />
         <ButtonMain
-          chapter='header'
-          className={clsx(
-            'notLg:hidden',
-            pathname === '/policy' &&
-              'lg:bg-white lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white',
-          )}
-          onClick={() => handleClick()}
+          chapter={pathname === '/policy' ? 'policy' : 'header'}
+          className='notLg:hidden'
+          onClick={() => handleClick('contacts')}
           to='contacts'
         >
           {headerData.text}
@@ -52,7 +48,7 @@ export const Header: FC = () => {
           type='button'
           purpose='burger'
           aria={headerData.ariaLabelOpen}
-          className=' h-12 w-12 p-3 lg:hidden'
+          className='h-12 w-12 p-3 lg:hidden'
           onClick={toggleMenuOpen}
         >
           <BurgerIcon
