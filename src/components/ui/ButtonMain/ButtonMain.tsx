@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useEffect } from 'react';
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 import { clsx } from 'clsx';
 import { Link, scroller } from 'react-scroll';
@@ -20,7 +20,6 @@ export const ButtonMain: FC<IButtonMainProps> = ({
 
   const path = usePathname();
   const policy = path === '/policy';
-  const router = useRouter();
 
   useEffect(() => {
     if (scrollTo) {
@@ -29,19 +28,14 @@ export const ButtonMain: FC<IButtonMainProps> = ({
         delay: 0,
         offset: 100,
         smooth: 'easeInOutQuart',
-        onComplete: () => {
-          router.push('/');
-        },
       });
     }
-  }, [scrollTo, router]);
+  }, [scrollTo]);
 
   const handleClick = () => {
     if (chapter === 'policy' || (chapter === 'header' && policy)) {
       window.location.href = `/?scrollTo=${to}`;
-      // const url = new URL(window.location.href);
-      // url.searchParams.set('scrollTo', to);
-      // window.history.pushState({}, '', url.href);
+      // window.location.href = '/#contacts';
     } else if (onClick) {
       onClick();
     }
