@@ -7,6 +7,8 @@ import { FC } from 'react';
 import { Swiper } from 'swiper/react';
 import { EffectFade, Navigation } from 'swiper/modules';
 
+import { motion } from 'framer-motion';
+
 import { ButtonLess } from '@/components/ui/ButtonLess';
 
 import Arrow from '@/../public/icons/arrow.svg';
@@ -24,7 +26,17 @@ export const Slider: FC<ISliderProps> = ({
   btnConteinerStyle,
 }) => {
   return (
-    <div className='relative w-full'>
+    <motion.div
+      className='relative w-full notLg:[--opacity-hidden:100%] notLg:[--x-hidden:0px] lg:[--opacity-hidden:0%] lg:[--x-hidden:80px]'
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.8 }}
+      variants={{
+        hidden: { opacity: 'var(--opacity-hidden)', x: 'var(--x-hidden, 0)' },
+        visible: { opacity: 1, x: 0 },
+      }}
+    >
       <Swiper
         modules={[EffectFade, Navigation]}
         className='swiper mySwiper'
@@ -65,6 +77,6 @@ export const Slider: FC<ISliderProps> = ({
           {<Arrow className='arrow-icon' />}
         </ButtonLess>
       </div>
-    </div>
+    </motion.div>
   );
 };
