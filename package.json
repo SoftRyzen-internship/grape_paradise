@@ -23,7 +23,6 @@
 		"react-fast-marquee": "^1.6.4",
 		"react-hook-form": "^7.51.4",
 		"react-hook-form-persist": "^3.0.0",
-		"react-responsive": "^10.0.0",
 		"react-scroll": "^1.9.0",
 		"sanity": "^3.40.0",
 		"sharp": "^0.33.3",

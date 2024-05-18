@@ -37,12 +37,8 @@ export const Header: FC = () => {
         <Logo theme={`${pathname === '/policy' ? 'green' : 'white'}`} />
         <NavMenu className='notLg:hidden' onClick={() => handleClick()} />
         <ButtonMain
-          chapter='header'
-          className={clsx(
-            'notLg:hidden',
-            pathname === '/policy' &&
-              'lg:bg-white lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white',
-          )}
+          chapter={pathname === '/policy' ? 'policy' : 'header'}
+          className={clsx('notLg:hidden')}
           onClick={() => handleClick()}
           to='contacts'
         >
