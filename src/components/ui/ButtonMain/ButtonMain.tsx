@@ -37,8 +37,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
             chapter === 'card',
         },
         {
-          'w-[218px] lg:bg-white h-[43px] lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white':
-            chapter === 'policy',
+          'h-[43px] w-[218px] lg:bg-white': chapter === 'policy',
         },
         className,
       )}

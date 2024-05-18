@@ -2,7 +2,7 @@
   content: url('/images/footer/footer-bg-frame.webp');
   position: absolute;
   display: inline-block;
-  top: -8px;
+  top: -10px;
   left: 0;
   width: 100%;
   transform: rotate(180deg);
