@@ -2,10 +2,11 @@
 
 import { FC } from 'react';
 
+import { AnimationContainer } from "@/components/common/AnimationContainer"
+
 import { advantagesData } from '@/data';
 
 import s from './AdvantagesCard.module.css';
-import { AnimationContainer } from '../AnimationContainer';
 
 export const AdvantagesCard: FC = () => {
   return (
