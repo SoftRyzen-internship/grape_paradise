@@ -2,6 +2,8 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import { ButtonLess } from '@/components/ui/ButtonLess';
+import { HistoryGrape } from '@/components/common/HistoryGrape';
+import { AnimationContainer } from '@/components/common/AnimationContainer';
 
 import { historyData } from '@/data';
 
@@ -12,9 +14,8 @@ import { IHistoryFrame } from './HistoryFrame.types';
 import s from './HistoryFrame.module.css';
 
 export const HistoryFrame: FC<IHistoryFrame> = ({ onClick }) => (
-  <div
-    className={`relative h-[328px] md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] smOnly:mb-12 ${s.grape}`}
-  >
+  <AnimationContainer className='relative h-[328px] w-full md:h-[312px] md:w-[300px] lg:h-[579px] lg:w-[567px] lg:[--x-hidden:-80px] smOnly:mb-12'>
+    <HistoryGrape />
     <Image
       fill
       priority
@@ -33,5 +34,5 @@ export const HistoryFrame: FC<IHistoryFrame> = ({ onClick }) => (
     >
       <Play className='h-[26px] w-[26px] lg:h-[64px] lg:w-[64px]' />
     </ButtonLess>
-  </div>
+  </AnimationContainer>
 );

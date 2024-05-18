@@ -13,15 +13,3 @@
     object-fit: contain;
   }
 }
-
-@media screen and (min-width: 1280px) {
-  .grape::before {
-    content: url('/icons/bg-grape-section-2.svg');
-    position: absolute;
-    display: inline-block;
-    top: -62px;
-    left: 452px;
-    width: 214px;
-    height: 235px;
-  }
-}
