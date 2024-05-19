@@ -1,9 +1,20 @@
+'use client';
+
 import { FC } from 'react';
 import { clsx } from 'clsx';
 
+import { AnimationContainer } from '@/components/common/AnimationContainer';
+
 import { ITitleProps } from './Title.types';
 
-export const Title: FC<ITitleProps> = ({ chapter, className, children }) => {
+export const Title: FC<ITitleProps> = ({
+  chapter,
+  history,
+  className,
+  children,
+}) => {
+  const animation = history ? 'lg:[--x-hidden:80]' : 'lg:[--x-hidden:-80]';
+
   return (
     <>
       {chapter === 'hero' ? (
@@ -11,7 +22,9 @@ export const Title: FC<ITitleProps> = ({ chapter, className, children }) => {
       ) : chapter === 'chapter' ? (
         <h3 className={clsx('subtitle', className)}>{children} </h3>
       ) : (
-        <h2 className={clsx('title', className)}>{children}</h2>
+        <AnimationContainer className={animation}>
+          <h2 className={clsx('title', className)}>{children}</h2>
+        </AnimationContainer>
       )}
     </>
   );
