@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     siteName: metaData.title,
     images: '/images/ogp/ogp.webp',
   },
+  other: {
+    'color-scheme': 'light',
+  },
 };
 
 const tenor = Tenor_Sans({
