@@ -23,7 +23,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
       offset={0}
       onClick={onClick}
       className={clsx(
-        'flex cursor-pointer items-center justify-center  rounded-60px font-tenor text-btn font-normal uppercase text-green transition hover:bg-green hover:text-white focus:bg-green focus:text-white md:border-green md:bg-transparent',
+        'flex cursor-pointer items-center justify-center rounded-60px font-tenor text-btn font-normal uppercase text-green transition hover:bg-green hover:text-white focus:bg-green focus:text-white md:border-green md:bg-transparent',
         {
           'h-[43px] w-[218px] border lg:border-white50 lg:text-white lg:hover:bg-white lg:hover:text-green lg:focus:bg-white lg:focus:text-green':
             chapter === 'header',
@@ -37,8 +37,7 @@ export const ButtonMain: FC<IButtonMainProps> = ({
             chapter === 'card',
         },
         {
-          'w-[218px] lg:bg-white h-[43px] lg:text-darkGreen lg:hover:bg-darkGreen lg:hover:text-white':
-            chapter === 'policy',
+          'h-[43px] w-[218px] lg:bg-white': chapter === 'policy',
         },
         className,
       )}
