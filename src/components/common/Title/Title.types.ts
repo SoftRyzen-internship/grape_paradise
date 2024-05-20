@@ -1,5 +1,6 @@
 export interface ITitleProps {
-	chapter?: 'hero' | 'chapter';
-	className?: string;
-	children: React.ReactNode;
+  chapter?: 'hero' | 'chapter';
+  history?: boolean;
+  className?: string;
+  children: React.ReactNode;
 }

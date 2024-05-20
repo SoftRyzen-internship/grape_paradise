@@ -20,106 +20,146 @@ import { Modal } from '@/components/ui/Modal';
 import { IFormBlockProps } from './FormBlock.types';
 
 export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
-	const [modalOpen, setModalOpen] = useState(false);
-	const [sendError, setSendError] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
-	const {
-		register,
-		handleSubmit,
-		reset,
-		formState: { errors },
-		control,
-		watch,
-		setValue,
-	} = useForm<IFormState>({
-		defaultValues: { approval: false },
-		shouldFocusError: false,
-	});
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+    control,
+    watch,
+    setValue,
+  } = useForm<IFormState>({
+    defaultValues: { approval: false },
+    shouldFocusError: false,
+  });
 
-	useFormPersist('storageForm', {
-		watch,
-		setValue,
-		exclude: ['approval'],
-	});
+  useFormPersist('storageForm', {
+    watch,
+    setValue,
+    exclude: ['approval'],
+  });
 
-	const onSubmit: SubmitHandler<IFormState> = async data => {
-		setSendError(false);
-		try {
-			await sendMessage(data);
-			reset();
-		} catch (error) {
-			setSendError(true);
-		} finally {
-			setModalOpen(true);
-		}
-	};
+  const observePhone = watch('phone');
 
-	return (
-		<>
-			<form onSubmit={handleSubmit(onSubmit)} className={className}>
-				<CustomInput
-					label={namedField.name.label}
-					placeholder={namedField.name.placeholder}
-					{...register('name', formSchema.name)}
-					errorMessage={errors.name?.message}
-				/>
+  const handleFocus = () => {
+    if (observePhone === '') {
+      setValue('phone', '+380');
+    }
+  };
 
-				<CustomInput
-					label={namedField.phone.label}
-					placeholder={namedField.phone.placeholder}
-					{...register('phone', formSchema.phone)}
-					errorMessage={errors.phone?.message}
-					className='mt-11 lg:mt-[60px]'
-				/>
+  const handleBlur = () => {
+    if (observePhone === '+380') {
+      setValue('phone', '');
+    }
+  };
 
-				<CustomTextarea
-					label={namedField.textarea.label}
-					placeholder={namedField.textarea.placeholder}
-					{...register('message', formSchema.message)}
-					className='mt-11 h-[149px] lg:mt-[60px]'
-				/>
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    if (!value.startsWith('+380')) {
+      value = '+380' + value.replace(/\D/g, '');
+    } else {
+      value = '+380' + value.slice(4).replace(/\D/g, '');
+    }
 
-				<Controller
-					name='approval'
-					control={control}
-					rules={formSchema.approval}
-					render={({ field }) => (
-						<CustomCheckbox
-							checked={field.value}
-							handleChange={field.onChange}
-							errorMessage={errors.approval?.message}
-							definition={namedField.checkbox.label}
-							className='mt-[52px] lg:mt-[60px]'
-						/>
-					)}
-				/>
+    if (value === '+380') {
+      setValue('phone', '');
+    } else {
+      setValue('phone', value);
+    }
+  };
 
-				<ButtonLess type='submit' purpose='form' className='mt-8 lg:mt-10'>
-					{buttonText}
-				</ButtonLess>
-			</form>
-			<Modal
-				onClose={() => setModalOpen(false)}
-				show={modalOpen}
-				title={sendError ? modalInfo.failure.title : modalInfo.successful.title}
-				errorMessage={sendError}
-			>
-				<div className='pb-[10px] md:px-[68px] lg:px-48'>
-					<p className='mb-8 whitespace-pre-line text-xs font-extralight leading-[1.5] text-bodyDark md:text-small lg:text-normal'>
-						{sendError ? modalInfo.failure.text : modalInfo.successful.text}
-					</p>
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const value = e.currentTarget.value;
+    if (e.key === 'Backspace' && value === '+380') {
+      e.preventDefault();
+    }
+  };
 
-					<ButtonLess
-						type='button'
-						purpose='modal'
-						onClick={() => setModalOpen(false)}
-						aria={modalInfo.button.ariaLabelClose}
-						className=' inline-flex'
-					>
-						{modalInfo.button.text}
-					</ButtonLess>
-				</div>
-			</Modal>
-		</>
-	);
+  const onSubmit: SubmitHandler<IFormState> = async data => {
+    setSendError(false);
+    try {
+      await sendMessage(data);
+      reset();
+    } catch (error) {
+      setSendError(true);
+    } finally {
+      setModalOpen(true);
+    }
+  };
+
+  return (
+    <>
+      <form onSubmit={handleSubmit(onSubmit)} className={className}>
+        <CustomInput
+          label={namedField.name.label}
+          placeholder={namedField.name.placeholder}
+          {...register('name', formSchema.name)}
+          errorMessage={errors.name?.message}
+        />
+
+        <CustomInput
+          label={namedField.phone.label}
+          placeholder={namedField.phone.placeholder}
+          {...register('phone', formSchema.phone)}
+          errorMessage={errors.phone?.message}
+          className='mt-11 lg:mt-[60px]'
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+        />
+
+        <CustomTextarea
+          label={namedField.textarea.label}
+          placeholder={namedField.textarea.placeholder}
+          {...register('message', formSchema.message)}
+          className='mt-11 h-[149px] lg:mt-[60px]'
+        />
+
+        <Controller
+          name='approval'
+          control={control}
+          rules={formSchema.approval}
+          render={({ field }) => (
+            <CustomCheckbox
+              checked={field.value}
+              handleChange={field.onChange}
+              errorMessage={errors.approval?.message}
+              definition={namedField.checkbox.label}
+              className='mt-[52px] lg:mt-[60px]'
+            />
+          )}
+        />
+
+        <ButtonLess type='submit' purpose='form' className='mt-8 lg:mt-10'>
+          {buttonText}
+        </ButtonLess>
+      </form>
+      <Modal
+        onClose={() => setModalOpen(false)}
+        show={modalOpen}
+        title={sendError ? modalInfo.failure.title : modalInfo.successful.title}
+        errorMessage={sendError}
+      >
+        <div className='pb-[10px] md:px-[68px] lg:px-48'>
+          <p className='mb-8 whitespace-pre-line text-xs font-extralight leading-[1.5] text-bodyDark md:text-small lg:text-normal'>
+            {sendError ? modalInfo.failure.text : modalInfo.successful.text}
+          </p>
+
+          <ButtonLess
+            type='button'
+            purpose='modal'
+            onClick={() => setModalOpen(false)}
+            aria={modalInfo.button.ariaLabelClose}
+            className=' inline-flex'
+          >
+            {modalInfo.button.text}
+          </ButtonLess>
+        </div>
+      </Modal>
+    </>
+  );
 };

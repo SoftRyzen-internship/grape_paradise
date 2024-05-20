@@ -18,4 +18,3 @@ interface IProducts {
 export interface IProductsSlidesProps {
   products: IProducts[];
 }
-

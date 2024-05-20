@@ -1,4 +1,4 @@
 export interface IHistoryVideoProps {
-	onClose: () => void;
-	show: boolean;
+  onClose: () => void;
+  show: boolean;
 }

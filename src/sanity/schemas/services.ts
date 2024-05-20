@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity';
 
 export const services = defineType({
   name: 'services',
@@ -11,21 +11,19 @@ export const services = defineType({
       title: 'Назва послуги',
       type: 'string',
       placeholder: 'Додайте назву послуги',
-      validation: (rule) =>
+      validation: rule =>
         rule
           .required()
-          .error("Додайте назву послуги")
+          .error('Додайте назву послуги')
           .max(30)
-          .error('Введіть назву послуги, яка містить не більше 30 символів')
+          .error('Введіть назву послуги, яка містить не більше 30 символів'),
     }),
 
-  
     defineField({
       name: 'imageServices',
       title: 'Фото послуги',
       type: 'image',
-      validation: (rule) =>
-        rule.required()
+      validation: rule => rule.required(),
     }),
 
     defineField({
@@ -33,42 +31,20 @@ export const services = defineType({
       type: 'string',
       title: 'Короткий опис того, що зображено на фото',
       placeholder: 'Опис фото',
-      validation: (rule) =>
+      validation: rule =>
         rule
           .required()
-          .error("Додайте опис фото")
+          .error('Додайте опис фото')
           .max(100)
-          .error('Введіть опис фото, який містить не більше 100 символів')
+          .error('Введіть опис фото, який містить не більше 100 символів'),
     }),
 
     defineField({
-      name: 'slug',
-      type: 'slug',
-      title: 'Згенеруйте URL адресу для фотографії послуги',
-      validation: (rule) =>
-        rule.required(),
-      options: {
-        source: 'servicesTitle',
-        maxLength: 200,
-        slugify: (input) => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .slice(0, 200)
-      }
-    }),
-
-    defineField({
-      name: "servicesText",
-      type: "text",
-      title: "Текст послуги",
+      name: 'servicesText',
+      type: 'text',
+      title: 'Текст послуги',
       placeholder: 'Введіть повний опис послуги',
-      validation: (rule) =>
-        rule
-          .required()
-          .error('Введіть опис послуги')
-    })
-
-    
+      validation: rule => rule.required().error('Введіть опис послуги'),
+    }),
   ],
-  
-})
+});
