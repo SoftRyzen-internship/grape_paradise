@@ -31,6 +31,7 @@ export const Slider: FC<ISliderProps> = ({
         className='swiper mySwiper'
         slidesPerView={2}
         initialSlide={0}
+        slidesPerGroup={1}
         grabCursor={true}
         loop={loop}
         navigation={{
@@ -39,7 +40,7 @@ export const Slider: FC<ISliderProps> = ({
         }}
         breakpoints={{
           0: { slidesPerView: 1, spaceBetween: 16 },
-          768: { slidesPerView: 2, spaceBetween: 32 },
+          768: { slidesPerView: 2, spaceBetween: 40 },
           1280: { slidesPerView: 2, spaceBetween: desktopSpaceBetween },
         }}
       >
