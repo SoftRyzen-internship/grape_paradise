@@ -14,7 +14,7 @@ export const ReviewsSlider: FC<IReviewsSliderProps> = ({ data }) => {
       loop={true}
       prevEl='reviewsBtnBack'
       nextEl='reviewsBtnNext'
-      desktopSpaceBetween={80}
+      desktopSpaceBetween={56}
       btnConteinerStyle='md:-top-[88px] lg:-top-40'
     >
       {data.map(({ _id, reviewAuthor, reviewText }) => (

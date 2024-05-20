@@ -3,6 +3,8 @@ import { clsx } from 'clsx';
 
 import { IButtonLessProps } from './ButtonLess.types';
 
+import s from './ButtonLess.module.css';
+
 export const ButtonLess: FC<IButtonLessProps> = ({
   type,
   purpose,
@@ -27,6 +29,7 @@ export const ButtonLess: FC<IButtonLessProps> = ({
             purpose === 'slider',
           'flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white20 backdrop-blur-70 hover:bg-white40 focus:bg-white40 lg:h-36 lg:w-36':
             purpose === 'video',
+          [s.btn_less]: purpose === 'video',
           'rounded-full transition hover:scale-125 focus:scale-125 focus:outline-current':
             purpose === 'burger',
           'flex h-[43px] w-full cursor-pointer items-center justify-center rounded-60px border border-green py-3 font-tenor  text-btn font-normal uppercase text-green transition hover:bg-green hover:text-white focus:bg-green focus:text-white md:w-[151px] md:border-green md:bg-transparent lg:border-green50':
