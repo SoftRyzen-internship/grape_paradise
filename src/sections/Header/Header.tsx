@@ -35,7 +35,9 @@ export const Header: FC = () => {
     <header className='absolute left-0 top-0 z-20 w-full bg-transparent py-6'>
       <div className='container flex items-center justify-between '>
         <Logo theme={`${pathname === '/policy' ? 'green' : 'white'}`} />
+
         <NavMenu className='notLg:hidden' onClick={handleClick} />
+
         <ButtonMain
           chapter={pathname === '/policy' ? 'policy' : 'header'}
           className='notLg:hidden'
@@ -59,7 +61,8 @@ export const Header: FC = () => {
             )}
           />
         </ButtonLess>
-        {isOpened && <BurgerMenu onClick={toggleMenuOpen} />}
+
+        <BurgerMenu onClick={toggleMenuOpen} isOpened={isOpened} />
       </div>
     </header>
   );

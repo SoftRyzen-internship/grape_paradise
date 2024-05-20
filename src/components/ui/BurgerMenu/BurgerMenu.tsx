@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { clsx } from 'clsx';
 import { usePathname } from 'next/navigation';
 
 import { Logo } from '@/components/ui/Logo';
@@ -14,7 +15,7 @@ import { IBurgerMenuProps } from './IBurgerMenuProps.types';
 
 import s from './BurgerMenu.module.css';
 
-export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
+export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick, isOpened }) => {
   const pathname = usePathname();
 
   const handleClick = (to: string) => {
@@ -27,7 +28,12 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick }) => {
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden bg-bg1 lg:hidden ${s.background}`}
+      className={clsx(
+        `fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden bg-bg1 transition lg:hidden ${s.background}`,
+        {
+          'translate-x-full': !isOpened,
+        },
+      )}
     >
       <div className='container'>
         <div className='flex items-center justify-between py-6'>
