@@ -1,5 +1,6 @@
 import { defineConfig } from './node_modules/sanity';
 import { structureTool } from 'sanity/structure';
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 import { schema } from '@/sanity/schemas/schema';
 
@@ -22,6 +23,7 @@ export default defineConfig({
       name: 'content',
       title: 'Редагування контенту',
       structure: pageStructure,
-    })
+    }),
+    vercelDeployTool()
   ],
 });
