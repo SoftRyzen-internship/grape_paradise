@@ -13,7 +13,6 @@
     "@sanity/client": "^6.18.0",
     "@sanity/icons": "^2.11.8",
     "@sanity/ui": "^2.1.6",
-    "@sanity/vision": "^3.42.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.4",
     "next": "14.2.3",

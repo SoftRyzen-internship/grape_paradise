@@ -38,18 +38,5 @@ export const goods = defineType({
           .max(100)
           .error('Введіть опис фото, який містить не більше 100 символів'),
     }),
-
-    defineField({
-      name: 'slug',
-      type: 'slug',
-      title: 'Згенеруйте URL адресу для фотографії товару',
-      validation: rule => rule.required(),
-      options: {
-        source: 'goodsTitle',
-        maxLength: 200,
-        slugify: input =>
-          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
-      },
-    }),
   ],
 });

@@ -40,19 +40,6 @@ export const services = defineType({
     }),
 
     defineField({
-      name: 'slug',
-      type: 'slug',
-      title: 'Згенеруйте URL адресу для фотографії послуги',
-      validation: rule => rule.required(),
-      options: {
-        source: 'servicesTitle',
-        maxLength: 200,
-        slugify: input =>
-          input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
-      },
-    }),
-
-    defineField({
       name: 'servicesText',
       type: 'text',
       title: 'Текст послуги',
