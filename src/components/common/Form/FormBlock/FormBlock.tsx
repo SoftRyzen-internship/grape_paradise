@@ -42,6 +42,42 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
     exclude: ['approval'],
   });
 
+  const observePhone = watch('phone');
+
+  const handleFocus = () => {
+    if (observePhone === '') {
+      setValue('phone', '+380');
+    }
+  };
+
+  const handleBlur = () => {
+    if (observePhone === '+380') {
+      setValue('phone', '');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
+    if (!value.startsWith('+380')) {
+      value = '+380' + value.replace(/\D/g, '');
+    } else {
+      value = '+380' + value.slice(4).replace(/\D/g, '');
+    }
+
+    if (value === '+380') {
+      setValue('phone', '');
+    } else {
+      setValue('phone', value);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const value = e.currentTarget.value;
+    if (e.key === 'Backspace' && value === '+380') {
+      e.preventDefault();
+    }
+  };
+
   const onSubmit: SubmitHandler<IFormState> = async data => {
     setSendError(false);
     try {
@@ -70,6 +106,10 @@ export const FormBlock: FC<IFormBlockProps> = ({ className }) => {
           {...register('phone', formSchema.phone)}
           errorMessage={errors.phone?.message}
           className='mt-11 lg:mt-[60px]'
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
 
         <CustomTextarea
