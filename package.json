@@ -13,7 +13,6 @@
     "@sanity/client": "^6.18.0",
     "@sanity/icons": "^2.11.8",
     "@sanity/ui": "^2.1.6",
-    "@sanity/vision": "^3.42.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.4",
     "next": "14.2.3",
@@ -25,6 +24,7 @@
     "react-hook-form-persist": "^3.0.0",
     "react-scroll": "^1.9.0",
     "sanity": "^3.40.0",
+    "sanity-plugin-vercel-deploy": "^3.3.4",
     "sharp": "^0.33.3",
     "swiper": "^11.1.1"
   },
