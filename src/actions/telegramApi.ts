@@ -20,7 +20,7 @@ export const sendMessage = async (data: IFormState): Promise<void> => {
     message += `${TitleFold[key as keyof typeof TitleFold]}: ${value.trim()};%0A`;
   }
 
-  const url: string = `${baseUrl}sendMessage?chat_id=${CHAT_ID}&text=${message}`;
+  const url: string = `${baseUrl}sendMessage?chat_id=${CHAT_ID}&text=${message.slice(0, -4)}`;
 
   const res: Response = await fetch(url);
 
