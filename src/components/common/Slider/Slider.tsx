@@ -22,7 +22,7 @@ export const Slider: FC<ISliderProps> = ({
   loop = false,
   desktopSpaceBetween = 174,
   children,
-  btnConteinerStyle,
+  btnContainerStyle,
 }) => {
   return (
     <AnimationContainer className='lg:[--x-hidden:80px]'>
@@ -31,6 +31,7 @@ export const Slider: FC<ISliderProps> = ({
         className='swiper mySwiper'
         slidesPerView={2}
         initialSlide={0}
+        slidesPerGroup={1}
         grabCursor={true}
         loop={loop}
         navigation={{
@@ -47,7 +48,7 @@ export const Slider: FC<ISliderProps> = ({
       </Swiper>
 
       <div
-        className={`swiper-navigation absolute -bottom-20 left-1/2 right-auto z-10 flex w-[104px] -translate-x-1/2 transform items-center justify-between md:-top-[72px] md:bottom-auto md:left-auto md:right-0 md:w-[112px]  md:translate-x-0 lg:-top-32 lg:w-[164px] ${btnConteinerStyle}`}
+        className={`swiper-navigation absolute -bottom-20 left-1/2 right-auto z-10 flex w-[104px] -translate-x-1/2 transform items-center justify-between md:-top-[72px] md:bottom-auto md:left-auto md:right-0 md:w-[112px]  md:translate-x-0 lg:-top-32 lg:w-[164px] ${btnContainerStyle}`}
       >
         <ButtonLess
           className={`prev-btn ${prevEl}`}
