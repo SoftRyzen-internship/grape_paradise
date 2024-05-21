@@ -9,7 +9,8 @@ export const formSchema: Record<keyof IFormState, RegisterOptions> = {
   name: {
     required: `${name.errorMessage}`,
     pattern: {
-      value: /^[А-Яа-яЄєІіЇїҐґʼ]|[A-Za-z\-'\s]+$/,
+      value:
+        /^(?!.*\s{2})[А-Яа-яЄєІіЇїҐґʼA-Za-z'-]+(\s[А-Яа-яЄєІіЇїҐґʼA-Za-z'-]+)*$/,
       message: `${name.rules}`,
     },
     minLength: {
