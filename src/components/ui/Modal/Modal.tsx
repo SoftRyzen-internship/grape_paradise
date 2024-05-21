@@ -69,7 +69,11 @@ export const Modal: FC<IModalProps> = ({
                     title && 'mb-10 md:mb-8 lg:mb-10',
                   )}
                 >
-                  <CloseIcon width={24} height={24} className='fill-green' />
+                  <CloseIcon
+                    width={24}
+                    height={24}
+                    className='fill-green md:h-8 md:w-8'
+                  />
                 </ButtonLess>
 
                 {title ? (

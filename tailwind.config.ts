@@ -29,7 +29,7 @@ const config: Config = {
         lg: '2rem',
       },
     },
-	
+
     extend: {
       colors: {
         transparent: 'transparent',
@@ -83,7 +83,7 @@ const config: Config = {
         large: ['18px', '1.3'],
         large_desk: ['26px', '1.3'],
       },
-	  
+
       backdropBlur: {
         '12.5': '12.5px',
         '25': '25px',
