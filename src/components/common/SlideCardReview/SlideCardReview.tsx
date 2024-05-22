@@ -53,7 +53,7 @@ export const SlideCardReviews: FC<ISlideCardReviewsProps> = ({
 
         {isOverflow && (
           <button
-            className='text-left font-tenor text-normal_desk underline lg:text-large_desk'
+            className='w-max text-left font-tenor text-normal_desk underline lg:text-large_desk'
             onClick={() => setModalOpen(true)}
           >
             {slidersData.readMoreButton}
