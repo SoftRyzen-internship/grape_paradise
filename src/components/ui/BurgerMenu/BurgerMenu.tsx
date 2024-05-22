@@ -37,7 +37,7 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick, isOpened }) => {
     >
       <div className='container'>
         <div className='flex items-center justify-between py-6'>
-          <Logo theme={'green'} size={'small'} />
+          <Logo theme={'green'} size={'small'} onClick={onClick}/>
           <ButtonLess
             type='button'
             purpose='burger'

@@ -14,6 +14,7 @@ export const Logo: FC<ILogoProps> = ({
   theme = 'white',
   size = 'small',
   toScroll,
+  onClick,
 }) => {
   return (
     <>
@@ -37,6 +38,7 @@ export const Logo: FC<ILogoProps> = ({
           href='/'
           className='cursor-pointer focus:outline-1 focus:outline-white'
           aria-label={logo.ariaLabel}
+          onClick={onClick}
         >
           <div className='inline-block'>
             <LogoSvg theme={theme} size={size} />

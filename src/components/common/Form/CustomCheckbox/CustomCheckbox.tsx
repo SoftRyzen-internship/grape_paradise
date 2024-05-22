@@ -35,11 +35,11 @@ export const CustomCheckbox: React.FC<ICustomCheckboxProps> = ({
       />
       <span
         className={clsx(
-          'flex h-5 w-5 shrink-0 items-center justify-center rounded border border-green text-transparent transition peer-checked:bg-green30 peer-checked:text-green peer-hover:bg-green30 peer-focus:bg-green30 lg:h-6 lg:w-6',
+          'flex h-5 w-5 shrink-0 items-center justify-center rounded border border-green stroke-current text-transparent transition peer-checked:bg-green30 peer-checked:text-green peer-hover:bg-green30 peer-focus:bg-green30 lg:h-6 lg:w-6',
           errorMessage && 'border-red',
         )}
       >
-        <CheckIcon className='transition' />
+        <CheckIcon className='h-5 w-5 transition lg:h-6 lg:w-6' />
       </span>
       <span className='text-xs/normal font-extralight text-black80 md:text-small lg:text-normal'>
         {definition}
