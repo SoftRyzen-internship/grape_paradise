@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='uk' className={`${tenor.variable}`}>
-      <body>
+      <body className='overflow-x-hidden'>
         <Header />
         <main>{children}</main>
         <Footer />
