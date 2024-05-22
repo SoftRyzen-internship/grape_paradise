@@ -5,7 +5,7 @@ export interface ILogoProps {
   theme?: Theme;
   size?: Size;
   toScroll?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export interface ILogoComponentProps {
