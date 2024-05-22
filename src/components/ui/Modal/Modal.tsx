@@ -29,20 +29,12 @@ export const Modal: FC<IModalProps> = ({
 }) => {
   return (
     <Transition as={Fragment} appear show={show}>
-      <Dialog
-        onClose={onClose}
-        as='div'
-        className='fixed inset-0 z-50 flex items-center'
-      >
+      <Dialog onClose={onClose} as='div' className='relative z-50'>
         <div
-          className='fixed inset-0 bg-black60 backdrop-blur-12.5'
+          className='fixed inset-0 w-screen overflow-hidden overflow-y-auto bg-black60 backdrop-blur-12.5'
           aria-hidden='true'
         >
-          <div
-            className={clsx(
-              'fixed inset-0 flex w-screen items-center justify-center p-4 md:p-8',
-            )}
-          >
+          <div className='flex min-h-dvh w-screen items-center justify-center p-4 md:p-8'>
             <TransitionChild
               enter='ease-out duration-300'
               enterFrom='opacity-0 transform-[scale(60%)]'
@@ -69,7 +61,11 @@ export const Modal: FC<IModalProps> = ({
                     title && 'mb-10 md:mb-8 lg:mb-10',
                   )}
                 >
-                  <CloseIcon width={24} height={24} className='fill-green' />
+                  <CloseIcon
+                    width={24}
+                    height={24}
+                    className='fill-green md:h-8 md:w-8'
+                  />
                 </ButtonLess>
 
                 {title ? (

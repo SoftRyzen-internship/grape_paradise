@@ -4,6 +4,7 @@ type Size = 'small' | 'big';
 export interface ILogoProps {
   theme?: Theme;
   size?: Size;
+  toScroll?: boolean;
 }
 
 export interface ILogoComponentProps {
