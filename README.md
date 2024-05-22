@@ -4,6 +4,9 @@
 
 <p align="center">Additionally, we offer grape tourism with tasting elements. Our company successfully operates in the Kharkiv region, Ukraine, and abroad, meeting the needs of our clients.</p>
 
+The "Grape Paradise" website was developed according to the design. You can view the design at the following link.
+[Link to the design](https://www.figma.com/design/91c9tNL3l06Qro8L3Ti7b0/%D0%92%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D0%BD%D0%B8%D0%BA?node-id=41-1854&t=k3d5WPIfqd7k7q8f-0)
+
 <h2 align="center">Components that the application consists of:</h2>
 
 <h3 align="center">Header and Hero</h3>
