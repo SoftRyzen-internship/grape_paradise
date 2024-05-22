@@ -11,7 +11,8 @@ export const HistoryVideo: FC<IHistoryVideoProps> = ({ onClose, show }) => {
         <iframe
           className='absolute inset-0 h-full w-full'
           src='https://www.youtube.com/embed/ovSJ9TDDgRE'
-          allowFullScreen
+          sandbox='allow-scripts allow-same-origin allow-presentation'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
           title='YouTube Video'
         ></iframe>
       </div>

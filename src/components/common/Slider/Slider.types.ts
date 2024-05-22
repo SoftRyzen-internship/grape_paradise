@@ -6,5 +6,5 @@ export interface ISliderProps {
   loop?: boolean;
   desktopSpaceBetween?: number;
   children: ReactNode;
-  btnConteinerStyle?: string;
+  btnContainerStyle?: string;
 }

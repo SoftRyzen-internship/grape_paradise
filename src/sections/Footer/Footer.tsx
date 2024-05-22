@@ -31,7 +31,7 @@ export const Footer: FC = () => {
     >
       <div className='container'>
         <div className='mb-8 flex justify-center lg:mb-6'>
-          <Logo theme={'green'} size={'big'} />
+          <Logo theme={'green'} size={'big'} toScroll={policy ? false : true} />
         </div>
         <div className='border-t-2 border-stroke pt-8 lg:flex lg:flex-row-reverse lg:justify-between'>
           <div className='mb-8 flex flex-col gap-4 md:mx-auto md:mb-4 md:w-[402px] md:flex-row md:gap-6 lg:mx-0 lg:mb-0'>

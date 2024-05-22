@@ -21,7 +21,9 @@ export const Header: FC = () => {
 
   const toggleMenuOpen = () => {
     setIsOpened(prev => !prev);
-    document.body.style.overflow = isOpened ? 'auto' : 'hidden';
+    !isOpened
+      ? document.body.classList.add('overflow-hidden')
+      : document.body.classList.remove('overflow-hidden');
   };
 
   const handleClick = (to: string) => {

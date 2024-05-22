@@ -29,7 +29,7 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick, isOpened }) => {
   return (
     <div
       className={clsx(
-        `fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden bg-bg1 transition lg:hidden ${s.background}`,
+        `fixed left-0 top-0 z-50 flex h-full w-full flex-col overflow-hidden overflow-y-auto bg-bg1 transition lg:hidden ${s.background}`,
         {
           'translate-x-full': !isOpened,
         },
@@ -41,7 +41,7 @@ export const BurgerMenu: FC<IBurgerMenuProps> = ({ onClick, isOpened }) => {
           <ButtonLess
             type='button'
             purpose='burger'
-            aria-label={headerData.ariaLabelClose}
+            aria={headerData.ariaLabelClose}
             onClick={onClick}
             className='h-12 w-12 p-3'
           >
